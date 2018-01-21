@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Constants.vb" />
     <Compile Include="frmHome.Designer.vb">
       <DependentUpon>frmHome.vb</DependentUpon>
     </Compile>
