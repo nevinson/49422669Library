@@ -24,7 +24,7 @@
                 loadingStatusLabel.Text = "Modules running..."
             Case 100
                 loadingTimer.Enabled = False
-                frmHome.Show()
+                frmLogIn.Show()
                 Me.Hide()
             Case Else
 
