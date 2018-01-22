@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\frmDashboard.Designer.vb">
+      <DependentUpon>frmDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Constants.vb" />
     <Compile Include="frmHome.Designer.vb">
@@ -107,8 +113,29 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="User\frmBorrow.Designer.vb">
+      <DependentUpon>frmBorrow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmBorrow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmReserve.Designer.vb">
+      <DependentUpon>frmReserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmReserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUserDashboard.Designer.vb">
+      <DependentUpon>frmUserDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmUserDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin\frmDashboard.resx">
+      <DependentUpon>frmDashboard.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLoading.resx">
       <DependentUpon>frmLoading.vb</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +147,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmBorrow.resx">
+      <DependentUpon>frmBorrow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmReserve.resx">
+      <DependentUpon>frmReserve.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUserDashboard.resx">
+      <DependentUpon>frmUserDashboard.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

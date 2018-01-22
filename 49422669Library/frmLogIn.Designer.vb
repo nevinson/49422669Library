@@ -33,6 +33,7 @@ Partial Class frmLogIn
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblLogin = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,7 +50,7 @@ Partial Class frmLogIn
         Me.Panel1.Controls.Add(Me.txtUsername)
         Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Controls.Add(Me.lblLogin)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Location = New System.Drawing.Point(12, 83)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(328, 193)
         Me.Panel1.TabIndex = 4
@@ -158,12 +159,24 @@ Partial Class frmLogIn
         Me.lblLogin.TabIndex = 0
         Me.lblLogin.Text = "Login"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(46, 27)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(251, 36)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "46422669 Library"
+        '
         'frmLogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(352, 217)
+        Me.ClientSize = New System.Drawing.Size(352, 287)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Location = New System.Drawing.Point(7, 8)
@@ -173,6 +186,7 @@ Partial Class frmLogIn
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -187,4 +201,5 @@ Partial Class frmLogIn
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents lblUsername As Label
     Friend WithEvents lblLogin As Label
+    Friend WithEvents Label1 As Label
 End Class
