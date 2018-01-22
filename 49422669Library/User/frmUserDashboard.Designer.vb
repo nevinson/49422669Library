@@ -147,27 +147,27 @@ Partial Class frmUserDashboard
         '
         'btnLogout
         '
-        Me.btnLogout.Location = New System.Drawing.Point(781, 248)
+        Me.btnLogout.Location = New System.Drawing.Point(771, 264)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(75, 37)
+        Me.btnLogout.Size = New System.Drawing.Size(82, 32)
         Me.btnLogout.TabIndex = 29
         Me.btnLogout.Text = "&Logout"
         Me.btnLogout.UseVisualStyleBackColor = True
         '
         'btnReserve
         '
-        Me.btnReserve.Location = New System.Drawing.Point(781, 164)
+        Me.btnReserve.Location = New System.Drawing.Point(771, 180)
         Me.btnReserve.Name = "btnReserve"
-        Me.btnReserve.Size = New System.Drawing.Size(75, 37)
+        Me.btnReserve.Size = New System.Drawing.Size(82, 32)
         Me.btnReserve.TabIndex = 28
         Me.btnReserve.Text = "&Reserve"
         Me.btnReserve.UseVisualStyleBackColor = True
         '
         'btnBorrow
         '
-        Me.btnBorrow.Location = New System.Drawing.Point(781, 80)
+        Me.btnBorrow.Location = New System.Drawing.Point(771, 96)
         Me.btnBorrow.Name = "btnBorrow"
-        Me.btnBorrow.Size = New System.Drawing.Size(75, 37)
+        Me.btnBorrow.Size = New System.Drawing.Size(82, 32)
         Me.btnBorrow.TabIndex = 27
         Me.btnBorrow.Text = "&Borrow"
         Me.btnBorrow.UseVisualStyleBackColor = True

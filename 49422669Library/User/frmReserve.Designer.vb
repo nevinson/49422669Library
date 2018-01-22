@@ -64,7 +64,7 @@ Partial Class frmReserve
         Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.Location = New System.Drawing.Point(320, 273)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(94, 37)
+        Me.btnBack.Size = New System.Drawing.Size(94, 32)
         Me.btnBack.TabIndex = 37
         Me.btnBack.Text = "B&ack"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -74,7 +74,7 @@ Partial Class frmReserve
         Me.btnBorrow.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBorrow.Location = New System.Drawing.Point(20, 273)
         Me.btnBorrow.Name = "btnBorrow"
-        Me.btnBorrow.Size = New System.Drawing.Size(94, 37)
+        Me.btnBorrow.Size = New System.Drawing.Size(94, 32)
         Me.btnBorrow.TabIndex = 36
         Me.btnBorrow.Text = "&Borrow"
         Me.btnBorrow.UseVisualStyleBackColor = True

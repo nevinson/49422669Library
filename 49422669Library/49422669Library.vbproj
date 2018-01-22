@@ -119,6 +119,12 @@
     <Compile Include="User\frmBorrow.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User\frmProfile.Designer.vb">
+      <DependentUpon>frmProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User\frmReserve.Designer.vb">
       <DependentUpon>frmReserve.vb</DependentUpon>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User\frmBorrow.resx">
       <DependentUpon>frmBorrow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmProfile.resx">
+      <DependentUpon>frmProfile.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\frmReserve.resx">
       <DependentUpon>frmReserve.vb</DependentUpon>

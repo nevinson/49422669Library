@@ -37,7 +37,9 @@ Partial Class frmBorrow
         Me.HowToUseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnBack = New System.Windows.Forms.Button()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.btnBorrow = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -51,8 +53,6 @@ Partial Class frmBorrow
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
-        Me.btnBorrow = New System.Windows.Forms.Button()
-        Me.btnBack = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -183,12 +183,32 @@ Partial Class frmBorrow
         Me.Panel1.Size = New System.Drawing.Size(431, 290)
         Me.Panel1.TabIndex = 13
         '
+        'btnBack
+        '
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBack.Location = New System.Drawing.Point(320, 242)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(94, 32)
+        Me.btnBack.TabIndex = 31
+        Me.btnBack.Text = "B&ack"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
         'TextBox7
         '
         Me.TextBox7.Location = New System.Drawing.Point(165, 201)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(249, 20)
         Me.TextBox7.TabIndex = 18
+        '
+        'btnBorrow
+        '
+        Me.btnBorrow.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBorrow.Location = New System.Drawing.Point(20, 243)
+        Me.btnBorrow.Name = "btnBorrow"
+        Me.btnBorrow.Size = New System.Drawing.Size(94, 32)
+        Me.btnBorrow.TabIndex = 30
+        Me.btnBorrow.Text = "&Borrow"
+        Me.btnBorrow.UseVisualStyleBackColor = True
         '
         'TextBox6
         '
@@ -308,26 +328,6 @@ Partial Class frmBorrow
         Me.lblUsername.Size = New System.Drawing.Size(73, 17)
         Me.lblUsername.TabIndex = 4
         Me.lblUsername.Text = "Borrow ID:"
-        '
-        'btnBorrow
-        '
-        Me.btnBorrow.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBorrow.Location = New System.Drawing.Point(20, 241)
-        Me.btnBorrow.Name = "btnBorrow"
-        Me.btnBorrow.Size = New System.Drawing.Size(94, 37)
-        Me.btnBorrow.TabIndex = 30
-        Me.btnBorrow.Text = "&Borrow"
-        Me.btnBorrow.UseVisualStyleBackColor = True
-        '
-        'btnBack
-        '
-        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBack.Location = New System.Drawing.Point(320, 240)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(94, 37)
-        Me.btnBack.TabIndex = 31
-        Me.btnBack.Text = "B&ack"
-        Me.btnBack.UseVisualStyleBackColor = True
         '
         'frmBorrow
         '
