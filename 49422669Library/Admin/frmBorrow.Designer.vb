@@ -186,6 +186,7 @@ Partial Class frmBorrow
         'btnBack
         '
         Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBack.ForeColor = System.Drawing.Color.Teal
         Me.btnBack.Location = New System.Drawing.Point(320, 242)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(94, 32)
@@ -195,6 +196,7 @@ Partial Class frmBorrow
         '
         'TextBox7
         '
+        Me.TextBox7.ForeColor = System.Drawing.Color.Teal
         Me.TextBox7.Location = New System.Drawing.Point(165, 201)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(249, 20)
@@ -203,6 +205,7 @@ Partial Class frmBorrow
         'btnBorrow
         '
         Me.btnBorrow.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBorrow.ForeColor = System.Drawing.Color.Teal
         Me.btnBorrow.Location = New System.Drawing.Point(20, 243)
         Me.btnBorrow.Name = "btnBorrow"
         Me.btnBorrow.Size = New System.Drawing.Size(94, 32)
@@ -212,6 +215,7 @@ Partial Class frmBorrow
         '
         'TextBox6
         '
+        Me.TextBox6.ForeColor = System.Drawing.Color.Teal
         Me.TextBox6.Location = New System.Drawing.Point(166, 169)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(249, 20)
@@ -219,6 +223,7 @@ Partial Class frmBorrow
         '
         'TextBox5
         '
+        Me.TextBox5.ForeColor = System.Drawing.Color.Teal
         Me.TextBox5.Location = New System.Drawing.Point(165, 137)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(249, 20)
@@ -226,6 +231,7 @@ Partial Class frmBorrow
         '
         'TextBox4
         '
+        Me.TextBox4.ForeColor = System.Drawing.Color.Teal
         Me.TextBox4.Location = New System.Drawing.Point(166, 105)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(249, 20)
@@ -233,6 +239,7 @@ Partial Class frmBorrow
         '
         'TextBox3
         '
+        Me.TextBox3.ForeColor = System.Drawing.Color.Teal
         Me.TextBox3.Location = New System.Drawing.Point(165, 73)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(249, 20)
@@ -240,6 +247,7 @@ Partial Class frmBorrow
         '
         'TextBox2
         '
+        Me.TextBox2.ForeColor = System.Drawing.Color.Teal
         Me.TextBox2.Location = New System.Drawing.Point(165, 41)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(249, 20)
@@ -247,6 +255,7 @@ Partial Class frmBorrow
         '
         'TextBox1
         '
+        Me.TextBox1.ForeColor = System.Drawing.Color.Teal
         Me.TextBox1.Location = New System.Drawing.Point(165, 9)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(249, 20)
@@ -334,7 +343,7 @@ Partial Class frmBorrow
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(456, 420)
+        Me.ClientSize = New System.Drawing.Size(456, 412)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label2)

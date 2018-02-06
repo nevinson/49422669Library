@@ -49,20 +49,21 @@ Partial Class frmProfile
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox7
         '
+        Me.TextBox7.ForeColor = System.Drawing.Color.Teal
         Me.TextBox7.Location = New System.Drawing.Point(166, 201)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(249, 20)
@@ -70,6 +71,7 @@ Partial Class frmProfile
         '
         'TextBox5
         '
+        Me.TextBox5.ForeColor = System.Drawing.Color.Teal
         Me.TextBox5.Location = New System.Drawing.Point(166, 137)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(249, 20)
@@ -77,6 +79,7 @@ Partial Class frmProfile
         '
         'TextBox4
         '
+        Me.TextBox4.ForeColor = System.Drawing.Color.Teal
         Me.TextBox4.Location = New System.Drawing.Point(166, 105)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(249, 20)
@@ -84,6 +87,7 @@ Partial Class frmProfile
         '
         'TextBox3
         '
+        Me.TextBox3.ForeColor = System.Drawing.Color.Teal
         Me.TextBox3.Location = New System.Drawing.Point(166, 73)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(249, 20)
@@ -91,6 +95,7 @@ Partial Class frmProfile
         '
         'TextBox2
         '
+        Me.TextBox2.ForeColor = System.Drawing.Color.Teal
         Me.TextBox2.Location = New System.Drawing.Point(166, 41)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(249, 20)
@@ -98,6 +103,7 @@ Partial Class frmProfile
         '
         'TextBox1
         '
+        Me.TextBox1.ForeColor = System.Drawing.Color.Teal
         Me.TextBox1.Location = New System.Drawing.Point(166, 9)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(249, 20)
@@ -296,19 +302,44 @@ Partial Class frmProfile
         Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Location = New System.Drawing.Point(13, 104)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(431, 399)
+        Me.Panel1.Size = New System.Drawing.Size(431, 391)
         Me.Panel1.TabIndex = 17
         '
-        'Label9
+        'btnBack
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Teal
-        Me.Label9.Location = New System.Drawing.Point(47, 268)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(99, 17)
-        Me.Label9.TabIndex = 20
-        Me.Label9.Text = "Old Password:"
+        Me.btnBack.ForeColor = System.Drawing.Color.Teal
+        Me.btnBack.Location = New System.Drawing.Point(321, 346)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(94, 32)
+        Me.btnBack.TabIndex = 26
+        Me.btnBack.Text = "B&ack"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.ForeColor = System.Drawing.Color.Teal
+        Me.Button1.Location = New System.Drawing.Point(16, 346)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(94, 32)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "&Update Profile"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox10
+        '
+        Me.TextBox10.ForeColor = System.Drawing.Color.Teal
+        Me.TextBox10.Location = New System.Drawing.Point(166, 297)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(249, 20)
+        Me.TextBox10.TabIndex = 24
+        '
+        'TextBox9
+        '
+        Me.TextBox9.ForeColor = System.Drawing.Color.Teal
+        Me.TextBox9.Location = New System.Drawing.Point(166, 265)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(249, 20)
+        Me.TextBox9.TabIndex = 23
         '
         'Label10
         '
@@ -321,19 +352,24 @@ Partial Class frmProfile
         Me.Label10.TabIndex = 21
         Me.Label10.Text = "New Password:"
         '
-        'TextBox9
+        'Label9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(166, 265)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox9.TabIndex = 23
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Teal
+        Me.Label9.Location = New System.Drawing.Point(47, 268)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(99, 17)
+        Me.Label9.TabIndex = 20
+        Me.Label9.Text = "Old Password:"
         '
-        'TextBox10
+        'TextBox6
         '
-        Me.TextBox10.Location = New System.Drawing.Point(166, 297)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox10.TabIndex = 24
+        Me.TextBox6.ForeColor = System.Drawing.Color.Teal
+        Me.TextBox6.Location = New System.Drawing.Point(166, 169)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(249, 20)
+        Me.TextBox6.TabIndex = 17
         '
         'Label6
         '
@@ -346,37 +382,12 @@ Partial Class frmProfile
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Username:"
         '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(166, 169)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox6.TabIndex = 17
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(16, 346)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 32)
-        Me.Button1.TabIndex = 25
-        Me.Button1.Text = "Update Profile"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'btnBack
-        '
-        Me.btnBack.Location = New System.Drawing.Point(321, 346)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(94, 32)
-        Me.btnBack.TabIndex = 26
-        Me.btnBack.Text = "B&ack"
-        Me.btnBack.UseVisualStyleBackColor = True
-        '
         'frmProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(456, 529)
+        Me.ClientSize = New System.Drawing.Size(456, 516)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)

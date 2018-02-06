@@ -37,7 +37,6 @@ Partial Class frmUserDashboard
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnReserve = New System.Windows.Forms.Button()
-        Me.btnBorrow = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.lstBooks = New System.Windows.Forms.ListView()
         Me.bk_id = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -136,17 +135,17 @@ Partial Class frmUserDashboard
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.btnReserve)
-        Me.Panel1.Controls.Add(Me.btnBorrow)
         Me.Panel1.Controls.Add(Me.btnSearch)
         Me.Panel1.Controls.Add(Me.lstBooks)
         Me.Panel1.Controls.Add(Me.txtSearch)
-        Me.Panel1.Location = New System.Drawing.Point(13, 101)
+        Me.Panel1.Location = New System.Drawing.Point(13, 94)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(868, 361)
         Me.Panel1.TabIndex = 1
         '
         'btnLogout
         '
+        Me.btnLogout.ForeColor = System.Drawing.Color.Teal
         Me.btnLogout.Location = New System.Drawing.Point(771, 264)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(82, 32)
@@ -156,24 +155,17 @@ Partial Class frmUserDashboard
         '
         'btnReserve
         '
-        Me.btnReserve.Location = New System.Drawing.Point(771, 180)
+        Me.btnReserve.ForeColor = System.Drawing.Color.Teal
+        Me.btnReserve.Location = New System.Drawing.Point(771, 112)
         Me.btnReserve.Name = "btnReserve"
         Me.btnReserve.Size = New System.Drawing.Size(82, 32)
         Me.btnReserve.TabIndex = 28
         Me.btnReserve.Text = "&Reserve"
         Me.btnReserve.UseVisualStyleBackColor = True
         '
-        'btnBorrow
-        '
-        Me.btnBorrow.Location = New System.Drawing.Point(771, 96)
-        Me.btnBorrow.Name = "btnBorrow"
-        Me.btnBorrow.Size = New System.Drawing.Size(82, 32)
-        Me.btnBorrow.TabIndex = 27
-        Me.btnBorrow.Text = "&Borrow"
-        Me.btnBorrow.UseVisualStyleBackColor = True
-        '
         'btnSearch
         '
+        Me.btnSearch.ForeColor = System.Drawing.Color.Teal
         Me.btnSearch.Location = New System.Drawing.Point(582, 18)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(75, 23)
@@ -184,6 +176,7 @@ Partial Class frmUserDashboard
         'lstBooks
         '
         Me.lstBooks.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.bk_id, Me.bk_name, Me.author_name, Me.bk_ctry, Me.bk_qty})
+        Me.lstBooks.ForeColor = System.Drawing.Color.Teal
         Me.lstBooks.FullRowSelect = True
         Me.lstBooks.GridLines = True
         Me.lstBooks.Location = New System.Drawing.Point(3, 62)
@@ -220,6 +213,7 @@ Partial Class frmUserDashboard
         '
         'txtSearch
         '
+        Me.txtSearch.ForeColor = System.Drawing.Color.Teal
         Me.txtSearch.Location = New System.Drawing.Point(242, 22)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(294, 20)
@@ -253,7 +247,7 @@ Partial Class frmUserDashboard
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(893, 494)
+        Me.ClientSize = New System.Drawing.Size(893, 464)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
@@ -261,6 +255,7 @@ Partial Class frmUserDashboard
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmUserDashboard"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmUserDashboard"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -285,7 +280,6 @@ Partial Class frmUserDashboard
     Friend WithEvents Label2 As Label
     Friend WithEvents btnLogout As Button
     Friend WithEvents btnReserve As Button
-    Friend WithEvents btnBorrow As Button
     Friend WithEvents btnSearch As Button
     Friend WithEvents ReloadPageToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem

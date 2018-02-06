@@ -4,12 +4,6 @@
 
     End Sub
 
-    Private Sub btnBorrow_Click(sender As Object, e As EventArgs) Handles btnBorrow.Click
-        '' show the borrow book form
-        frmBorrow.Show()
-        Me.Hide()
-    End Sub
-
     Private Sub btnReserve_Click(sender As Object, e As EventArgs) Handles btnReserve.Click
         '' show the reserve book form
         frmReserve.Show()

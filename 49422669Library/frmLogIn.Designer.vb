@@ -69,7 +69,7 @@ Partial Class frmLogIn
         Me.Showing.AutoSize = True
         Me.Showing.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Showing.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Showing.Location = New System.Drawing.Point(119, 89)
+        Me.Showing.Location = New System.Drawing.Point(119, 99)
         Me.Showing.Name = "Showing"
         Me.Showing.Size = New System.Drawing.Size(102, 17)
         Me.Showing.TabIndex = 9
@@ -79,20 +79,22 @@ Partial Class frmLogIn
         'btnLogin
         '
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(119, 121)
+        Me.btnLogin.ForeColor = System.Drawing.Color.Teal
+        Me.btnLogin.Location = New System.Drawing.Point(119, 128)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(94, 32)
+        Me.btnLogin.Size = New System.Drawing.Size(94, 28)
         Me.btnLogin.TabIndex = 3
         Me.btnLogin.Text = "Submit"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
-        Me.btnCancel.BackColor = System.Drawing.Color.Red
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Location = New System.Drawing.Point(229, 121)
+        Me.btnCancel.ForeColor = System.Drawing.Color.Teal
+        Me.btnCancel.Location = New System.Drawing.Point(229, 128)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(94, 32)
+        Me.btnCancel.Size = New System.Drawing.Size(94, 28)
         Me.btnCancel.TabIndex = 4
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
@@ -100,7 +102,8 @@ Partial Class frmLogIn
         'txtPassword
         '
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(119, 60)
+        Me.txtPassword.ForeColor = System.Drawing.Color.Teal
+        Me.txtPassword.Location = New System.Drawing.Point(119, 67)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(202, 23)
         Me.txtPassword.TabIndex = 2
@@ -110,7 +113,7 @@ Partial Class frmLogIn
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.ForeColor = System.Drawing.Color.Teal
-        Me.lblPassword.Location = New System.Drawing.Point(22, 66)
+        Me.lblPassword.Location = New System.Drawing.Point(22, 73)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(73, 17)
         Me.lblPassword.TabIndex = 3
@@ -119,6 +122,7 @@ Partial Class frmLogIn
         'txtUsername
         '
         Me.txtUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.ForeColor = System.Drawing.Color.Teal
         Me.txtUsername.Location = New System.Drawing.Point(119, 20)
         Me.txtUsername.MaxLength = 25
         Me.txtUsername.Name = "txtUsername"
@@ -139,11 +143,11 @@ Partial Class frmLogIn
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(12, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(251, 36)
+        Me.Label1.Size = New System.Drawing.Size(224, 31)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "46422669 Library"
         '
@@ -151,11 +155,11 @@ Partial Class frmLogIn
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(297, 43)
+        Me.Label2.Location = New System.Drawing.Point(290, 39)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 17)
+        Me.Label2.Size = New System.Drawing.Size(50, 20)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "LogIn"
         '
