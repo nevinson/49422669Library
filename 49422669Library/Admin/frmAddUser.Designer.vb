@@ -33,7 +33,7 @@ Partial Class frmAddUser
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSaveProfile = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,20 +41,20 @@ Partial Class frmAddUser
         Me.HowToUseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmbUserType = New System.Windows.Forms.ComboBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.txtEmailAddress = New System.Windows.Forms.TextBox()
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.txtMembershipNumber = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.chkIsAdmin = New System.Windows.Forms.CheckBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -132,22 +132,22 @@ Partial Class frmAddUser
         'btnBack
         '
         Me.btnBack.ForeColor = System.Drawing.Color.Teal
-        Me.btnBack.Location = New System.Drawing.Point(321, 281)
+        Me.btnBack.Location = New System.Drawing.Point(321, 274)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(94, 32)
         Me.btnBack.TabIndex = 26
         Me.btnBack.Text = "B&ack"
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnSaveProfile
         '
-        Me.Button1.ForeColor = System.Drawing.Color.Teal
-        Me.Button1.Location = New System.Drawing.Point(16, 281)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 32)
-        Me.Button1.TabIndex = 25
-        Me.Button1.Text = "&Update Profile"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSaveProfile.ForeColor = System.Drawing.Color.Teal
+        Me.btnSaveProfile.Location = New System.Drawing.Point(16, 274)
+        Me.btnSaveProfile.Name = "btnSaveProfile"
+        Me.btnSaveProfile.Size = New System.Drawing.Size(94, 32)
+        Me.btnSaveProfile.TabIndex = 25
+        Me.btnSaveProfile.Text = "&Save Profile"
+        Me.btnSaveProfile.UseVisualStyleBackColor = True
         '
         'Label9
         '
@@ -193,7 +193,7 @@ Partial Class frmAddUser
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Teal
-        Me.Label6.Location = New System.Drawing.Point(71, 44)
+        Me.Label6.Location = New System.Drawing.Point(71, 140)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(77, 17)
         Me.Label6.TabIndex = 10
@@ -203,18 +203,18 @@ Partial Class frmAddUser
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.DateTimePicker1)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.chkIsAdmin)
+        Me.Panel1.Controls.Add(Me.cmbUserType)
         Me.Panel1.Controls.Add(Me.btnBack)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btnSaveProfile)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.txtPassword)
+        Me.Panel1.Controls.Add(Me.txtUsername)
         Me.Panel1.Controls.Add(Me.txtEmailAddress)
         Me.Panel1.Controls.Add(Me.txtLastName)
         Me.Panel1.Controls.Add(Me.txtFirstName)
-        Me.Panel1.Controls.Add(Me.txtUsername)
         Me.Panel1.Controls.Add(Me.txtMembershipNumber)
-        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -223,57 +223,50 @@ Partial Class frmAddUser
         Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Location = New System.Drawing.Point(13, 115)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(431, 328)
+        Me.Panel1.Size = New System.Drawing.Size(431, 322)
         Me.Panel1.TabIndex = 21
         '
-        'DateTimePicker1
+        'cmbUserType
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(166, 236)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(249, 20)
-        Me.DateTimePicker1.TabIndex = 28
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.ForeColor = System.Drawing.Color.Teal
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Administrator", "Member"})
-        Me.ComboBox1.Location = New System.Drawing.Point(166, 200)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(249, 21)
-        Me.ComboBox1.TabIndex = 27
-        '
-        'txtEmailAddress
-        '
-        Me.txtEmailAddress.ForeColor = System.Drawing.Color.Teal
-        Me.txtEmailAddress.Location = New System.Drawing.Point(166, 137)
-        Me.txtEmailAddress.Name = "txtEmailAddress"
-        Me.txtEmailAddress.Size = New System.Drawing.Size(249, 20)
-        Me.txtEmailAddress.TabIndex = 16
-        '
-        'txtLastName
-        '
-        Me.txtLastName.ForeColor = System.Drawing.Color.Teal
-        Me.txtLastName.Location = New System.Drawing.Point(166, 105)
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(249, 20)
-        Me.txtLastName.TabIndex = 15
-        '
-        'txtFirstName
-        '
-        Me.txtFirstName.ForeColor = System.Drawing.Color.Teal
-        Me.txtFirstName.Location = New System.Drawing.Point(166, 73)
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(249, 20)
-        Me.txtFirstName.TabIndex = 14
+        Me.cmbUserType.ForeColor = System.Drawing.Color.Teal
+        Me.cmbUserType.FormattingEnabled = True
+        Me.cmbUserType.Items.AddRange(New Object() {"Administrator", "Member"})
+        Me.cmbUserType.Location = New System.Drawing.Point(166, 200)
+        Me.cmbUserType.Name = "cmbUserType"
+        Me.cmbUserType.Size = New System.Drawing.Size(249, 21)
+        Me.cmbUserType.TabIndex = 27
         '
         'txtUsername
         '
         Me.txtUsername.ForeColor = System.Drawing.Color.Teal
-        Me.txtUsername.Location = New System.Drawing.Point(166, 41)
+        Me.txtUsername.Location = New System.Drawing.Point(166, 137)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(249, 20)
-        Me.txtUsername.TabIndex = 13
+        Me.txtUsername.TabIndex = 16
+        '
+        'txtEmailAddress
+        '
+        Me.txtEmailAddress.ForeColor = System.Drawing.Color.Teal
+        Me.txtEmailAddress.Location = New System.Drawing.Point(166, 105)
+        Me.txtEmailAddress.Name = "txtEmailAddress"
+        Me.txtEmailAddress.Size = New System.Drawing.Size(249, 20)
+        Me.txtEmailAddress.TabIndex = 15
+        '
+        'txtLastName
+        '
+        Me.txtLastName.ForeColor = System.Drawing.Color.Teal
+        Me.txtLastName.Location = New System.Drawing.Point(166, 73)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(249, 20)
+        Me.txtLastName.TabIndex = 14
+        '
+        'txtFirstName
+        '
+        Me.txtFirstName.ForeColor = System.Drawing.Color.Teal
+        Me.txtFirstName.Location = New System.Drawing.Point(166, 41)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(249, 20)
+        Me.txtFirstName.TabIndex = 13
         '
         'txtMembershipNumber
         '
@@ -282,17 +275,6 @@ Partial Class frmAddUser
         Me.txtMembershipNumber.Name = "txtMembershipNumber"
         Me.txtMembershipNumber.Size = New System.Drawing.Size(249, 20)
         Me.txtMembershipNumber.TabIndex = 12
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Teal
-        Me.Label7.Location = New System.Drawing.Point(76, 239)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(72, 17)
-        Me.Label7.TabIndex = 11
-        Me.Label7.Text = "Join Date:"
         '
         'Label5
         '
@@ -310,7 +292,7 @@ Partial Class frmAddUser
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Teal
-        Me.Label4.Location = New System.Drawing.Point(46, 140)
+        Me.Label4.Location = New System.Drawing.Point(46, 108)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(102, 17)
         Me.Label4.TabIndex = 8
@@ -321,7 +303,7 @@ Partial Class frmAddUser
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Teal
-        Me.Label3.Location = New System.Drawing.Point(68, 108)
+        Me.Label3.Location = New System.Drawing.Point(68, 76)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(80, 17)
         Me.Label3.TabIndex = 7
@@ -332,7 +314,7 @@ Partial Class frmAddUser
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.ForeColor = System.Drawing.Color.Teal
-        Me.lblPassword.Location = New System.Drawing.Point(68, 76)
+        Me.lblPassword.Location = New System.Drawing.Point(68, 44)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(80, 17)
         Me.lblPassword.TabIndex = 5
@@ -360,12 +342,32 @@ Partial Class frmAddUser
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "Add Member"
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Teal
+        Me.Label8.Location = New System.Drawing.Point(83, 239)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(65, 17)
+        Me.Label8.TabIndex = 11
+        Me.Label8.Text = "Is Admin:"
+        '
+        'chkIsAdmin
+        '
+        Me.chkIsAdmin.AutoSize = True
+        Me.chkIsAdmin.Location = New System.Drawing.Point(166, 242)
+        Me.chkIsAdmin.Name = "chkIsAdmin"
+        Me.chkIsAdmin.Size = New System.Drawing.Size(15, 14)
+        Me.chkIsAdmin.TabIndex = 29
+        Me.chkIsAdmin.UseVisualStyleBackColor = True
+        '
         'frmAddUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(456, 461)
+        Me.ClientSize = New System.Drawing.Size(456, 455)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Panel1)
@@ -394,7 +396,7 @@ Partial Class frmAddUser
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents btnBack As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSaveProfile As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
@@ -402,18 +404,18 @@ Partial Class frmAddUser
     Friend WithEvents HowToUseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmbUserType As ComboBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents txtEmailAddress As TextBox
     Friend WithEvents txtLastName As TextBox
     Friend WithEvents txtFirstName As TextBox
-    Friend WithEvents txtUsername As TextBox
     Friend WithEvents txtMembershipNumber As TextBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblPassword As Label
     Friend WithEvents lblUsername As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents chkIsAdmin As CheckBox
 End Class

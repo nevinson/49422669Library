@@ -78,11 +78,15 @@ Public Class UserService
         dbCmd.Parameters.AddWithValue("@status", newUser.Status)
         dbCmd.Parameters.AddWithValue("@joinDate", newUser.JoinDate)
 
-        If dbCmd.ExecuteNonQuery() = 1 Then
-            blResult = True
-        Else
-            blResult = False
-        End If
+        Try
+            If dbCmd.ExecuteNonQuery() = 1 Then
+                blResult = True
+            Else
+                blResult = False
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString(), "Create User", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
         Return blResult
     End Function
