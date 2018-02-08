@@ -103,12 +103,13 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="BusinessLogic\UserService.vb" />
     <Compile Include="BusinessObjects\Book.vb" />
     <Compile Include="BusinessObjects\BookCategory.vb" />
     <Compile Include="BusinessObjects\BookBorrow.vb" />
     <Compile Include="BusinessObjects\BookReserve.vb" />
     <Compile Include="BusinessObjects\User.vb" />
-    <Compile Include="Constants.vb" />
+    <Compile Include="BusinessLogic\Constants.vb" />
     <Compile Include="frmHome.Designer.vb">
       <DependentUpon>frmHome.vb</DependentUpon>
     </Compile>
@@ -220,9 +221,7 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BusinessLogic\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\wallpaper.jpg" />
   </ItemGroup>
