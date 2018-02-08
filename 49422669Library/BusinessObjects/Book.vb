@@ -40,13 +40,13 @@
         End Set
     End Property
 
-    Private strBookCategory As String
-    Public Property BookCategory() As String
+    Private strBookCategoryId As Integer
+    Public Property BookCategoryId() As Integer
         Get
-            Return strBookCategory
+            Return strBookCategoryId
         End Get
-        Set(ByVal value As String)
-            strBookCategory = value
+        Set(ByVal value As Integer)
+            strBookCategoryId = value
         End Set
     End Property
 
