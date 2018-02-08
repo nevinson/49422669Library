@@ -8,12 +8,12 @@ Public Class UserService
     Dim blResult As Boolean = False
     Dim objConstants As New Constants()
 
-    Public Function Login() As User
+    Public Function Authenticate(ByVal strUsername As String, ByVal strPassword As String) As DataTable
         ''
         Dim dbCon As New OleDbConnection()
         Dim dbCmd As New OleDbCommand()
         Dim dbTable As New DataTable()
-        Dim loggedUser As New User
+        Dim strPwd As String = HashPassword(strPassword)
         sql = "UserLogin"
         blResult = False
 
@@ -27,28 +27,15 @@ Public Class UserService
         dbCmd.CommandType = CommandType.StoredProcedure
 
         ''
-        dbCmd.Parameters.AddWithValue("@email", "")
-        dbCmd.Parameters.AddWithValue("@username", "")
-        dbCmd.Parameters.AddWithValue("@password", "")
+        dbCmd.Parameters.AddWithValue("@email", strUsername)
+        dbCmd.Parameters.AddWithValue("@username", strUsername)
+        dbCmd.Parameters.AddWithValue("@password", strPwd)
 
         ''
         dbTable.Load(dbCmd.ExecuteReader())
 
         ''
-        If dbTable.Rows.Count = 1 Then
-            loggedUser.MembershipNumber = dbTable(0)("").ToString()
-            loggedUser.Email = dbTable(0)("").ToString()
-            loggedUser.Username = dbTable(0)("").ToString()
-            loggedUser.FirstName = dbTable(0)("").ToString()
-            loggedUser.LastName = dbTable(0)("").ToString()
-            loggedUser.MembershipType = dbTable(0)("").ToString()
-            loggedUser.Status = dbTable(0)("").ToString()
-
-            Return loggedUser
-        Else
-            MessageBox.Show("Username or password is incorrect.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return Nothing
-        End If
+        Return dbTable
     End Function
 
     Public Function Create(ByVal newUser As User) As Boolean
