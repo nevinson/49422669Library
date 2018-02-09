@@ -39,5 +39,15 @@
             strMembershipNumber = value
         End Set
     End Property
+
+    Private strBookNumber As String
+    Public Property BookNumber() As String
+        Get
+            Return strBookNumber
+        End Get
+        Set(ByVal value As String)
+            strBookNumber = value
+        End Set
+    End Property
 #End Region
 End Class

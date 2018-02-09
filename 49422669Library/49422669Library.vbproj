@@ -104,6 +104,7 @@
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="BusinessLogic\BookService.vb" />
+    <Compile Include="BusinessLogic\BorrowService.vb" />
     <Compile Include="BusinessLogic\UserService.vb" />
     <Compile Include="BusinessObjects\Book.vb" />
     <Compile Include="BusinessObjects\BookCategory.vb" />
