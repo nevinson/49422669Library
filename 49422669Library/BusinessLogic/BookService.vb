@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Text
 
 Public Class BookService
     ''
@@ -181,5 +182,48 @@ Public Class BookService
         End If
 
         Return blResult
+    End Function
+
+    Public Function GenerateBookNumber() As String
+        ''
+        Dim strBookNumber As String = Nothing
+
+        ''
+        Dim _stringBuilder As New StringBuilder()
+        Dim _random As New Random()
+        Dim _char As Char
+        Dim i As Integer
+
+        ''
+        For i = 0 To 2
+            _char = Convert.ToChar(Convert.ToInt32((26 * _random.NextDouble() + 65)))
+            _stringBuilder.Append(_char)
+        Next
+
+        ''
+        strBookNumber = _stringBuilder.ToString().ToUpper() & DateTime.Now.ToString("yy") & RandomNumber()
+
+        ''
+        Return strBookNumber
+    End Function
+
+    Private Function RandomNumber() As String
+        ''generate and return a random number between 000 and 999
+        Randomize()
+
+        Dim intRandom As Integer = 0
+        Dim strRandom As String = Nothing
+
+        intRandom = CInt((999 * Rnd()) + 1)
+
+        If intRandom.ToString().Length = 1 Then
+            strRandom = String.Format("00{0}", intRandom.ToString())
+        ElseIf intRandom.ToString().Length = 2 Then
+            strRandom = String.Format("0{0}", intRandom.ToString())
+        ElseIf intRandom.ToString().Length = 3 Then
+            strRandom = intRandom.ToString()
+        End If
+
+        Return strRandom
     End Function
 End Class

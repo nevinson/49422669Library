@@ -23,18 +23,18 @@ Partial Class frmAddBook
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtEmailAddress = New System.Windows.Forms.TextBox()
-        Me.txtLastName = New System.Windows.Forms.TextBox()
-        Me.txtFirstName = New System.Windows.Forms.TextBox()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.txtMembershipNumber = New System.Windows.Forms.TextBox()
+        Me.txtBookQuantity = New System.Windows.Forms.TextBox()
+        Me.txtAuthorName = New System.Windows.Forms.TextBox()
+        Me.txtBookName = New System.Windows.Forms.TextBox()
+        Me.txtBookNumber = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cmbBookCategory = New System.Windows.Forms.ComboBox()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnAddBook = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.HowToUseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -64,56 +64,49 @@ Partial Class frmAddBook
         Me.Label2.TabIndex = 27
         Me.Label2.Text = "Add Book"
         '
-        'txtEmailAddress
+        'txtBookQuantity
         '
-        Me.txtEmailAddress.ForeColor = System.Drawing.Color.Teal
-        Me.txtEmailAddress.Location = New System.Drawing.Point(166, 141)
-        Me.txtEmailAddress.Name = "txtEmailAddress"
-        Me.txtEmailAddress.Size = New System.Drawing.Size(249, 20)
-        Me.txtEmailAddress.TabIndex = 16
+        Me.txtBookQuantity.ForeColor = System.Drawing.Color.Teal
+        Me.txtBookQuantity.Location = New System.Drawing.Point(166, 109)
+        Me.txtBookQuantity.Name = "txtBookQuantity"
+        Me.txtBookQuantity.Size = New System.Drawing.Size(249, 20)
+        Me.txtBookQuantity.TabIndex = 15
         '
-        'txtLastName
+        'txtAuthorName
         '
-        Me.txtLastName.ForeColor = System.Drawing.Color.Teal
-        Me.txtLastName.Location = New System.Drawing.Point(166, 109)
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(249, 20)
-        Me.txtLastName.TabIndex = 15
+        Me.txtAuthorName.ForeColor = System.Drawing.Color.Teal
+        Me.txtAuthorName.Location = New System.Drawing.Point(166, 77)
+        Me.txtAuthorName.Name = "txtAuthorName"
+        Me.txtAuthorName.Size = New System.Drawing.Size(249, 20)
+        Me.txtAuthorName.TabIndex = 14
         '
-        'txtFirstName
+        'txtBookName
         '
-        Me.txtFirstName.ForeColor = System.Drawing.Color.Teal
-        Me.txtFirstName.Location = New System.Drawing.Point(166, 77)
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(249, 20)
-        Me.txtFirstName.TabIndex = 14
+        Me.txtBookName.ForeColor = System.Drawing.Color.Teal
+        Me.txtBookName.Location = New System.Drawing.Point(166, 45)
+        Me.txtBookName.Name = "txtBookName"
+        Me.txtBookName.Size = New System.Drawing.Size(249, 20)
+        Me.txtBookName.TabIndex = 13
         '
-        'txtUsername
+        'txtBookNumber
         '
-        Me.txtUsername.ForeColor = System.Drawing.Color.Teal
-        Me.txtUsername.Location = New System.Drawing.Point(166, 45)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(249, 20)
-        Me.txtUsername.TabIndex = 13
-        '
-        'txtMembershipNumber
-        '
-        Me.txtMembershipNumber.ForeColor = System.Drawing.Color.Teal
-        Me.txtMembershipNumber.Location = New System.Drawing.Point(166, 13)
-        Me.txtMembershipNumber.Name = "txtMembershipNumber"
-        Me.txtMembershipNumber.Size = New System.Drawing.Size(249, 20)
-        Me.txtMembershipNumber.TabIndex = 12
+        Me.txtBookNumber.ForeColor = System.Drawing.Color.Teal
+        Me.txtBookNumber.Location = New System.Drawing.Point(166, 13)
+        Me.txtBookNumber.Name = "txtBookNumber"
+        Me.txtBookNumber.ReadOnly = True
+        Me.txtBookNumber.Size = New System.Drawing.Size(249, 20)
+        Me.txtBookNumber.TabIndex = 12
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Teal
-        Me.Label5.Location = New System.Drawing.Point(87, 16)
+        Me.Label5.Location = New System.Drawing.Point(50, 16)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 17)
+        Me.Label5.Size = New System.Drawing.Size(98, 17)
         Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Book ID:"
+        Me.Label5.Text = "Book Number:"
         '
         'Label4
         '
@@ -152,13 +145,13 @@ Partial Class frmAddBook
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.cmbBookCategory)
         Me.Panel1.Controls.Add(Me.btnBack)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.txtEmailAddress)
-        Me.Panel1.Controls.Add(Me.txtLastName)
-        Me.Panel1.Controls.Add(Me.txtFirstName)
-        Me.Panel1.Controls.Add(Me.txtUsername)
-        Me.Panel1.Controls.Add(Me.txtMembershipNumber)
+        Me.Panel1.Controls.Add(Me.btnAddBook)
+        Me.Panel1.Controls.Add(Me.txtBookQuantity)
+        Me.Panel1.Controls.Add(Me.txtAuthorName)
+        Me.Panel1.Controls.Add(Me.txtBookName)
+        Me.Panel1.Controls.Add(Me.txtBookNumber)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -168,6 +161,16 @@ Partial Class frmAddBook
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(431, 244)
         Me.Panel1.TabIndex = 25
+        '
+        'cmbBookCategory
+        '
+        Me.cmbBookCategory.ForeColor = System.Drawing.Color.Teal
+        Me.cmbBookCategory.FormattingEnabled = True
+        Me.cmbBookCategory.Items.AddRange(New Object() {"Fiction", "Romance", "Drama", "Sci-fi", "Action/Triller"})
+        Me.cmbBookCategory.Location = New System.Drawing.Point(166, 140)
+        Me.cmbBookCategory.Name = "cmbBookCategory"
+        Me.cmbBookCategory.Size = New System.Drawing.Size(249, 21)
+        Me.cmbBookCategory.TabIndex = 27
         '
         'btnBack
         '
@@ -179,15 +182,15 @@ Partial Class frmAddBook
         Me.btnBack.Text = "B&ack"
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnAddBook
         '
-        Me.Button1.ForeColor = System.Drawing.Color.Teal
-        Me.Button1.Location = New System.Drawing.Point(13, 192)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 32)
-        Me.Button1.TabIndex = 25
-        Me.Button1.Text = "&Update Profile"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAddBook.ForeColor = System.Drawing.Color.Teal
+        Me.btnAddBook.Location = New System.Drawing.Point(13, 192)
+        Me.btnAddBook.Name = "btnAddBook"
+        Me.btnAddBook.Size = New System.Drawing.Size(94, 32)
+        Me.btnAddBook.TabIndex = 25
+        Me.btnAddBook.Text = "Add &Book"
+        Me.btnAddBook.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -313,18 +316,17 @@ Partial Class frmAddBook
     End Sub
 
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtEmailAddress As TextBox
-    Friend WithEvents txtLastName As TextBox
-    Friend WithEvents txtFirstName As TextBox
-    Friend WithEvents txtUsername As TextBox
-    Friend WithEvents txtMembershipNumber As TextBox
+    Friend WithEvents txtBookQuantity As TextBox
+    Friend WithEvents txtAuthorName As TextBox
+    Friend WithEvents txtBookName As TextBox
+    Friend WithEvents txtBookNumber As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblPassword As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnBack As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAddBook As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents HowToUseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
@@ -339,4 +341,5 @@ Partial Class frmAddBook
     Friend WithEvents ReserveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BackToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
+    Friend WithEvents cmbBookCategory As ComboBox
 End Class
