@@ -26,9 +26,9 @@ Partial Class frmManageBooks
         Me.ReloadPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.btnResetPassword = New System.Windows.Forms.Button()
-        Me.btnDeleteUser = New System.Windows.Forms.Button()
-        Me.btnBlacklistUser = New System.Windows.Forms.Button()
+        Me.btnResetBook = New System.Windows.Forms.Button()
+        Me.btnDeleteBook = New System.Windows.Forms.Button()
+        Me.btnUpdateBook = New System.Windows.Forms.Button()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BorrowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -42,17 +42,12 @@ Partial Class frmManageBooks
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Lsv2 = New System.Windows.Forms.ListView()
-        Me.book_id = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.bk_name = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.author_name = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.bk_ctry = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.bk_qty = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.txtEmailAddress = New System.Windows.Forms.TextBox()
-        Me.txtLastName = New System.Windows.Forms.TextBox()
-        Me.txtFirstName = New System.Windows.Forms.TextBox()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.txtMembershipNumber = New System.Windows.Forms.TextBox()
+        Me.dgvBooks = New System.Windows.Forms.DataGridView()
+        Me.txtBookCategory = New System.Windows.Forms.TextBox()
+        Me.txtBookQuantity = New System.Windows.Forms.TextBox()
+        Me.txtAuthorName = New System.Windows.Forms.TextBox()
+        Me.txtBookName = New System.Windows.Forms.TextBox()
+        Me.txtBookNumber = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -60,6 +55,7 @@ Partial Class frmManageBooks
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.Panel1.SuspendLayout()
+        CType(Me.dgvBooks, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,35 +88,35 @@ Partial Class frmManageBooks
         Me.btnBack.Text = "B&ack"
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'btnResetPassword
+        'btnResetBook
         '
-        Me.btnResetPassword.ForeColor = System.Drawing.Color.Teal
-        Me.btnResetPassword.Location = New System.Drawing.Point(33, 287)
-        Me.btnResetPassword.Name = "btnResetPassword"
-        Me.btnResetPassword.Size = New System.Drawing.Size(137, 46)
-        Me.btnResetPassword.TabIndex = 39
-        Me.btnResetPassword.Text = "&Reset Fields"
-        Me.btnResetPassword.UseVisualStyleBackColor = True
+        Me.btnResetBook.ForeColor = System.Drawing.Color.Teal
+        Me.btnResetBook.Location = New System.Drawing.Point(33, 287)
+        Me.btnResetBook.Name = "btnResetBook"
+        Me.btnResetBook.Size = New System.Drawing.Size(137, 46)
+        Me.btnResetBook.TabIndex = 39
+        Me.btnResetBook.Text = "&Reset Fields"
+        Me.btnResetBook.UseVisualStyleBackColor = True
         '
-        'btnDeleteUser
+        'btnDeleteBook
         '
-        Me.btnDeleteUser.ForeColor = System.Drawing.Color.Teal
-        Me.btnDeleteUser.Location = New System.Drawing.Point(249, 232)
-        Me.btnDeleteUser.Name = "btnDeleteUser"
-        Me.btnDeleteUser.Size = New System.Drawing.Size(137, 46)
-        Me.btnDeleteUser.TabIndex = 38
-        Me.btnDeleteUser.Text = "&Delete Book"
-        Me.btnDeleteUser.UseVisualStyleBackColor = True
+        Me.btnDeleteBook.ForeColor = System.Drawing.Color.Teal
+        Me.btnDeleteBook.Location = New System.Drawing.Point(249, 232)
+        Me.btnDeleteBook.Name = "btnDeleteBook"
+        Me.btnDeleteBook.Size = New System.Drawing.Size(137, 46)
+        Me.btnDeleteBook.TabIndex = 38
+        Me.btnDeleteBook.Text = "&Delete Book"
+        Me.btnDeleteBook.UseVisualStyleBackColor = True
         '
-        'btnBlacklistUser
+        'btnUpdateBook
         '
-        Me.btnBlacklistUser.ForeColor = System.Drawing.Color.Teal
-        Me.btnBlacklistUser.Location = New System.Drawing.Point(33, 232)
-        Me.btnBlacklistUser.Name = "btnBlacklistUser"
-        Me.btnBlacklistUser.Size = New System.Drawing.Size(137, 46)
-        Me.btnBlacklistUser.TabIndex = 37
-        Me.btnBlacklistUser.Text = "Update &Book"
-        Me.btnBlacklistUser.UseVisualStyleBackColor = True
+        Me.btnUpdateBook.ForeColor = System.Drawing.Color.Teal
+        Me.btnUpdateBook.Location = New System.Drawing.Point(33, 232)
+        Me.btnUpdateBook.Name = "btnUpdateBook"
+        Me.btnUpdateBook.Size = New System.Drawing.Size(137, 46)
+        Me.btnUpdateBook.TabIndex = 37
+        Me.btnUpdateBook.Text = "Update &Book"
+        Me.btnUpdateBook.UseVisualStyleBackColor = True
         '
         'EditToolStripMenuItem
         '
@@ -187,7 +183,7 @@ Partial Class frmManageBooks
         'btnSearch
         '
         Me.btnSearch.ForeColor = System.Drawing.Color.Teal
-        Me.btnSearch.Location = New System.Drawing.Point(291, 19)
+        Me.btnSearch.Location = New System.Drawing.Point(291, 9)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(68, 23)
         Me.btnSearch.TabIndex = 28
@@ -197,7 +193,7 @@ Partial Class frmManageBooks
         'txtSearch
         '
         Me.txtSearch.ForeColor = System.Drawing.Color.Teal
-        Me.txtSearch.Location = New System.Drawing.Point(62, 22)
+        Me.txtSearch.Location = New System.Drawing.Point(62, 12)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(200, 20)
         Me.txtSearch.TabIndex = 27
@@ -207,7 +203,7 @@ Partial Class frmManageBooks
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(1106, 69)
+        Me.Label2.Location = New System.Drawing.Point(977, 69)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(102, 17)
         Me.Label2.TabIndex = 31
@@ -217,104 +213,78 @@ Partial Class frmManageBooks
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Lsv2)
-        Me.Panel1.Controls.Add(Me.txtEmailAddress)
-        Me.Panel1.Controls.Add(Me.txtLastName)
-        Me.Panel1.Controls.Add(Me.txtFirstName)
-        Me.Panel1.Controls.Add(Me.txtUsername)
-        Me.Panel1.Controls.Add(Me.txtMembershipNumber)
+        Me.Panel1.Controls.Add(Me.dgvBooks)
+        Me.Panel1.Controls.Add(Me.txtBookCategory)
+        Me.Panel1.Controls.Add(Me.txtBookQuantity)
+        Me.Panel1.Controls.Add(Me.txtAuthorName)
+        Me.Panel1.Controls.Add(Me.txtBookName)
+        Me.Panel1.Controls.Add(Me.txtBookNumber)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.lblPassword)
         Me.Panel1.Controls.Add(Me.btnBack)
-        Me.Panel1.Controls.Add(Me.btnResetPassword)
-        Me.Panel1.Controls.Add(Me.btnDeleteUser)
-        Me.Panel1.Controls.Add(Me.btnBlacklistUser)
+        Me.Panel1.Controls.Add(Me.btnResetBook)
+        Me.Panel1.Controls.Add(Me.btnDeleteBook)
+        Me.Panel1.Controls.Add(Me.btnUpdateBook)
         Me.Panel1.Controls.Add(Me.btnSearch)
         Me.Panel1.Controls.Add(Me.txtSearch)
         Me.Panel1.Location = New System.Drawing.Point(13, 105)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1195, 349)
+        Me.Panel1.Size = New System.Drawing.Size(1066, 349)
         Me.Panel1.TabIndex = 29
         '
-        'Lsv2
+        'dgvBooks
         '
-        Me.Lsv2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.book_id, Me.bk_name, Me.author_name, Me.bk_ctry, Me.bk_qty})
-        Me.Lsv2.FullRowSelect = True
-        Me.Lsv2.GridLines = True
-        Me.Lsv2.Location = New System.Drawing.Point(439, 19)
-        Me.Lsv2.Name = "Lsv2"
-        Me.Lsv2.Size = New System.Drawing.Size(741, 314)
-        Me.Lsv2.TabIndex = 52
-        Me.Lsv2.UseCompatibleStateImageBehavior = False
-        Me.Lsv2.View = System.Windows.Forms.View.Details
+        Me.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvBooks.Location = New System.Drawing.Point(417, 22)
+        Me.dgvBooks.Name = "dgvBooks"
+        Me.dgvBooks.Size = New System.Drawing.Size(644, 311)
+        Me.dgvBooks.TabIndex = 52
         '
-        'book_id
+        'txtBookCategory
         '
-        Me.book_id.Text = "Book ID "
-        Me.book_id.Width = 62
+        Me.txtBookCategory.ForeColor = System.Drawing.Color.Teal
+        Me.txtBookCategory.Location = New System.Drawing.Point(140, 179)
+        Me.txtBookCategory.Name = "txtBookCategory"
+        Me.txtBookCategory.ReadOnly = True
+        Me.txtBookCategory.Size = New System.Drawing.Size(249, 20)
+        Me.txtBookCategory.TabIndex = 51
         '
-        'bk_name
+        'txtBookQuantity
         '
-        Me.bk_name.Text = "Book Name"
-        Me.bk_name.Width = 246
+        Me.txtBookQuantity.ForeColor = System.Drawing.Color.Teal
+        Me.txtBookQuantity.Location = New System.Drawing.Point(140, 147)
+        Me.txtBookQuantity.Name = "txtBookQuantity"
+        Me.txtBookQuantity.Size = New System.Drawing.Size(249, 20)
+        Me.txtBookQuantity.TabIndex = 50
         '
-        'author_name
+        'txtAuthorName
         '
-        Me.author_name.Text = "Author Name"
-        Me.author_name.Width = 183
+        Me.txtAuthorName.ForeColor = System.Drawing.Color.Teal
+        Me.txtAuthorName.Location = New System.Drawing.Point(140, 115)
+        Me.txtAuthorName.Name = "txtAuthorName"
+        Me.txtAuthorName.Size = New System.Drawing.Size(249, 20)
+        Me.txtAuthorName.TabIndex = 49
         '
-        'bk_ctry
+        'txtBookName
         '
-        Me.bk_ctry.Text = "Book Category"
-        Me.bk_ctry.Width = 150
+        Me.txtBookName.ForeColor = System.Drawing.Color.Teal
+        Me.txtBookName.Location = New System.Drawing.Point(140, 83)
+        Me.txtBookName.Name = "txtBookName"
+        Me.txtBookName.ReadOnly = True
+        Me.txtBookName.Size = New System.Drawing.Size(249, 20)
+        Me.txtBookName.TabIndex = 48
         '
-        'bk_qty
+        'txtBookNumber
         '
-        Me.bk_qty.Text = "Book Quantity"
-        Me.bk_qty.Width = 95
-        '
-        'txtEmailAddress
-        '
-        Me.txtEmailAddress.ForeColor = System.Drawing.Color.Teal
-        Me.txtEmailAddress.Location = New System.Drawing.Point(140, 179)
-        Me.txtEmailAddress.Name = "txtEmailAddress"
-        Me.txtEmailAddress.Size = New System.Drawing.Size(249, 20)
-        Me.txtEmailAddress.TabIndex = 51
-        '
-        'txtLastName
-        '
-        Me.txtLastName.ForeColor = System.Drawing.Color.Teal
-        Me.txtLastName.Location = New System.Drawing.Point(140, 147)
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(249, 20)
-        Me.txtLastName.TabIndex = 50
-        '
-        'txtFirstName
-        '
-        Me.txtFirstName.ForeColor = System.Drawing.Color.Teal
-        Me.txtFirstName.Location = New System.Drawing.Point(140, 115)
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(249, 20)
-        Me.txtFirstName.TabIndex = 49
-        '
-        'txtUsername
-        '
-        Me.txtUsername.ForeColor = System.Drawing.Color.Teal
-        Me.txtUsername.Location = New System.Drawing.Point(140, 83)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(249, 20)
-        Me.txtUsername.TabIndex = 48
-        '
-        'txtMembershipNumber
-        '
-        Me.txtMembershipNumber.ForeColor = System.Drawing.Color.Teal
-        Me.txtMembershipNumber.Location = New System.Drawing.Point(140, 51)
-        Me.txtMembershipNumber.Name = "txtMembershipNumber"
-        Me.txtMembershipNumber.Size = New System.Drawing.Size(249, 20)
-        Me.txtMembershipNumber.TabIndex = 47
+        Me.txtBookNumber.ForeColor = System.Drawing.Color.Teal
+        Me.txtBookNumber.Location = New System.Drawing.Point(140, 51)
+        Me.txtBookNumber.Name = "txtBookNumber"
+        Me.txtBookNumber.ReadOnly = True
+        Me.txtBookNumber.Size = New System.Drawing.Size(249, 20)
+        Me.txtBookNumber.TabIndex = 47
         '
         'Label6
         '
@@ -332,11 +302,11 @@ Partial Class frmManageBooks
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Teal
-        Me.Label5.Location = New System.Drawing.Point(61, 54)
+        Me.Label5.Location = New System.Drawing.Point(24, 54)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 17)
+        Me.Label5.Size = New System.Drawing.Size(98, 17)
         Me.Label5.TabIndex = 45
-        Me.Label5.Text = "Book ID:"
+        Me.Label5.Text = "Book Number:"
         '
         'Label4
         '
@@ -376,7 +346,7 @@ Partial Class frmManageBooks
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1220, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1091, 24)
         Me.MenuStrip1.TabIndex = 28
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -385,7 +355,7 @@ Partial Class frmManageBooks
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(1220, 466)
+        Me.ClientSize = New System.Drawing.Size(1091, 466)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel1)
@@ -395,6 +365,7 @@ Partial Class frmManageBooks
         Me.Text = "frmManageBooks"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.dgvBooks, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -406,9 +377,9 @@ Partial Class frmManageBooks
     Friend WithEvents ReloadPageToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnBack As Button
-    Friend WithEvents btnResetPassword As Button
-    Friend WithEvents btnDeleteUser As Button
-    Friend WithEvents btnBlacklistUser As Button
+    Friend WithEvents btnResetBook As Button
+    Friend WithEvents btnDeleteBook As Button
+    Friend WithEvents btnUpdateBook As Button
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BorrowToolStripMenuItem As ToolStripMenuItem
@@ -423,20 +394,15 @@ Partial Class frmManageBooks
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents Lsv2 As ListView
-    Friend WithEvents book_id As ColumnHeader
-    Friend WithEvents bk_name As ColumnHeader
-    Friend WithEvents author_name As ColumnHeader
-    Friend WithEvents bk_ctry As ColumnHeader
-    Friend WithEvents bk_qty As ColumnHeader
-    Friend WithEvents txtEmailAddress As TextBox
-    Friend WithEvents txtLastName As TextBox
-    Friend WithEvents txtFirstName As TextBox
-    Friend WithEvents txtUsername As TextBox
-    Friend WithEvents txtMembershipNumber As TextBox
+    Friend WithEvents txtBookCategory As TextBox
+    Friend WithEvents txtBookQuantity As TextBox
+    Friend WithEvents txtAuthorName As TextBox
+    Friend WithEvents txtBookName As TextBox
+    Friend WithEvents txtBookNumber As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblPassword As Label
+    Friend WithEvents dgvBooks As DataGridView
 End Class

@@ -208,14 +208,17 @@ Public Class BookService
     End Function
 
     Private Function RandomNumber() As String
-        ''generate and return a random number between 000 and 999
+        ''
         Randomize()
 
+        ''
         Dim intRandom As Integer = 0
         Dim strRandom As String = Nothing
 
+        ''
         intRandom = CInt((999 * Rnd()) + 1)
 
+        ''
         If intRandom.ToString().Length = 1 Then
             strRandom = String.Format("00{0}", intRandom.ToString())
         ElseIf intRandom.ToString().Length = 2 Then
