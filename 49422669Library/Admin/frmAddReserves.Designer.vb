@@ -44,7 +44,17 @@ Partial Class frmAddReserves
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HowToUseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnBack = New System.Windows.Forms.Button()
+        Me.btnReserve = New System.Windows.Forms.Button()
+        Me.txtMembershipNumber = New System.Windows.Forms.TextBox()
+        Me.txtBookNumber = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblPassword = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -52,7 +62,7 @@ Partial Class frmAddReserves
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(284, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(456, 24)
         Me.MenuStrip1.TabIndex = 29
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -92,7 +102,7 @@ Partial Class frmAddReserves
         '
         Me.UsersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddUserToolStripMenuItem, Me.ManageUserToolStripMenuItem})
         Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
-        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.UsersToolStripMenuItem.Text = "&Users"
         '
         'AddUserToolStripMenuItem
@@ -111,7 +121,7 @@ Partial Class frmAddReserves
         '
         Me.BooksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddBookToolStripMenuItem, Me.ManageBookToolStripMenuItem})
         Me.BooksToolStripMenuItem.Name = "BooksToolStripMenuItem"
-        Me.BooksToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BooksToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BooksToolStripMenuItem.Text = "&Books"
         '
         'AddBookToolStripMenuItem
@@ -130,7 +140,7 @@ Partial Class frmAddReserves
         '
         Me.BorrowsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddBorrowsToolStripMenuItem, Me.ManageBorrowsToolStripMenuItem})
         Me.BorrowsToolStripMenuItem.Name = "BorrowsToolStripMenuItem"
-        Me.BorrowsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BorrowsToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BorrowsToolStripMenuItem.Text = "Borro&ws"
         '
         'AddBorrowsToolStripMenuItem
@@ -149,26 +159,26 @@ Partial Class frmAddReserves
         '
         Me.ReservesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddReservesToolStripMenuItem, Me.ManageReservesToolStripMenuItem})
         Me.ReservesToolStripMenuItem.Name = "ReservesToolStripMenuItem"
-        Me.ReservesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReservesToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.ReservesToolStripMenuItem.Text = "&Reserves"
         '
         'AddReservesToolStripMenuItem
         '
         Me.AddReservesToolStripMenuItem.Enabled = False
         Me.AddReservesToolStripMenuItem.Name = "AddReservesToolStripMenuItem"
-        Me.AddReservesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AddReservesToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.AddReservesToolStripMenuItem.Text = "&Add"
         '
         'ManageReservesToolStripMenuItem
         '
         Me.ManageReservesToolStripMenuItem.Name = "ManageReservesToolStripMenuItem"
-        Me.ManageReservesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ManageReservesToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.ManageReservesToolStripMenuItem.Text = "&Manage"
         '
         'BackToolStripMenuItem
         '
         Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
-        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BackToolStripMenuItem.Text = "B&ack"
         '
         'HelpToolStripMenuItem
@@ -190,17 +200,122 @@ Partial Class frmAddReserves
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.AboutToolStripMenuItem.Text = "About "
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(338, 49)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(109, 17)
+        Me.Label2.TabIndex = 38
+        Me.Label2.Text = "Reserve a Book"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.btnBack)
+        Me.Panel1.Controls.Add(Me.btnReserve)
+        Me.Panel1.Controls.Add(Me.txtMembershipNumber)
+        Me.Panel1.Controls.Add(Me.txtBookNumber)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.lblPassword)
+        Me.Panel1.Location = New System.Drawing.Point(16, 93)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(431, 203)
+        Me.Panel1.TabIndex = 36
+        '
+        'btnBack
+        '
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBack.ForeColor = System.Drawing.Color.Teal
+        Me.btnBack.Location = New System.Drawing.Point(320, 151)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(94, 32)
+        Me.btnBack.TabIndex = 37
+        Me.btnBack.Text = "B&ack"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
+        'btnReserve
+        '
+        Me.btnReserve.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReserve.ForeColor = System.Drawing.Color.Teal
+        Me.btnReserve.Location = New System.Drawing.Point(20, 151)
+        Me.btnReserve.Name = "btnReserve"
+        Me.btnReserve.Size = New System.Drawing.Size(94, 32)
+        Me.btnReserve.TabIndex = 36
+        Me.btnReserve.Text = "&Reserve Book"
+        Me.btnReserve.UseVisualStyleBackColor = True
+        '
+        'txtMembershipNumber
+        '
+        Me.txtMembershipNumber.ForeColor = System.Drawing.Color.Teal
+        Me.txtMembershipNumber.Location = New System.Drawing.Point(166, 98)
+        Me.txtMembershipNumber.Name = "txtMembershipNumber"
+        Me.txtMembershipNumber.Size = New System.Drawing.Size(249, 20)
+        Me.txtMembershipNumber.TabIndex = 15
+        '
+        'txtBookNumber
+        '
+        Me.txtBookNumber.ForeColor = System.Drawing.Color.Teal
+        Me.txtBookNumber.Location = New System.Drawing.Point(165, 31)
+        Me.txtBookNumber.Name = "txtBookNumber"
+        Me.txtBookNumber.Size = New System.Drawing.Size(249, 20)
+        Me.txtBookNumber.TabIndex = 13
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Teal
+        Me.Label3.Location = New System.Drawing.Point(3, 101)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(143, 17)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Membership Number:"
+        '
+        'lblPassword
+        '
+        Me.lblPassword.AutoSize = True
+        Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPassword.ForeColor = System.Drawing.Color.Teal
+        Me.lblPassword.Location = New System.Drawing.Point(48, 34)
+        Me.lblPassword.Name = "lblPassword"
+        Me.lblPassword.Size = New System.Drawing.Size(98, 17)
+        Me.lblPassword.TabIndex = 5
+        Me.lblPassword.Text = "Book Number:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(10, 35)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(251, 36)
+        Me.Label1.TabIndex = 37
+        Me.Label1.Text = "46422669 Library"
+        '
         'frmAddReserves
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.BackColor = System.Drawing.Color.Teal
+        Me.ClientSize = New System.Drawing.Size(456, 309)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmAddReserves"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmAddReserves"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -228,4 +343,13 @@ Partial Class frmAddReserves
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HowToUseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnBack As Button
+    Friend WithEvents btnReserve As Button
+    Friend WithEvents txtMembershipNumber As TextBox
+    Friend WithEvents txtBookNumber As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents lblPassword As Label
+    Friend WithEvents Label1 As Label
 End Class

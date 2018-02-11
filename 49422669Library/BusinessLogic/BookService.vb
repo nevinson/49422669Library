@@ -155,7 +155,7 @@ Public Class BookService
         Return blResult
     End Function
 
-    Public Function UpdateQuantity(ByVal _book As Book)
+    Public Function UpdateQuantity(ByVal _book As Book) As Boolean
         ''
         Dim dbCon As New OleDbConnection()
         Dim dbCmd As New OleDbCommand()

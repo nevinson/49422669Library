@@ -26,20 +26,11 @@ Partial Class frmAddBorrow
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.btnBorrow = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtMembershipNumber = New System.Windows.Forms.TextBox()
+        Me.txtBookNumber = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.lblPassword = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -63,6 +54,7 @@ Partial Class frmAddBorrow
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HowToUseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.dteReturnDate = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -94,137 +86,56 @@ Partial Class frmAddBorrow
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.dteReturnDate)
         Me.Panel1.Controls.Add(Me.btnBack)
-        Me.Panel1.Controls.Add(Me.TextBox7)
         Me.Panel1.Controls.Add(Me.btnBorrow)
-        Me.Panel1.Controls.Add(Me.TextBox6)
-        Me.Panel1.Controls.Add(Me.TextBox5)
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.txtMembershipNumber)
+        Me.Panel1.Controls.Add(Me.txtBookNumber)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.lblPassword)
         Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Location = New System.Drawing.Point(13, 101)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(431, 290)
+        Me.Panel1.Size = New System.Drawing.Size(431, 237)
         Me.Panel1.TabIndex = 13
         '
         'btnBack
         '
         Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.Color.Teal
-        Me.btnBack.Location = New System.Drawing.Point(320, 242)
+        Me.btnBack.Location = New System.Drawing.Point(320, 183)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(94, 32)
         Me.btnBack.TabIndex = 31
         Me.btnBack.Text = "B&ack"
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'TextBox7
-        '
-        Me.TextBox7.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox7.Location = New System.Drawing.Point(165, 201)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox7.TabIndex = 18
-        '
         'btnBorrow
         '
         Me.btnBorrow.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBorrow.ForeColor = System.Drawing.Color.Teal
-        Me.btnBorrow.Location = New System.Drawing.Point(20, 243)
+        Me.btnBorrow.Location = New System.Drawing.Point(20, 184)
         Me.btnBorrow.Name = "btnBorrow"
         Me.btnBorrow.Size = New System.Drawing.Size(94, 32)
         Me.btnBorrow.TabIndex = 30
         Me.btnBorrow.Text = "&Borrow"
         Me.btnBorrow.UseVisualStyleBackColor = True
         '
-        'TextBox6
+        'txtMembershipNumber
         '
-        Me.TextBox6.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox6.Location = New System.Drawing.Point(166, 169)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox6.TabIndex = 17
+        Me.txtMembershipNumber.ForeColor = System.Drawing.Color.Teal
+        Me.txtMembershipNumber.Location = New System.Drawing.Point(165, 76)
+        Me.txtMembershipNumber.Name = "txtMembershipNumber"
+        Me.txtMembershipNumber.Size = New System.Drawing.Size(249, 20)
+        Me.txtMembershipNumber.TabIndex = 14
         '
-        'TextBox5
+        'txtBookNumber
         '
-        Me.TextBox5.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox5.Location = New System.Drawing.Point(165, 137)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox5.TabIndex = 16
-        '
-        'TextBox4
-        '
-        Me.TextBox4.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox4.Location = New System.Drawing.Point(166, 105)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox4.TabIndex = 15
-        '
-        'TextBox3
-        '
-        Me.TextBox3.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox3.Location = New System.Drawing.Point(165, 73)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox3.TabIndex = 14
-        '
-        'TextBox2
-        '
-        Me.TextBox2.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox2.Location = New System.Drawing.Point(165, 41)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox2.TabIndex = 13
-        '
-        'TextBox1
-        '
-        Me.TextBox1.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox1.Location = New System.Drawing.Point(165, 9)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox1.TabIndex = 12
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Teal
-        Me.Label7.Location = New System.Drawing.Point(17, 204)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 17)
-        Me.Label7.TabIndex = 11
-        Me.Label7.Text = "Number of Copies:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Teal
-        Me.Label6.Location = New System.Drawing.Point(47, 172)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(95, 17)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "Author Name:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Teal
-        Me.Label5.Location = New System.Drawing.Point(81, 108)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 17)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Book ID:"
+        Me.txtBookNumber.ForeColor = System.Drawing.Color.Teal
+        Me.txtBookNumber.Location = New System.Drawing.Point(165, 17)
+        Me.txtBookNumber.Name = "txtBookNumber"
+        Me.txtBookNumber.Size = New System.Drawing.Size(249, 20)
+        Me.txtBookNumber.TabIndex = 12
         '
         'Label4
         '
@@ -233,42 +144,31 @@ Partial Class frmAddBorrow
         Me.Label4.ForeColor = System.Drawing.Color.Teal
         Me.Label4.Location = New System.Drawing.Point(57, 140)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 17)
+        Me.Label4.Size = New System.Drawing.Size(89, 17)
         Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Book Name:"
+        Me.Label4.Text = "Return Date:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Teal
-        Me.Label3.Location = New System.Drawing.Point(45, 76)
+        Me.Label3.Location = New System.Drawing.Point(3, 79)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(97, 17)
+        Me.Label3.Size = New System.Drawing.Size(143, 17)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Borrow Name:"
-        '
-        'lblPassword
-        '
-        Me.lblPassword.AutoSize = True
-        Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPassword.ForeColor = System.Drawing.Color.Teal
-        Me.lblPassword.Location = New System.Drawing.Point(56, 44)
-        Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(86, 17)
-        Me.lblPassword.TabIndex = 5
-        Me.lblPassword.Text = "Contact No.:"
+        Me.Label3.Text = "Membership Number:"
         '
         'lblUsername
         '
         Me.lblUsername.AutoSize = True
         Me.lblUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername.ForeColor = System.Drawing.Color.Teal
-        Me.lblUsername.Location = New System.Drawing.Point(69, 12)
+        Me.lblUsername.Location = New System.Drawing.Point(48, 20)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(73, 17)
+        Me.lblUsername.Size = New System.Drawing.Size(98, 17)
         Me.lblUsername.TabIndex = 4
-        Me.lblUsername.Text = "Borrow ID:"
+        Me.lblUsername.Text = "Book Number:"
         '
         'MenuStrip1
         '
@@ -315,7 +215,7 @@ Partial Class frmAddBorrow
         '
         Me.UsersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddUserToolStripMenuItem, Me.ManageUserToolStripMenuItem})
         Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
-        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.UsersToolStripMenuItem.Text = "&Users"
         '
         'AddUserToolStripMenuItem
@@ -334,7 +234,7 @@ Partial Class frmAddBorrow
         '
         Me.BooksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddBookToolStripMenuItem, Me.ManageBookToolStripMenuItem})
         Me.BooksToolStripMenuItem.Name = "BooksToolStripMenuItem"
-        Me.BooksToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BooksToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BooksToolStripMenuItem.Text = "&Books"
         '
         'AddBookToolStripMenuItem
@@ -353,27 +253,27 @@ Partial Class frmAddBorrow
         '
         Me.BorrowsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddBorrowsToolStripMenuItem, Me.ManageBorrowsToolStripMenuItem})
         Me.BorrowsToolStripMenuItem.Name = "BorrowsToolStripMenuItem"
-        Me.BorrowsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BorrowsToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BorrowsToolStripMenuItem.Text = "Borro&ws"
         '
         'AddBorrowsToolStripMenuItem
         '
         Me.AddBorrowsToolStripMenuItem.Enabled = False
         Me.AddBorrowsToolStripMenuItem.Name = "AddBorrowsToolStripMenuItem"
-        Me.AddBorrowsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AddBorrowsToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.AddBorrowsToolStripMenuItem.Text = "&Add"
         '
         'ManageBorrowsToolStripMenuItem
         '
         Me.ManageBorrowsToolStripMenuItem.Name = "ManageBorrowsToolStripMenuItem"
-        Me.ManageBorrowsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ManageBorrowsToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.ManageBorrowsToolStripMenuItem.Text = "&Manage"
         '
         'ReservesToolStripMenuItem
         '
         Me.ReservesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddReservesToolStripMenuItem, Me.ManageReservesToolStripMenuItem})
         Me.ReservesToolStripMenuItem.Name = "ReservesToolStripMenuItem"
-        Me.ReservesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReservesToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.ReservesToolStripMenuItem.Text = "&Reserves"
         '
         'AddReservesToolStripMenuItem
@@ -391,7 +291,7 @@ Partial Class frmAddBorrow
         'BackToolStripMenuItem
         '
         Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
-        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BackToolStripMenuItem.Text = "B&ack"
         '
         'HelpToolStripMenuItem
@@ -413,12 +313,19 @@ Partial Class frmAddBorrow
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.AboutToolStripMenuItem.Text = "About "
         '
+        'dteReturnDate
+        '
+        Me.dteReturnDate.Location = New System.Drawing.Point(165, 137)
+        Me.dteReturnDate.Name = "dteReturnDate"
+        Me.dteReturnDate.Size = New System.Drawing.Size(249, 20)
+        Me.dteReturnDate.TabIndex = 32
+        '
         'frmAddBorrow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(456, 412)
+        Me.ClientSize = New System.Drawing.Size(456, 359)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
@@ -439,18 +346,9 @@ Partial Class frmAddBorrow
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents lblPassword As Label
     Friend WithEvents lblUsername As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents txtMembershipNumber As TextBox
+    Friend WithEvents txtBookNumber As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnBorrow As Button
@@ -477,4 +375,5 @@ Partial Class frmAddBorrow
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HowToUseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents dteReturnDate As DateTimePicker
 End Class
