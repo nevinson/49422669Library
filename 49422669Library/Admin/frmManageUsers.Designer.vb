@@ -26,7 +26,7 @@ Partial Class frmManageUsers
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtNewPassword = New System.Windows.Forms.TextBox()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.btnResetPassword = New System.Windows.Forms.Button()
+        Me.btnUnBlackListUser = New System.Windows.Forms.Button()
         Me.btnDeleteUser = New System.Windows.Forms.Button()
         Me.btnBlacklistUser = New System.Windows.Forms.Button()
         Me.txtEmailAddress = New System.Windows.Forms.TextBox()
@@ -52,14 +52,10 @@ Partial Class frmManageUsers
         Me.ReserveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Lsv3 = New System.Windows.Forms.ListView()
-        Me.id = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.lname = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.fname = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.mname = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.uname = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.dgvUsers = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -77,10 +73,10 @@ Partial Class frmManageUsers
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Lsv3)
+        Me.Panel1.Controls.Add(Me.dgvUsers)
         Me.Panel1.Controls.Add(Me.txtNewPassword)
         Me.Panel1.Controls.Add(Me.btnBack)
-        Me.Panel1.Controls.Add(Me.btnResetPassword)
+        Me.Panel1.Controls.Add(Me.btnUnBlackListUser)
         Me.Panel1.Controls.Add(Me.btnDeleteUser)
         Me.Panel1.Controls.Add(Me.btnBlacklistUser)
         Me.Panel1.Controls.Add(Me.txtEmailAddress)
@@ -122,15 +118,15 @@ Partial Class frmManageUsers
         Me.btnBack.Text = "B&ack"
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'btnResetPassword
+        'btnUnBlackListUser
         '
-        Me.btnResetPassword.ForeColor = System.Drawing.Color.Teal
-        Me.btnResetPassword.Location = New System.Drawing.Point(36, 339)
-        Me.btnResetPassword.Name = "btnResetPassword"
-        Me.btnResetPassword.Size = New System.Drawing.Size(137, 46)
-        Me.btnResetPassword.TabIndex = 39
-        Me.btnResetPassword.Text = "&Reset Password"
-        Me.btnResetPassword.UseVisualStyleBackColor = True
+        Me.btnUnBlackListUser.ForeColor = System.Drawing.Color.Teal
+        Me.btnUnBlackListUser.Location = New System.Drawing.Point(36, 339)
+        Me.btnUnBlackListUser.Name = "btnUnBlackListUser"
+        Me.btnUnBlackListUser.Size = New System.Drawing.Size(137, 46)
+        Me.btnUnBlackListUser.TabIndex = 39
+        Me.btnUnBlackListUser.Text = "&UnBlacklist User"
+        Me.btnUnBlackListUser.UseVisualStyleBackColor = True
         '
         'btnDeleteUser
         '
@@ -235,7 +231,7 @@ Partial Class frmManageUsers
         'btnSearch
         '
         Me.btnSearch.ForeColor = System.Drawing.Color.Teal
-        Me.btnSearch.Location = New System.Drawing.Point(291, 19)
+        Me.btnSearch.Location = New System.Drawing.Point(291, 14)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(68, 23)
         Me.btnSearch.TabIndex = 28
@@ -245,7 +241,7 @@ Partial Class frmManageUsers
         'txtSearch
         '
         Me.txtSearch.ForeColor = System.Drawing.Color.Teal
-        Me.txtSearch.Location = New System.Drawing.Point(62, 22)
+        Me.txtSearch.Location = New System.Drawing.Point(62, 17)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(200, 20)
         Me.txtSearch.TabIndex = 27
@@ -340,41 +336,13 @@ Partial Class frmManageUsers
         Me.Label1.TabIndex = 26
         Me.Label1.Text = "46422669 Library"
         '
-        'Lsv3
+        'dgvUsers
         '
-        Me.Lsv3.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.id, Me.lname, Me.fname, Me.mname, Me.uname})
-        Me.Lsv3.FullRowSelect = True
-        Me.Lsv3.GridLines = True
-        Me.Lsv3.Location = New System.Drawing.Point(426, 66)
-        Me.Lsv3.Name = "Lsv3"
-        Me.Lsv3.Size = New System.Drawing.Size(668, 319)
-        Me.Lsv3.TabIndex = 42
-        Me.Lsv3.UseCompatibleStateImageBehavior = False
-        Me.Lsv3.View = System.Windows.Forms.View.Details
-        '
-        'id
-        '
-        Me.id.Text = "ID"
-        '
-        'lname
-        '
-        Me.lname.Text = "Last Name"
-        Me.lname.Width = 118
-        '
-        'fname
-        '
-        Me.fname.Text = "First Name"
-        Me.fname.Width = 108
-        '
-        'mname
-        '
-        Me.mname.Text = "Middle Name"
-        Me.mname.Width = 105
-        '
-        'uname
-        '
-        Me.uname.Text = "Student Number"
-        Me.uname.Width = 110
+        Me.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvUsers.Location = New System.Drawing.Point(437, 66)
+        Me.dgvUsers.Name = "dgvUsers"
+        Me.dgvUsers.Size = New System.Drawing.Size(667, 297)
+        Me.dgvUsers.TabIndex = 42
         '
         'frmManageUsers
         '
@@ -394,6 +362,7 @@ Partial Class frmManageUsers
         Me.Panel1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -419,7 +388,7 @@ Partial Class frmManageUsers
     Friend WithEvents txtMembershipNumber As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents btnBack As Button
-    Friend WithEvents btnResetPassword As Button
+    Friend WithEvents btnUnBlackListUser As Button
     Friend WithEvents btnDeleteUser As Button
     Friend WithEvents btnBlacklistUser As Button
     Friend WithEvents txtEmailAddress As TextBox
@@ -429,10 +398,5 @@ Partial Class frmManageUsers
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtNewPassword As TextBox
-    Friend WithEvents Lsv3 As ListView
-    Friend WithEvents id As ColumnHeader
-    Friend WithEvents lname As ColumnHeader
-    Friend WithEvents fname As ColumnHeader
-    Friend WithEvents mname As ColumnHeader
-    Friend WithEvents uname As ColumnHeader
+    Friend WithEvents dgvUsers As DataGridView
 End Class

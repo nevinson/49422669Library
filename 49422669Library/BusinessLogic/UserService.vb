@@ -8,6 +8,55 @@ Public Class UserService
     Dim blResult As Boolean = False
     Dim objConstants As New Constants()
 
+    Public Function GetAll() As DataTable
+        ''
+        Dim dbCon As New OleDbConnection()
+        Dim dbCmd As New OleDbCommand()
+        Dim dbTable As New DataTable()
+        sql = "GetAllUsers"
+
+        ''
+        dbCon.ConnectionString = objConstants.ConnectionString()
+        dbCon.Open()
+
+        ''
+        dbCmd.Connection = dbCon
+        dbCmd.CommandText = sql
+        dbCmd.CommandType = CommandType.StoredProcedure
+
+        ''
+        dbTable.Load(dbCmd.ExecuteReader())
+
+        ''
+        Return dbTable
+    End Function
+
+    Public Function GetUserByMembershipNumber(ByVal strMembershipNumber As String) As DataTable
+        ''
+        Dim dbCon As New OleDbConnection()
+        Dim dbCmd As New OleDbCommand()
+        Dim dbTable As New DataTable()
+        sql = "GetUsersByMembershipNumber"
+
+        ''
+        dbCon.ConnectionString = objConstants.ConnectionString()
+        dbCon.Open()
+
+        ''
+        dbCmd.Connection = dbCon
+        dbCmd.CommandText = sql
+        dbCmd.CommandType = CommandType.StoredProcedure
+
+        ''
+        dbCmd.Parameters.AddWithValue("@membershipNumber", strMembershipNumber)
+
+        ''
+        dbTable.Load(dbCmd.ExecuteReader())
+
+        ''
+        Return dbTable
+    End Function
+
     Public Function Authenticate(ByVal strUsername As String, ByVal strPassword As String) As DataTable
         ''
         Dim dbCon As New OleDbConnection()
