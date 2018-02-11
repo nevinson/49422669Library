@@ -1,4 +1,29 @@
 ﻿Public Class frmReserve
+    ''
+    Dim objReserveService As New ReserveService()
+
+    Private Sub frmReserve_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ''
+        txtMembershipNumber.Text = frmLogIn.MembershipNumber
+    End Sub
+
+    Private Sub btnReserve_Click(sender As Object, e As EventArgs) Handles btnReserve.Click
+        ''
+        Dim newReserve As New BookReserve
+
+        ''
+        If txtMembershipNumber.Text.Length > 5 And txtBookNumber.Text.Length > 5 Then
+            newReserve.BookNumber = txtBookNumber.Text
+            newReserve.MembershipNumber = txtMembershipNumber.Text
+            newReserve.ReserveDate = DateTime.Now.ToLongDateString()
+            If objReserveService.Create(newReserve) Then
+                MessageBox.Show("Book successfully reserved.", "Reserve Book", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("Book could not be reserved.", "Reserve Book", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        End If
+    End Sub
+
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         '' show the user dashboard form
         frmUserDashboard.Show()

@@ -23,25 +23,13 @@ Partial Class frmReserve
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.btnBorrow = New System.Windows.Forms.Button()
+        Me.btnReserve = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtMembershipNumber = New System.Windows.Forms.TextBox()
+        Me.txtBookNumber = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
-        Me.lblUsername = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -65,23 +53,23 @@ Partial Class frmReserve
         '
         Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.Color.Teal
-        Me.btnBack.Location = New System.Drawing.Point(320, 273)
+        Me.btnBack.Location = New System.Drawing.Point(320, 151)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(94, 32)
         Me.btnBack.TabIndex = 37
         Me.btnBack.Text = "B&ack"
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'btnBorrow
+        'btnReserve
         '
-        Me.btnBorrow.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBorrow.ForeColor = System.Drawing.Color.Teal
-        Me.btnBorrow.Location = New System.Drawing.Point(20, 273)
-        Me.btnBorrow.Name = "btnBorrow"
-        Me.btnBorrow.Size = New System.Drawing.Size(94, 32)
-        Me.btnBorrow.TabIndex = 36
-        Me.btnBorrow.Text = "&Borrow"
-        Me.btnBorrow.UseVisualStyleBackColor = True
+        Me.btnReserve.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReserve.ForeColor = System.Drawing.Color.Teal
+        Me.btnReserve.Location = New System.Drawing.Point(20, 151)
+        Me.btnReserve.Name = "btnReserve"
+        Me.btnReserve.Size = New System.Drawing.Size(94, 32)
+        Me.btnReserve.TabIndex = 36
+        Me.btnReserve.Text = "&Reserve Book"
+        Me.btnReserve.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -98,181 +86,55 @@ Partial Class frmReserve
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.btnBack)
-        Me.Panel1.Controls.Add(Me.TextBox7)
-        Me.Panel1.Controls.Add(Me.btnBorrow)
-        Me.Panel1.Controls.Add(Me.DateTimePicker1)
-        Me.Panel1.Controls.Add(Me.TextBox6)
-        Me.Panel1.Controls.Add(Me.TextBox5)
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.btnReserve)
+        Me.Panel1.Controls.Add(Me.txtMembershipNumber)
+        Me.Panel1.Controls.Add(Me.txtBookNumber)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.lblPassword)
-        Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Location = New System.Drawing.Point(13, 108)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(431, 318)
+        Me.Panel1.Size = New System.Drawing.Size(431, 209)
         Me.Panel1.TabIndex = 33
         '
-        'Label8
+        'txtMembershipNumber
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Teal
-        Me.Label8.Location = New System.Drawing.Point(17, 236)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(125, 17)
-        Me.Label8.TabIndex = 38
-        Me.Label8.Text = "Number of Copies:"
+        Me.txtMembershipNumber.ForeColor = System.Drawing.Color.Teal
+        Me.txtMembershipNumber.Location = New System.Drawing.Point(166, 98)
+        Me.txtMembershipNumber.Name = "txtMembershipNumber"
+        Me.txtMembershipNumber.ReadOnly = True
+        Me.txtMembershipNumber.Size = New System.Drawing.Size(249, 20)
+        Me.txtMembershipNumber.TabIndex = 15
         '
-        'TextBox7
+        'txtBookNumber
         '
-        Me.TextBox7.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox7.Location = New System.Drawing.Point(166, 233)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox7.TabIndex = 19
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.CalendarForeColor = System.Drawing.Color.Teal
-        Me.DateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Teal
-        Me.DateTimePicker1.Location = New System.Drawing.Point(165, 201)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(249, 20)
-        Me.DateTimePicker1.TabIndex = 18
-        '
-        'TextBox6
-        '
-        Me.TextBox6.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox6.Location = New System.Drawing.Point(166, 169)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox6.TabIndex = 17
-        '
-        'TextBox5
-        '
-        Me.TextBox5.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox5.Location = New System.Drawing.Point(165, 137)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox5.TabIndex = 16
-        '
-        'TextBox4
-        '
-        Me.TextBox4.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox4.Location = New System.Drawing.Point(166, 105)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox4.TabIndex = 15
-        '
-        'TextBox3
-        '
-        Me.TextBox3.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox3.Location = New System.Drawing.Point(165, 73)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox3.TabIndex = 14
-        '
-        'TextBox2
-        '
-        Me.TextBox2.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox2.Location = New System.Drawing.Point(165, 41)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox2.TabIndex = 13
-        '
-        'TextBox1
-        '
-        Me.TextBox1.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox1.Location = New System.Drawing.Point(165, 9)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox1.TabIndex = 12
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Teal
-        Me.Label7.Location = New System.Drawing.Point(54, 204)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(88, 17)
-        Me.Label7.TabIndex = 11
-        Me.Label7.Text = "Pickup Date:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Teal
-        Me.Label6.Location = New System.Drawing.Point(47, 172)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(95, 17)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "Author Name:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Teal
-        Me.Label5.Location = New System.Drawing.Point(81, 108)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 17)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Book ID:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Teal
-        Me.Label4.Location = New System.Drawing.Point(57, 140)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 17)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Book Name:"
+        Me.txtBookNumber.ForeColor = System.Drawing.Color.Teal
+        Me.txtBookNumber.Location = New System.Drawing.Point(165, 31)
+        Me.txtBookNumber.Name = "txtBookNumber"
+        Me.txtBookNumber.Size = New System.Drawing.Size(249, 20)
+        Me.txtBookNumber.TabIndex = 13
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Teal
-        Me.Label3.Location = New System.Drawing.Point(36, 76)
+        Me.Label3.Location = New System.Drawing.Point(3, 101)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 17)
+        Me.Label3.Size = New System.Drawing.Size(143, 17)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Reserve Name:"
+        Me.Label3.Text = "Membership Number:"
         '
         'lblPassword
         '
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.ForeColor = System.Drawing.Color.Teal
-        Me.lblPassword.Location = New System.Drawing.Point(56, 44)
+        Me.lblPassword.Location = New System.Drawing.Point(48, 34)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(86, 17)
+        Me.lblPassword.Size = New System.Drawing.Size(98, 17)
         Me.lblPassword.TabIndex = 5
-        Me.lblPassword.Text = "Contact No.:"
-        '
-        'lblUsername
-        '
-        Me.lblUsername.AutoSize = True
-        Me.lblUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsername.ForeColor = System.Drawing.Color.Teal
-        Me.lblUsername.Location = New System.Drawing.Point(60, 12)
-        Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(82, 17)
-        Me.lblUsername.TabIndex = 4
-        Me.lblUsername.Text = "Reserve ID:"
+        Me.lblPassword.Text = "Book Number:"
         '
         'Label1
         '
@@ -336,26 +198,26 @@ Partial Class frmReserve
         'ProfileToolStripMenuItem
         '
         Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.ProfileToolStripMenuItem.Text = "&Profile"
         '
         'ReserveBookToolStripMenuItem
         '
         Me.ReserveBookToolStripMenuItem.Enabled = False
         Me.ReserveBookToolStripMenuItem.Name = "ReserveBookToolStripMenuItem"
-        Me.ReserveBookToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReserveBookToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.ReserveBookToolStripMenuItem.Text = "&Reserve Book"
         '
         'BorrowBookToolStripMenuItem
         '
         Me.BorrowBookToolStripMenuItem.Name = "BorrowBookToolStripMenuItem"
-        Me.BorrowBookToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BorrowBookToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.BorrowBookToolStripMenuItem.Text = "&Borrow Book"
         '
         'BackToolStripMenuItem
         '
         Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
-        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.BackToolStripMenuItem.Text = "B&ack"
         '
         'HelpToolStripMenuItem
@@ -382,7 +244,7 @@ Partial Class frmReserve
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(456, 446)
+        Me.ClientSize = New System.Drawing.Size(456, 337)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel1)
@@ -401,25 +263,13 @@ Partial Class frmReserve
     End Sub
 
     Friend WithEvents btnBack As Button
-    Friend WithEvents btnBorrow As Button
+    Friend WithEvents btnReserve As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents txtMembershipNumber As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents lblUsername As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtBookNumber As TextBox
     Friend WithEvents lblPassword As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
