@@ -1,31 +1,11 @@
-﻿Public Class frmUserDashboard
+﻿Public Class frmBorrow
 
-    Private Sub frmUserDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub btnReserve_Click(sender As Object, e As EventArgs) Handles btnReserve.Click
-        '' show the reserve book form
-        frmReserve.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        '' logout and show the login form
-        frmLogIn.Show()
-        Me.Hide()
-    End Sub
 
 #Region "MenuStrip"
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
         ''
         frmLogIn.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub RefreshPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RefreshPageToolStripMenuItem.Click
-        ''
-
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
@@ -46,13 +26,13 @@
     End Sub
 
     Private Sub BorrowBookToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BorrowBookToolStripMenuItem.Click
-        ''
-        frmBorrow.Show()
-        Me.Hide()
+
     End Sub
 
     Private Sub BackToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BackToolStripMenuItem.Click
-
+        ''
+        frmUserDashboard.Show()
+        Me.Hide()
     End Sub
 
     Private Sub HowToUseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HowToUseToolStripMenuItem.Click

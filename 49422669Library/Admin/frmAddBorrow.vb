@@ -1,4 +1,4 @@
-﻿Public Class frmBorrow
+﻿Public Class frmAddBorrow
     Private Sub btnBorrow_Click(sender As Object, e As EventArgs) Handles btnBorrow.Click
 
     End Sub
@@ -8,4 +8,5 @@
         frmUserDashboard.Show()
         Me.Hide()
     End Sub
+
 End Class
