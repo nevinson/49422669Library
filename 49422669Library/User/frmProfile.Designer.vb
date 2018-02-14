@@ -357,25 +357,25 @@ Partial Class frmProfile
         '
         Me.ProfileToolStripMenuItem.Enabled = False
         Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.ProfileToolStripMenuItem.Text = "&Profile"
         '
         'ReserveBookToolStripMenuItem
         '
         Me.ReserveBookToolStripMenuItem.Name = "ReserveBookToolStripMenuItem"
-        Me.ReserveBookToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReserveBookToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.ReserveBookToolStripMenuItem.Text = "&Reserve Book"
         '
         'BorrowBookToolStripMenuItem
         '
         Me.BorrowBookToolStripMenuItem.Name = "BorrowBookToolStripMenuItem"
-        Me.BorrowBookToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BorrowBookToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.BorrowBookToolStripMenuItem.Text = "&Borrow Book"
         '
         'BackToolStripMenuItem
         '
         Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
-        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.BackToolStripMenuItem.Text = "B&ack"
         '
         'HelpToolStripMenuItem
@@ -409,6 +409,7 @@ Partial Class frmProfile
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmProfile"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmProfile"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

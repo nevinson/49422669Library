@@ -235,3 +235,19 @@ Public Class BorrowService
         Return blResult
     End Function
 End Class
+
+
+
+'For i = 0 To lv.Rows.Count - 1
+'With ListView
+'.Items.Add(lv.Rows(i)("brw_id"))
+'With .Items(.Items.Count - 1).SubItems
+'.Add(lv.Rows(i)("contact_no"))
+'.Add(lv.Rows(i)("brw_name"))
+'.Add(lv.Rows(i)("bookid"))
+'.Add(lv.Rows(i)("booktle"))
+'.Add(lv.Rows(i)("author_name"))
+'.Add(lv.Rows(i)("no_copies"))
+'End With
+'End With
+'Next

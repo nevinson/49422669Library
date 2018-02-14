@@ -29,14 +29,12 @@ Partial Class frmAddUser
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.chkIsAdmin = New System.Windows.Forms.CheckBox()
         Me.cmbUserType = New System.Windows.Forms.ComboBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.txtEmailAddress = New System.Windows.Forms.TextBox()
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.txtMembershipNumber = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -135,7 +133,6 @@ Partial Class frmAddUser
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.chkIsAdmin)
         Me.Panel1.Controls.Add(Me.cmbUserType)
         Me.Panel1.Controls.Add(Me.btnBack)
         Me.Panel1.Controls.Add(Me.btnSaveProfile)
@@ -146,7 +143,6 @@ Partial Class frmAddUser
         Me.Panel1.Controls.Add(Me.txtLastName)
         Me.Panel1.Controls.Add(Me.txtFirstName)
         Me.Panel1.Controls.Add(Me.txtMembershipNumber)
-        Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -157,15 +153,6 @@ Partial Class frmAddUser
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(431, 322)
         Me.Panel1.TabIndex = 21
-        '
-        'chkIsAdmin
-        '
-        Me.chkIsAdmin.AutoSize = True
-        Me.chkIsAdmin.Location = New System.Drawing.Point(166, 242)
-        Me.chkIsAdmin.Name = "chkIsAdmin"
-        Me.chkIsAdmin.Size = New System.Drawing.Size(15, 14)
-        Me.chkIsAdmin.TabIndex = 29
-        Me.chkIsAdmin.UseVisualStyleBackColor = True
         '
         'cmbUserType
         '
@@ -216,17 +203,6 @@ Partial Class frmAddUser
         Me.txtMembershipNumber.Name = "txtMembershipNumber"
         Me.txtMembershipNumber.Size = New System.Drawing.Size(249, 20)
         Me.txtMembershipNumber.TabIndex = 12
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Teal
-        Me.Label8.Location = New System.Drawing.Point(83, 239)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(65, 17)
-        Me.Label8.TabIndex = 11
-        Me.Label8.Text = "Is Admin:"
         '
         'Label5
         '
@@ -339,27 +315,27 @@ Partial Class frmAddUser
         '
         Me.UsersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddUserToolStripMenuItem, Me.ManageUserToolStripMenuItem})
         Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
-        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.UsersToolStripMenuItem.Text = "&Users"
         '
         'AddUserToolStripMenuItem
         '
         Me.AddUserToolStripMenuItem.Enabled = False
         Me.AddUserToolStripMenuItem.Name = "AddUserToolStripMenuItem"
-        Me.AddUserToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AddUserToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.AddUserToolStripMenuItem.Text = "&Add "
         '
         'ManageUserToolStripMenuItem
         '
         Me.ManageUserToolStripMenuItem.Name = "ManageUserToolStripMenuItem"
-        Me.ManageUserToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ManageUserToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.ManageUserToolStripMenuItem.Text = "&Manage"
         '
         'BooksToolStripMenuItem
         '
         Me.BooksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddBookToolStripMenuItem, Me.ManageBookToolStripMenuItem})
         Me.BooksToolStripMenuItem.Name = "BooksToolStripMenuItem"
-        Me.BooksToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BooksToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BooksToolStripMenuItem.Text = "&Books"
         '
         'AddBookToolStripMenuItem
@@ -378,7 +354,7 @@ Partial Class frmAddUser
         '
         Me.BorrowsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddBorrowsToolStripMenuItem, Me.ManageBorrowsToolStripMenuItem})
         Me.BorrowsToolStripMenuItem.Name = "BorrowsToolStripMenuItem"
-        Me.BorrowsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BorrowsToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BorrowsToolStripMenuItem.Text = "Borro&ws"
         '
         'AddBorrowsToolStripMenuItem
@@ -397,7 +373,7 @@ Partial Class frmAddUser
         '
         Me.ReservesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddReservesToolStripMenuItem, Me.ManageReservesToolStripMenuItem})
         Me.ReservesToolStripMenuItem.Name = "ReservesToolStripMenuItem"
-        Me.ReservesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReservesToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.ReservesToolStripMenuItem.Text = "&Reserves"
         '
         'AddReservesToolStripMenuItem
@@ -415,7 +391,7 @@ Partial Class frmAddUser
         'BackToolStripMenuItem
         '
         Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
-        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BackToolStripMenuItem.Text = "B&ack"
         '
         'HelpToolStripMenuItem
@@ -479,8 +455,6 @@ Partial Class frmAddUser
     Friend WithEvents lblPassword As Label
     Friend WithEvents lblUsername As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents chkIsAdmin As CheckBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RefreshPageToolStripMenuItem As ToolStripMenuItem

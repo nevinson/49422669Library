@@ -1,5 +1,93 @@
 ﻿Public Class frmManageBorrows
+    ''
+    Dim objBorrowService As New BorrowService
+    Public Shared BorrowedBook As New BookBorrow
 
+    Private Sub frmManageBorrows_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ''
+        Dim borrowsTable As DataTable = objBorrowService.GetAll()
+
+        ''
+        For i = 0 To borrowsTable.Rows.Count - 1
+            With lstBorrows
+                .Items.Add(borrowsTable.Rows(i)("BorrowId"))
+                With .Items(.Items.Count - 1).SubItems
+                    .Add(borrowsTable.Rows(i)("PickupDate"))
+                    .Add(borrowsTable.Rows(i)("ReturnDate"))
+                    .Add(borrowsTable.Rows(i)("BookNumber"))
+                    .Add(borrowsTable.Rows(i)("BookName"))
+                    .Add(borrowsTable.Rows(i)("AuthorName"))
+                    .Add(borrowsTable.Rows(i)("MembershipNumber"))
+                    .Add(borrowsTable.Rows(i)("FirstName"))
+                    .Add(borrowsTable.Rows(i)("LastName"))
+                End With
+            End With
+        Next
+    End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        ''
+        If txtSearch.Text.Length > 5 Then
+            ''
+            lstBorrows.Items.Clear()
+
+            ''
+            Dim borrowsTable As DataTable = objBorrowService.GetByBookNumber(txtSearch.Text)
+
+            ''
+            If borrowsTable.Rows.Count > 0 Then
+                ''
+                For i = 0 To borrowsTable.Rows.Count - 1
+                    With lstBorrows
+                        .Items.Add(borrowsTable.Rows(i)("BorrowId"))
+                        With .Items(.Items.Count - 1).SubItems
+                            .Add(borrowsTable.Rows(i)("PickupDate"))
+                            .Add(borrowsTable.Rows(i)("ReturnDate"))
+                            .Add(borrowsTable.Rows(i)("BookNumber"))
+                            .Add(borrowsTable.Rows(i)("BookName"))
+                            .Add(borrowsTable.Rows(i)("AuthorName"))
+                            .Add(borrowsTable.Rows(i)("MembershipNumber"))
+                            .Add(borrowsTable.Rows(i)("FirstName"))
+                            .Add(borrowsTable.Rows(i)("LastName"))
+                        End With
+                    End With
+                Next
+            Else
+                MessageBox.Show("No record found.", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Else
+            MessageBox.Show("No record found.", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtSearch.Clear()
+            txtSearch.Focus()
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub btnLend_Click(sender As Object, e As EventArgs) Handles btnLend.Click
+        ''
+        frmAddBorrow.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnReturn_Click(sender As Object, e As EventArgs) Handles btnReturn.Click
+        ''
+        Try
+            BorrowedBook.BorrowId = lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(0).Text
+            BorrowedBook.PickupDate = lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(0).Text
+            BorrowedBook.ReturnDate = lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(0).Text
+            BorrowedBook.BookNumber = lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(0).Text
+            BorrowedBook.MembershipNumber = lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(0).Text
+        Catch ex As Exception
+            MessageBox.Show("Please select an item from the list.", "Manage Borrow", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End Try
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        ''
+        frmDashboard.Show()
+        Me.Hide()
+    End Sub
 
 #Region "MenuStrip"
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click

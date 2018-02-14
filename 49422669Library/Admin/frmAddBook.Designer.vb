@@ -270,7 +270,7 @@ Partial Class frmAddBook
         '
         Me.UsersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddUserToolStripMenuItem, Me.ManageUserToolStripMenuItem})
         Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
-        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.UsersToolStripMenuItem.Text = "&Users"
         '
         'AddUserToolStripMenuItem
@@ -289,27 +289,27 @@ Partial Class frmAddBook
         '
         Me.BooksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddBookToolStripMenuItem, Me.ManageBookToolStripMenuItem})
         Me.BooksToolStripMenuItem.Name = "BooksToolStripMenuItem"
-        Me.BooksToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BooksToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BooksToolStripMenuItem.Text = "&Books"
         '
         'AddBookToolStripMenuItem
         '
         Me.AddBookToolStripMenuItem.Enabled = False
         Me.AddBookToolStripMenuItem.Name = "AddBookToolStripMenuItem"
-        Me.AddBookToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AddBookToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.AddBookToolStripMenuItem.Text = "&Add"
         '
         'ManageBookToolStripMenuItem
         '
         Me.ManageBookToolStripMenuItem.Name = "ManageBookToolStripMenuItem"
-        Me.ManageBookToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ManageBookToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.ManageBookToolStripMenuItem.Text = "&Manage"
         '
         'BorrowsToolStripMenuItem
         '
         Me.BorrowsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddBorrowsToolStripMenuItem, Me.ManageBorrowsToolStripMenuItem})
         Me.BorrowsToolStripMenuItem.Name = "BorrowsToolStripMenuItem"
-        Me.BorrowsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BorrowsToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BorrowsToolStripMenuItem.Text = "Borro&ws"
         '
         'AddBorrowsToolStripMenuItem
@@ -328,7 +328,7 @@ Partial Class frmAddBook
         '
         Me.ReservesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddReservesToolStripMenuItem, Me.ManageReservesToolStripMenuItem})
         Me.ReservesToolStripMenuItem.Name = "ReservesToolStripMenuItem"
-        Me.ReservesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReservesToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.ReservesToolStripMenuItem.Text = "&Reserves"
         '
         'AddReservesToolStripMenuItem
@@ -346,7 +346,7 @@ Partial Class frmAddBook
         'BackToolStripMenuItem
         '
         Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
-        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BackToolStripMenuItem.Text = "B&ack"
         '
         'HelpToolStripMenuItem
@@ -381,6 +381,7 @@ Partial Class frmAddBook
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmAddBook"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmAddBook"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
