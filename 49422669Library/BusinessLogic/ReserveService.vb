@@ -11,7 +11,7 @@ Public Class ReserveService
         Dim dbCon As New OleDbConnection()
         Dim dbCmd As New OleDbCommand()
         Dim dbTable As New DataTable()
-        sql = "GetAllReserves"
+        sql = "GetAllBookReserves"
         blResult = False
 
         ''

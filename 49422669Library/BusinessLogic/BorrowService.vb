@@ -119,6 +119,34 @@ Public Class BorrowService
         Return blResult
     End Function
 
+    Friend Function MarkReturned(ByVal borrowId As Integer) As Boolean
+        ''
+        Dim dbCon As New OleDbConnection()
+        Dim dbCmd As New OleDbCommand()
+        sql = "MarkBookReturned"
+        blResult = False
+
+        ''
+        dbCon.ConnectionString = objConstants.ConnectionString()
+        dbCon.Open()
+
+        ''
+        dbCmd.Connection = dbCon
+        dbCmd.CommandText = sql
+        dbCmd.CommandType = CommandType.StoredProcedure
+
+        ''
+        dbCmd.Parameters.AddWithValue("@borrowId", borrowId)
+
+        If dbCmd.ExecuteNonQuery() = 1 Then
+            blResult = True
+        Else
+            blResult = False
+        End If
+
+        Return blResult
+    End Function
+
     Public Function Update(ByVal _bookBorrow As BookBorrow)
         ''
         Dim dbCon As New OleDbConnection()
