@@ -3,7 +3,10 @@
     Dim objReserveService As New ReserveService
     Public Shared ReservedBook As New BookReserve
 
-    Private Sub frmManageReserves_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub RefreshGrid()
+        ''
+        lstReserves.Items.Clear()
+
         ''
         Dim borrowsTable As DataTable = objReserveService.GetAll()
 
@@ -22,6 +25,11 @@
                 End With
             End With
         Next
+    End Sub
+
+    Private Sub frmManageReserves_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ''
+        RefreshGrid()
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
@@ -70,20 +78,20 @@
     Private Sub btnDeleteReserve_Click(sender As Object, e As EventArgs) Handles btnDeleteReserve.Click
         ''
         Try
-            If Not ReservedBook.BookNumber = "" And Not ReservedBook.MembershipNumber = "" And ReservedBook.ReserveId >= 1 Then
-                ''
+            If ReservedBook.BookNumber = "" And ReservedBook.MembershipNumber = "" Then
+                MessageBox.Show("Please select an item from the list.", "Manage Reserves", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            Else
                 If MessageBox.Show("Are you sure you want to delete book #" & ReservedBook.BookNumber, "Delete Reserve", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     If objReserveService.Delete(ReservedBook.ReserveId) = True Then
                         MessageBox.Show("Book reservation successfully deleted.", "Delete Reserve", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        RefreshGrid()
                     Else
                         MessageBox.Show("Book reservation could not be deleted.", "Delete Reserve", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
                 Else
                     Exit Sub
                 End If
-            Else
-                MessageBox.Show("Please select an item from the list.", "Manage Reserves", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Exit Sub
             End If
         Catch ex As Exception
             MessageBox.Show("Please select an item from the list.", "Manage Reserves", MessageBoxButtons.OK, MessageBoxIcon.Error)

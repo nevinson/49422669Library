@@ -31,12 +31,12 @@ Public Class UserService
         Return dbTable
     End Function
 
-    Public Function GetUserByMembershipNumber(ByVal strMembershipNumber As String) As DataTable
+    Public Function Search(ByVal strSearchString As String) As DataTable
         ''
         Dim dbCon As New OleDbConnection()
         Dim dbCmd As New OleDbCommand()
         Dim dbTable As New DataTable()
-        sql = "GetUsersByMembershipNumber"
+        sql = "SearchUser"
 
         ''
         dbCon.ConnectionString = objConstants.ConnectionString()
@@ -48,7 +48,7 @@ Public Class UserService
         dbCmd.CommandType = CommandType.StoredProcedure
 
         ''
-        dbCmd.Parameters.AddWithValue("@membershipNumber", strMembershipNumber)
+        dbCmd.Parameters.AddWithValue("@searchString", strSearchString)
 
         ''
         dbTable.Load(dbCmd.ExecuteReader())
@@ -163,11 +163,11 @@ Public Class UserService
         Return blResult
     End Function
 
-    Public Function Delete(ByVal strMembershipNumber As String)
+    Public Function UpdateStatus(ByVal strMembershipNumber As String, ByVal strStatus As String)
         ''
         Dim dbCon As New OleDbConnection()
         Dim dbCmd As New OleDbCommand()
-        sql = "DeleteUser"
+        sql = "UpdateUserStatus"
         blResult = False
 
         ''
@@ -180,36 +180,7 @@ Public Class UserService
         dbCmd.CommandType = CommandType.StoredProcedure
 
         ''
-        dbCmd.Parameters.AddWithValue("@membershipNumber", strMembershipNumber)
-
-
-        If dbCmd.ExecuteNonQuery() = 1 Then
-            blResult = True
-        Else
-            blResult = False
-        End If
-
-        Return blResult
-    End Function
-
-    Public Function Blacklist(ByVal strMembershipNumber As String) As Boolean
-        ''
-        Dim dbCon As New OleDbConnection()
-        Dim dbCmd As New OleDbCommand()
-        sql = "BlacklistUser"
-        blResult = False
-
-        ''
-        dbCon.ConnectionString = objConstants.ConnectionString()
-        dbCon.Open()
-
-        ''
-        dbCmd.Connection = dbCon
-        dbCmd.CommandText = sql
-        dbCmd.CommandType = CommandType.StoredProcedure
-
-        ''
-        dbCmd.Parameters.AddWithValue("@status", "Blacklisted")
+        dbCmd.Parameters.AddWithValue("@status", strStatus)
         dbCmd.Parameters.AddWithValue("@membershipNumber", strMembershipNumber)
 
         If dbCmd.ExecuteNonQuery() = 1 Then

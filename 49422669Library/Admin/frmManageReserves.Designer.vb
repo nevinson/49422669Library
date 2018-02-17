@@ -282,7 +282,6 @@ Partial Class frmManageReserves
         Me.lstReserves.FullRowSelect = True
         Me.lstReserves.GridLines = True
         Me.lstReserves.Location = New System.Drawing.Point(16, 56)
-        Me.lstReserves.MultiSelect = False
         Me.lstReserves.Name = "lstReserves"
         Me.lstReserves.Size = New System.Drawing.Size(846, 338)
         Me.lstReserves.TabIndex = 29

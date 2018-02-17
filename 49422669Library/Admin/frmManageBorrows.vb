@@ -4,7 +4,10 @@
     Dim objBookService As New BookService
     Public Shared BorrowedBook As New BookBorrow
 
-    Private Sub frmManageBorrows_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub RefreshGrid()
+        ''
+        lstBorrows.Items.Clear()
+
         ''
         Dim borrowsTable As DataTable = objBorrowService.GetAll()
 
@@ -24,6 +27,11 @@
                 End With
             End With
         Next
+    End Sub
+
+    Private Sub frmManageBorrows_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ''
+        RefreshGrid()
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
@@ -73,10 +81,14 @@
     Private Sub btnReturn_Click(sender As Object, e As EventArgs) Handles btnReturn.Click
         ''
         Try
-            If Not BorrowedBook.BookNumber = "" And Not BorrowedBook.MembershipNumber = "" And BorrowedBook.BorrowId >= 1 Then
+            If BorrowedBook.BookNumber = "" And BorrowedBook.MembershipNumber = "" Then
+                ''
+                MessageBox.Show("Please select an item from the list.", "Manage Borrow", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            Else
                 ''
                 If MessageBox.Show("Are you sure you want to return book #" & BorrowedBook.BookNumber, "Return Book", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                    If objBorrowService.MarkReturned(BorrowedBook.BorrowId) = True Then
+                    If objBorrowService.Delete(BorrowedBook.BorrowId) = True Then
                         Dim _book As New Book
                         Dim bookTable As DataTable = objBookService.GetByBookNumber(BorrowedBook.BookNumber)
 
@@ -86,6 +98,7 @@
 
                             If objBookService.UpdateQuantity(_book) Then
                                 MessageBox.Show("Book reservation successfully returned.", "Return Book", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                RefreshGrid()
                             Else
                                 MessageBox.Show("Book reservation could not be marked as returned.", "Return Book", MessageBoxButtons.OK, MessageBoxIcon.Error)
                                 Exit Sub
@@ -102,23 +115,20 @@
                 Else
                     Exit Sub
                 End If
-            Else
-                MessageBox.Show("Please select an item from the list.", "Manage Borrow", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Exit Sub
+
             End If
         Catch ex As Exception
-            MessageBox.Show("Please select an item from the list.", "Manage Borrow", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Exit Sub
+            MsgBox(ex.Message)
         End Try
     End Sub
 
     Private Sub lstBorrows_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstBorrows.SelectedIndexChanged
         ''
         BorrowedBook.BorrowId = lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(0).Text
-        BorrowedBook.PickupDate = Convert.ToDateTime(lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(0).Text)
-        BorrowedBook.ReturnDate = Convert.ToDateTime(lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(0).Text)
-        BorrowedBook.BookNumber = lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(0).Text
-        BorrowedBook.MembershipNumber = lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(0).Text
+        BorrowedBook.PickupDate = Convert.ToDateTime(lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(1).Text)
+        BorrowedBook.ReturnDate = Convert.ToDateTime(lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(2).Text)
+        BorrowedBook.BookNumber = lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(3).Text
+        BorrowedBook.MembershipNumber = lstBorrows.Items(lstBorrows.FocusedItem.Index).SubItems(6).Text
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click

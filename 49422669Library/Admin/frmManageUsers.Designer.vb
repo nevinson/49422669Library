@@ -24,20 +24,21 @@ Partial Class frmManageUsers
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.dgvUsers = New System.Windows.Forms.DataGridView()
-        Me.txtNewPassword = New System.Windows.Forms.TextBox()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.btnUnBlackListUser = New System.Windows.Forms.Button()
-        Me.btnDeleteUser = New System.Windows.Forms.Button()
+        Me.btnUnBlacklistUser = New System.Windows.Forms.Button()
         Me.btnBlacklistUser = New System.Windows.Forms.Button()
-        Me.txtEmailAddress = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtFullName = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtMembershipNumber = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnDeleteUser = New System.Windows.Forms.Button()
+        Me.btnUpdateUser = New System.Windows.Forms.Button()
+        Me.btnAddUser = New System.Windows.Forms.Button()
+        Me.lstUsers = New System.Windows.Forms.ListView()
+        Me.membership_no = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.first_name = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.last_name = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.email = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.username = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.member_type = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.status = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.join_date = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -64,7 +65,6 @@ Partial Class frmManageUsers
         Me.HowToUseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
-        CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,7 +73,7 @@ Partial Class frmManageUsers
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(1008, 62)
+        Me.Label2.Location = New System.Drawing.Point(902, 62)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(114, 17)
         Me.Label2.TabIndex = 27
@@ -83,168 +83,131 @@ Partial Class frmManageUsers
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.dgvUsers)
-        Me.Panel1.Controls.Add(Me.txtNewPassword)
         Me.Panel1.Controls.Add(Me.btnBack)
-        Me.Panel1.Controls.Add(Me.btnUnBlackListUser)
-        Me.Panel1.Controls.Add(Me.btnDeleteUser)
+        Me.Panel1.Controls.Add(Me.btnUnBlacklistUser)
         Me.Panel1.Controls.Add(Me.btnBlacklistUser)
-        Me.Panel1.Controls.Add(Me.txtEmailAddress)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.txtFullName)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.txtUsername)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.txtMembershipNumber)
-        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.btnDeleteUser)
+        Me.Panel1.Controls.Add(Me.btnUpdateUser)
+        Me.Panel1.Controls.Add(Me.btnAddUser)
+        Me.Panel1.Controls.Add(Me.lstUsers)
         Me.Panel1.Controls.Add(Me.btnSearch)
         Me.Panel1.Controls.Add(Me.txtSearch)
         Me.Panel1.Location = New System.Drawing.Point(13, 98)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1109, 398)
+        Me.Panel1.Size = New System.Drawing.Size(1003, 398)
         Me.Panel1.TabIndex = 25
-        '
-        'dgvUsers
-        '
-        Me.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvUsers.Location = New System.Drawing.Point(437, 66)
-        Me.dgvUsers.Name = "dgvUsers"
-        Me.dgvUsers.Size = New System.Drawing.Size(667, 297)
-        Me.dgvUsers.TabIndex = 42
-        '
-        'txtNewPassword
-        '
-        Me.txtNewPassword.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.txtNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNewPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNewPassword.ForeColor = System.Drawing.Color.Teal
-        Me.txtNewPassword.Location = New System.Drawing.Point(66, 215)
-        Me.txtNewPassword.Multiline = True
-        Me.txtNewPassword.Name = "txtNewPassword"
-        Me.txtNewPassword.ReadOnly = True
-        Me.txtNewPassword.Size = New System.Drawing.Size(309, 58)
-        Me.txtNewPassword.TabIndex = 41
-        Me.txtNewPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnBack
         '
         Me.btnBack.ForeColor = System.Drawing.Color.Teal
-        Me.btnBack.Location = New System.Drawing.Point(252, 339)
+        Me.btnBack.Location = New System.Drawing.Point(875, 354)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(137, 46)
-        Me.btnBack.TabIndex = 40
+        Me.btnBack.Size = New System.Drawing.Size(108, 36)
+        Me.btnBack.TabIndex = 37
         Me.btnBack.Text = "B&ack"
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'btnUnBlackListUser
+        'btnUnBlacklistUser
         '
-        Me.btnUnBlackListUser.ForeColor = System.Drawing.Color.Teal
-        Me.btnUnBlackListUser.Location = New System.Drawing.Point(36, 339)
-        Me.btnUnBlackListUser.Name = "btnUnBlackListUser"
-        Me.btnUnBlackListUser.Size = New System.Drawing.Size(137, 46)
-        Me.btnUnBlackListUser.TabIndex = 39
-        Me.btnUnBlackListUser.Text = "&UnBlacklist User"
-        Me.btnUnBlackListUser.UseVisualStyleBackColor = True
-        '
-        'btnDeleteUser
-        '
-        Me.btnDeleteUser.ForeColor = System.Drawing.Color.Teal
-        Me.btnDeleteUser.Location = New System.Drawing.Point(252, 284)
-        Me.btnDeleteUser.Name = "btnDeleteUser"
-        Me.btnDeleteUser.Size = New System.Drawing.Size(137, 46)
-        Me.btnDeleteUser.TabIndex = 38
-        Me.btnDeleteUser.Text = "&Delete User"
-        Me.btnDeleteUser.UseVisualStyleBackColor = True
+        Me.btnUnBlacklistUser.ForeColor = System.Drawing.Color.Teal
+        Me.btnUnBlacklistUser.Location = New System.Drawing.Point(875, 296)
+        Me.btnUnBlacklistUser.Name = "btnUnBlacklistUser"
+        Me.btnUnBlacklistUser.Size = New System.Drawing.Size(108, 36)
+        Me.btnUnBlacklistUser.TabIndex = 35
+        Me.btnUnBlacklistUser.Text = "U&nBlacklist User"
+        Me.btnUnBlacklistUser.UseVisualStyleBackColor = True
         '
         'btnBlacklistUser
         '
         Me.btnBlacklistUser.ForeColor = System.Drawing.Color.Teal
-        Me.btnBlacklistUser.Location = New System.Drawing.Point(36, 284)
+        Me.btnBlacklistUser.Location = New System.Drawing.Point(875, 233)
         Me.btnBlacklistUser.Name = "btnBlacklistUser"
-        Me.btnBlacklistUser.Size = New System.Drawing.Size(137, 46)
-        Me.btnBlacklistUser.TabIndex = 37
+        Me.btnBlacklistUser.Size = New System.Drawing.Size(108, 36)
+        Me.btnBlacklistUser.TabIndex = 34
         Me.btnBlacklistUser.Text = "&Blacklist User"
         Me.btnBlacklistUser.UseVisualStyleBackColor = True
         '
-        'txtEmailAddress
+        'btnDeleteUser
         '
-        Me.txtEmailAddress.ForeColor = System.Drawing.Color.Teal
-        Me.txtEmailAddress.Location = New System.Drawing.Point(181, 174)
-        Me.txtEmailAddress.Name = "txtEmailAddress"
-        Me.txtEmailAddress.ReadOnly = True
-        Me.txtEmailAddress.Size = New System.Drawing.Size(220, 20)
-        Me.txtEmailAddress.TabIndex = 36
+        Me.btnDeleteUser.ForeColor = System.Drawing.Color.Teal
+        Me.btnDeleteUser.Location = New System.Drawing.Point(875, 174)
+        Me.btnDeleteUser.Name = "btnDeleteUser"
+        Me.btnDeleteUser.Size = New System.Drawing.Size(108, 36)
+        Me.btnDeleteUser.TabIndex = 33
+        Me.btnDeleteUser.Text = "&Delete User"
+        Me.btnDeleteUser.UseVisualStyleBackColor = True
         '
-        'Label5
+        'btnUpdateUser
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Teal
-        Me.Label5.Location = New System.Drawing.Point(16, 69)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(143, 17)
-        Me.Label5.TabIndex = 35
-        Me.Label5.Text = "Membership Number:"
+        Me.btnUpdateUser.ForeColor = System.Drawing.Color.Teal
+        Me.btnUpdateUser.Location = New System.Drawing.Point(875, 113)
+        Me.btnUpdateUser.Name = "btnUpdateUser"
+        Me.btnUpdateUser.Size = New System.Drawing.Size(108, 36)
+        Me.btnUpdateUser.TabIndex = 32
+        Me.btnUpdateUser.Text = "&Update User"
+        Me.btnUpdateUser.UseVisualStyleBackColor = True
         '
-        'txtFullName
+        'btnAddUser
         '
-        Me.txtFullName.ForeColor = System.Drawing.Color.Teal
-        Me.txtFullName.Location = New System.Drawing.Point(181, 138)
-        Me.txtFullName.Name = "txtFullName"
-        Me.txtFullName.ReadOnly = True
-        Me.txtFullName.Size = New System.Drawing.Size(220, 20)
-        Me.txtFullName.TabIndex = 34
+        Me.btnAddUser.ForeColor = System.Drawing.Color.Teal
+        Me.btnAddUser.Location = New System.Drawing.Point(875, 52)
+        Me.btnAddUser.Name = "btnAddUser"
+        Me.btnAddUser.Size = New System.Drawing.Size(108, 36)
+        Me.btnAddUser.TabIndex = 31
+        Me.btnAddUser.Text = "&Add User"
+        Me.btnAddUser.UseVisualStyleBackColor = True
         '
-        'Label4
+        'lstUsers
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Teal
-        Me.Label4.Location = New System.Drawing.Point(57, 177)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(102, 17)
-        Me.Label4.TabIndex = 33
-        Me.Label4.Text = "Email Address:"
+        Me.lstUsers.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.membership_no, Me.first_name, Me.last_name, Me.email, Me.username, Me.member_type, Me.status, Me.join_date})
+        Me.lstUsers.FullRowSelect = True
+        Me.lstUsers.GridLines = True
+        Me.lstUsers.Location = New System.Drawing.Point(4, 52)
+        Me.lstUsers.Name = "lstUsers"
+        Me.lstUsers.Size = New System.Drawing.Size(846, 338)
+        Me.lstUsers.TabIndex = 30
+        Me.lstUsers.UseCompatibleStateImageBehavior = False
+        Me.lstUsers.View = System.Windows.Forms.View.Details
         '
-        'txtUsername
+        'membership_no
         '
-        Me.txtUsername.ForeColor = System.Drawing.Color.Teal
-        Me.txtUsername.Location = New System.Drawing.Point(181, 102)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.ReadOnly = True
-        Me.txtUsername.Size = New System.Drawing.Size(220, 20)
-        Me.txtUsername.TabIndex = 32
+        Me.membership_no.Text = "Membership Number"
+        Me.membership_no.Width = 133
         '
-        'Label3
+        'first_name
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Teal
-        Me.Label3.Location = New System.Drawing.Point(84, 141)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 17)
-        Me.Label3.TabIndex = 31
-        Me.Label3.Text = "Full Name:"
+        Me.first_name.Text = "First Name"
+        Me.first_name.Width = 107
         '
-        'txtMembershipNumber
+        'last_name
         '
-        Me.txtMembershipNumber.ForeColor = System.Drawing.Color.Teal
-        Me.txtMembershipNumber.Location = New System.Drawing.Point(181, 66)
-        Me.txtMembershipNumber.Name = "txtMembershipNumber"
-        Me.txtMembershipNumber.ReadOnly = True
-        Me.txtMembershipNumber.Size = New System.Drawing.Size(220, 20)
-        Me.txtMembershipNumber.TabIndex = 30
+        Me.last_name.Text = "Last Name"
+        Me.last_name.Width = 95
         '
-        'Label6
+        'email
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Teal
-        Me.Label6.Location = New System.Drawing.Point(82, 105)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(77, 17)
-        Me.Label6.TabIndex = 29
-        Me.Label6.Text = "Username:"
+        Me.email.Text = "Email Address"
+        Me.email.Width = 73
+        '
+        'username
+        '
+        Me.username.Text = "Username"
+        Me.username.Width = 97
+        '
+        'member_type
+        '
+        Me.member_type.Text = "Membership Type"
+        Me.member_type.Width = 101
+        '
+        'status
+        '
+        Me.status.Text = "Status"
+        Me.status.Width = 83
+        '
+        'join_date
+        '
+        Me.join_date.Text = "Join Date"
+        Me.join_date.Width = 141
         '
         'btnSearch
         '
@@ -281,7 +244,7 @@ Partial Class frmManageUsers
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1134, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1028, 24)
         Me.MenuStrip1.TabIndex = 29
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -321,27 +284,27 @@ Partial Class frmManageUsers
         '
         Me.UsersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddUserToolStripMenuItem, Me.ManageUserToolStripMenuItem})
         Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
-        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.UsersToolStripMenuItem.Text = "&Users"
         '
         'AddUserToolStripMenuItem
         '
         Me.AddUserToolStripMenuItem.Name = "AddUserToolStripMenuItem"
-        Me.AddUserToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AddUserToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.AddUserToolStripMenuItem.Text = "&Add "
         '
         'ManageUserToolStripMenuItem
         '
         Me.ManageUserToolStripMenuItem.Enabled = False
         Me.ManageUserToolStripMenuItem.Name = "ManageUserToolStripMenuItem"
-        Me.ManageUserToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ManageUserToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.ManageUserToolStripMenuItem.Text = "&Manage"
         '
         'BooksToolStripMenuItem
         '
         Me.BooksToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddBookToolStripMenuItem, Me.ManageBookToolStripMenuItem})
         Me.BooksToolStripMenuItem.Name = "BooksToolStripMenuItem"
-        Me.BooksToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BooksToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BooksToolStripMenuItem.Text = "&Books"
         '
         'AddBookToolStripMenuItem
@@ -360,7 +323,7 @@ Partial Class frmManageUsers
         '
         Me.BorrowsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddBorrowsToolStripMenuItem, Me.ManageBorrowsToolStripMenuItem})
         Me.BorrowsToolStripMenuItem.Name = "BorrowsToolStripMenuItem"
-        Me.BorrowsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BorrowsToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BorrowsToolStripMenuItem.Text = "Borro&ws"
         '
         'AddBorrowsToolStripMenuItem
@@ -379,7 +342,7 @@ Partial Class frmManageUsers
         '
         Me.ReservesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddReservesToolStripMenuItem, Me.ManageReservesToolStripMenuItem})
         Me.ReservesToolStripMenuItem.Name = "ReservesToolStripMenuItem"
-        Me.ReservesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReservesToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.ReservesToolStripMenuItem.Text = "&Reserves"
         '
         'AddReservesToolStripMenuItem
@@ -397,7 +360,7 @@ Partial Class frmManageUsers
         'BackToolStripMenuItem
         '
         Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
-        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.BackToolStripMenuItem.Text = "B&ack"
         '
         'HelpToolStripMenuItem
@@ -424,7 +387,7 @@ Partial Class frmManageUsers
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(1134, 510)
+        Me.ClientSize = New System.Drawing.Size(1028, 510)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel1)
@@ -435,7 +398,6 @@ Partial Class frmManageUsers
         Me.Text = "frmManageUsers"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -448,20 +410,6 @@ Partial Class frmManageUsers
     Friend WithEvents Label1 As Label
     Friend WithEvents btnSearch As Button
     Friend WithEvents txtSearch As TextBox
-    Friend WithEvents txtMembershipNumber As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents btnBack As Button
-    Friend WithEvents btnUnBlackListUser As Button
-    Friend WithEvents btnDeleteUser As Button
-    Friend WithEvents btnBlacklistUser As Button
-    Friend WithEvents txtEmailAddress As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents txtFullName As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtUsername As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents txtNewPassword As TextBox
-    Friend WithEvents dgvUsers As DataGridView
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RefreshPageToolStripMenuItem As ToolStripMenuItem
@@ -484,4 +432,20 @@ Partial Class frmManageUsers
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HowToUseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lstUsers As ListView
+    Friend WithEvents membership_no As ColumnHeader
+    Friend WithEvents first_name As ColumnHeader
+    Friend WithEvents last_name As ColumnHeader
+    Friend WithEvents email As ColumnHeader
+    Friend WithEvents username As ColumnHeader
+    Friend WithEvents member_type As ColumnHeader
+    Friend WithEvents status As ColumnHeader
+    Friend WithEvents join_date As ColumnHeader
+    Friend WithEvents btnResetPassword As Button
+    Friend WithEvents btnUnBlacklistUser As Button
+    Friend WithEvents btnBlacklistUser As Button
+    Friend WithEvents btnDeleteUser As Button
+    Friend WithEvents btnUpdateUser As Button
+    Friend WithEvents btnAddUser As Button
+    Friend WithEvents btnBack As Button
 End Class
