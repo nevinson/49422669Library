@@ -15,7 +15,7 @@
             newBorrow.ReturnDate = dteReturnDate.Value.ToLongDateString()
 
             ''
-            Dim book As DataTable = objBookService.GetByBookNumber(txtBookNumber.Text)
+            Dim book As DataTable = objBookService.Search(txtBookNumber.Text)
             Dim updateBook As New Book
 
             ''
@@ -38,8 +38,7 @@
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         '' show the user dashboard form
-        frmUserDashboard.Show()
+        frmDashboard.Show()
         Me.Hide()
     End Sub
-
 End Class

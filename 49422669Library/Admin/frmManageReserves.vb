@@ -39,7 +39,7 @@
             lstReserves.Items.Clear()
 
             ''
-            Dim borrowsTable As DataTable = objReserveService.GetByBookNumber(txtSearch.Text)
+            Dim borrowsTable As DataTable = objReserveService.GetByBookNumber("%" & txtSearch.Text & "%")
 
             ''
             If borrowsTable.Rows.Count > 0 Then

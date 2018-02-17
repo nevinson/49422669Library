@@ -31,12 +31,12 @@ Public Class BookService
         Return dbTable
     End Function
 
-    Public Function GetByBookNumber(ByVal strBookNumber As String) As DataTable
+    Public Function Search(ByVal strSearchString As String) As DataTable
         ''
         Dim dbCon As New OleDbConnection()
         Dim dbCmd As New OleDbCommand()
         Dim dbTable As New DataTable()
-        sql = "GetBookByBookNumber"
+        sql = "SearchBook"
         blResult = False
 
         ''
@@ -49,7 +49,7 @@ Public Class BookService
         dbCmd.CommandType = CommandType.StoredProcedure
 
         ''
-        dbCmd.Parameters.AddWithValue("@bookNumber", strBookNumber)
+        dbCmd.Parameters.AddWithValue("@searchString", strSearchString)
 
         ''
         dbTable.Load(dbCmd.ExecuteReader())

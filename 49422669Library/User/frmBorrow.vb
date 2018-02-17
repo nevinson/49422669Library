@@ -26,7 +26,7 @@
             newBorrow.ReturnDate = dteReturnDate.Value.ToLongDateString()
 
             ''
-            Dim book As DataTable = objBookService.GetByBookNumber(txtBookNumber.Text)
+            Dim book As DataTable = objBookService.Search(txtBookNumber.Text)
             Dim updateBook As New Book
 
             ''

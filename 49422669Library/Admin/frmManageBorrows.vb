@@ -41,7 +41,7 @@
             lstBorrows.Items.Clear()
 
             ''
-            Dim borrowsTable As DataTable = objBorrowService.GetByBookNumber(txtSearch.Text)
+            Dim borrowsTable As DataTable = objBorrowService.GetByBookNumber("%" & txtSearch.Text & "%")
 
             ''
             If borrowsTable.Rows.Count > 0 Then
@@ -90,7 +90,7 @@
                 If MessageBox.Show("Are you sure you want to return book #" & BorrowedBook.BookNumber, "Return Book", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     If objBorrowService.Delete(BorrowedBook.BorrowId) = True Then
                         Dim _book As New Book
-                        Dim bookTable As DataTable = objBookService.GetByBookNumber(BorrowedBook.BookNumber)
+                        Dim bookTable As DataTable = objBookService.Search(BorrowedBook.BookNumber)
 
                         If bookTable.Rows.Count = 1 Then
                             _book.BookNumber = bookTable.Rows(0)("BookNumber")

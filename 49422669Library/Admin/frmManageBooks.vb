@@ -1,24 +1,52 @@
 ﻿Public Class frmManageBooks
     ''
     Dim objBookService As New BookService()
+    Public Shared SelectedBook As New Book
+
+    Private Sub RefreshGrid()
+        ''
+        lstBooks.Items.Clear()
+
+        ''
+        Dim borrowsTable As DataTable = objBookService.GetAll()
+
+        ''
+        For i = 0 To borrowsTable.Rows.Count - 1
+            With lstBooks
+                .Items.Add(borrowsTable.Rows(i)("BookNumber"))
+                With .Items(.Items.Count - 1).SubItems
+                    .Add(borrowsTable.Rows(i)("BookName"))
+                    .Add(borrowsTable.Rows(i)("AuthorName"))
+                    .Add(borrowsTable.Rows(i)("BookQuantity"))
+                    .Add(borrowsTable.Rows(i)("CategoryName"))
+                End With
+            End With
+        Next
+    End Sub
 
     Private Sub frmManageBooks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ''
-        dgvBooks.DataSource = objBookService.GetAll()
+        RefreshGrid()
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         ''
         If txtSearch.Text.Length > 3 Then
-            Dim searchTable As DataTable = objBookService.GetByBookNumber(txtSearch.Text)
+            Dim searchTable As DataTable = objBookService.Search("%" & txtSearch.Text & "%")
 
-            If searchTable.Rows.Count = 1 Then
-                dgvBooks.DataSource = searchTable
-                txtBookNumber.Text = searchTable.Rows(0)("BookNumber").ToString()
-                txtBookName.Text = searchTable.Rows(0)("BookName").ToString()
-                txtAuthorName.Text = searchTable.Rows(0)("AuthorName").ToString()
-                txtBookQuantity.Text = searchTable.Rows(0)("BookQuantity").ToString()
-                txtBookCategory.Text = searchTable.Rows(0)("CategoryName").ToString()
+            If searchTable.Rows.Count >= 1 Then
+                ''
+                For i = 0 To searchTable.Rows.Count - 1
+                    With lstBooks
+                        .Items.Add(searchTable.Rows(i)("BookNumber"))
+                        With .Items(.Items.Count - 1).SubItems
+                            .Add(searchTable.Rows(i)("BookName"))
+                            .Add(searchTable.Rows(i)("AuthorName"))
+                            .Add(searchTable.Rows(i)("BookQuantity"))
+                            .Add(searchTable.Rows(i)("CategoryName"))
+                        End With
+                    End With
+                Next
             Else
                 MessageBox.Show("Book #" & txtSearch.Text & " could not be found.", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 txtSearch.Focus()
@@ -27,49 +55,75 @@
         End If
     End Sub
 
-    Private Sub btnUpdateBook_Click(sender As Object, e As EventArgs) Handles btnUpdateBook.Click
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         ''
-        Dim newBook As New Book
-
-        ''
-        newBook.BookNumber = txtBookNumber.Text
-        newBook.BookName = txtBookName.Text
-        newBook.AuthorName = txtAuthorName.Text
-        newBook.BookQuantity = txtBookQuantity.Text
-
-        ''
-        If objBookService.Update(newBook) = True Then
-            MessageBox.Show("Book successfully modified.", "Update Book", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Else
-            MessageBox.Show("Book could not be modified.", "Update Book", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End If
+        frmAddBook.Show()
+        Me.Hide()
     End Sub
 
-    Private Sub btnDeleteBook_Click(sender As Object, e As EventArgs) Handles btnDeleteBook.Click
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         ''
-        If txtBookNumber.Text.Length > 5 Then
-            If objBookService.Delete(txtBookNumber.Text) = True Then
-                MessageBox.Show("Book successfully deleted.", "Delete Book", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Try
+            If SelectedBook.BookNumber.Length >= 5 And SelectedBook.BookName.Length >= 1 Then
+                frmEditBook.Show()
+                Me.Hide()
             Else
-                MessageBox.Show("Book could not be deleted.", "Delete Book", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Please select a book to update from the list.", "Manage Books", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
             End If
-        Else
-            MessageBox.Show("Book number is invalid.", "input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            txtBookNumber.Focus()
-            Exit Sub
-        End If
+        Catch ex As Exception
+            MessageBox.Show("Please select a book to update from the list.", "Manage Books", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
-    Private Sub btnResetBook_Click(sender As Object, e As EventArgs) Handles btnResetBook.Click
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         ''
-        txtBookNumber.Clear()
-        txtBookName.Clear()
-        txtAuthorName.Clear()
-        txtBookQuantity.Clear()
-        txtBookCategory.Clear()
-        txtSearch.Clear()
+        Try
+            If SelectedBook.BookNumber.Length >= 5 And SelectedBook.BookName.Length >= 1 Then
+                If objBookService.Delete(SelectedBook.BookNumber) = True Then
+                    MessageBox.Show("Book successfully deleted.", "Manage Books", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    RefreshGrid()
+                Else
+                    MessageBox.Show("Could not successfully delete book.", "Manage Books", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                End If
+            Else
+                MessageBox.Show("Please select a book to delete from the list.", "Manage Books", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Please select a book to update from the list.", "Manage Books", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 
-        dgvBooks.DataSource = objBookService.GetAll()
+    Private Sub btnLend_Click(sender As Object, e As EventArgs) Handles btnLend.Click
+        ''
+        Try
+            If SelectedBook.BookNumber.Length >= 5 And SelectedBook.BookName.Length >= 1 Then
+                frmAddBorrow.Show()
+                Me.Hide()
+            Else
+                MessageBox.Show("Please select a book to lend from the list.", "Manage Books", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Please select a book to update from the list.", "Manage Books", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub btnReserve_Click(sender As Object, e As EventArgs) Handles btnReserve.Click
+        ''
+        Try
+            If SelectedBook.BookNumber.Length >= 5 And SelectedBook.BookName.Length >= 1 Then
+                frmAddBorrow.Show()
+                Me.Hide()
+            Else
+                MessageBox.Show("Please select a book to reserve from the list.", "Manage Books", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Please select a book to update from the list.", "Manage Books", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -78,6 +132,13 @@
         Me.Hide()
     End Sub
 
+    Private Sub lstBooks_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstBooks.SelectedIndexChanged
+        ''
+        SelectedBook.BookNumber = lstBooks.Items(lstBooks.FocusedItem.Index).SubItems(0).Text
+        SelectedBook.BookName = lstBooks.Items(lstBooks.FocusedItem.Index).SubItems(1).Text
+        SelectedBook.AuthorName = lstBooks.Items(lstBooks.FocusedItem.Index).SubItems(2).Text
+        SelectedBook.BookQuantity = Integer.Parse(lstBooks.Items(lstBooks.FocusedItem.Index).SubItems(3).Text)
+    End Sub
 
 #Region "MenuStrip"
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click

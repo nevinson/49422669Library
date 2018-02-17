@@ -96,6 +96,12 @@
     <Compile Include="Admin\frmDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\frmEditBook.Designer.vb">
+      <DependentUpon>frmEditBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmEditBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\frmEditUser.Designer.vb">
       <DependentUpon>frmEditUser.vb</DependentUpon>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\frmDashboard.resx">
       <DependentUpon>frmDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmEditBook.resx">
+      <DependentUpon>frmEditBook.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\frmEditUser.resx">
       <DependentUpon>frmEditUser.vb</DependentUpon>

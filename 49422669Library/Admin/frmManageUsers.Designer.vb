@@ -154,7 +154,7 @@ Partial Class frmManageUsers
         Me.btnAddUser.Name = "btnAddUser"
         Me.btnAddUser.Size = New System.Drawing.Size(108, 36)
         Me.btnAddUser.TabIndex = 31
-        Me.btnAddUser.Text = "&Add User"
+        Me.btnAddUser.Text = "Ad&d User"
         Me.btnAddUser.UseVisualStyleBackColor = True
         '
         'lstUsers
@@ -212,7 +212,7 @@ Partial Class frmManageUsers
         'btnSearch
         '
         Me.btnSearch.ForeColor = System.Drawing.Color.Teal
-        Me.btnSearch.Location = New System.Drawing.Point(291, 14)
+        Me.btnSearch.Location = New System.Drawing.Point(515, 13)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(68, 23)
         Me.btnSearch.TabIndex = 28
@@ -222,7 +222,7 @@ Partial Class frmManageUsers
         'txtSearch
         '
         Me.txtSearch.ForeColor = System.Drawing.Color.Teal
-        Me.txtSearch.Location = New System.Drawing.Point(62, 17)
+        Me.txtSearch.Location = New System.Drawing.Point(286, 16)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(200, 20)
         Me.txtSearch.TabIndex = 27
