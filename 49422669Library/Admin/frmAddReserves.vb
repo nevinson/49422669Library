@@ -2,6 +2,15 @@
     ''
     Dim objReserveService As New ReserveService()
 
+    Private Sub frmAddReserves_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ''
+        If frmManageBooks.SelectedBook.BookNumber = Nothing Then
+            txtBookNumber.Text = Nothing
+        Else
+            txtBookNumber.Text = frmManageBooks.SelectedBook.BookNumber
+        End If
+    End Sub
+
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         ''
         frmDashboard.Show()

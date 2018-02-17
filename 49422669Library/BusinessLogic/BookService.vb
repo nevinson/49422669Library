@@ -58,6 +58,33 @@ Public Class BookService
         Return dbTable
     End Function
 
+    Public Function SearchByBookNumber(ByVal strBookNumber As String) As DataTable
+        ''
+        Dim dbCon As New OleDbConnection()
+        Dim dbCmd As New OleDbCommand()
+        Dim dbTable As New DataTable()
+        sql = "SearchBookByBookNumber"
+        blResult = False
+
+        ''
+        dbCon.ConnectionString = objConstants.ConnectionString()
+        dbCon.Open()
+
+        ''
+        dbCmd.Connection = dbCon
+        dbCmd.CommandText = sql
+        dbCmd.CommandType = CommandType.StoredProcedure
+
+        ''
+        dbCmd.Parameters.AddWithValue("@bookNumber", strBookNumber)
+
+        ''
+        dbTable.Load(dbCmd.ExecuteReader())
+
+        ''
+        Return dbTable
+    End Function
+
     Public Function Create(ByVal _book As Book) As Boolean
         ''
         Dim dbCon As New OleDbConnection()

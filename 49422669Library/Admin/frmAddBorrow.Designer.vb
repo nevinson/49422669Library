@@ -25,6 +25,7 @@ Partial Class frmAddBorrow
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dteReturnDate = New System.Windows.Forms.DateTimePicker()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnBorrow = New System.Windows.Forms.Button()
         Me.txtMembershipNumber = New System.Windows.Forms.TextBox()
@@ -54,7 +55,6 @@ Partial Class frmAddBorrow
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HowToUseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.dteReturnDate = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -98,6 +98,13 @@ Partial Class frmAddBorrow
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(431, 237)
         Me.Panel1.TabIndex = 13
+        '
+        'dteReturnDate
+        '
+        Me.dteReturnDate.Location = New System.Drawing.Point(165, 137)
+        Me.dteReturnDate.Name = "dteReturnDate"
+        Me.dteReturnDate.Size = New System.Drawing.Size(249, 20)
+        Me.dteReturnDate.TabIndex = 32
         '
         'btnBack
         '
@@ -312,13 +319,6 @@ Partial Class frmAddBorrow
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.AboutToolStripMenuItem.Text = "About "
-        '
-        'dteReturnDate
-        '
-        Me.dteReturnDate.Location = New System.Drawing.Point(165, 137)
-        Me.dteReturnDate.Name = "dteReturnDate"
-        Me.dteReturnDate.Size = New System.Drawing.Size(249, 20)
-        Me.dteReturnDate.TabIndex = 32
         '
         'frmAddBorrow
         '

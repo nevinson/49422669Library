@@ -3,6 +3,15 @@
     Dim objBorrowService As New BorrowService
     Dim objBookService As New BookService
 
+    Private Sub frmAddBorrow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ''
+        If frmManageBooks.SelectedBook.BookNumber = Nothing Then
+            txtBookNumber.Text = Nothing
+        Else
+            txtBookNumber.Text = frmManageBooks.SelectedBook.BookNumber
+        End If
+    End Sub
+
     Private Sub btnBorrow_Click(sender As Object, e As EventArgs) Handles btnBorrow.Click
         ''
         Dim newBorrow As New BookBorrow
@@ -15,7 +24,7 @@
             newBorrow.ReturnDate = dteReturnDate.Value.ToLongDateString()
 
             ''
-            Dim book As DataTable = objBookService.Search(txtBookNumber.Text)
+            Dim book As DataTable = objBookService.SearchByBookNumber(txtBookNumber.Text)
             Dim updateBook As New Book
 
             ''

@@ -115,7 +115,7 @@
         ''
         Try
             If SelectedBook.BookNumber.Length >= 5 And SelectedBook.BookName.Length >= 1 Then
-                frmAddBorrow.Show()
+                frmAddReserves.Show()
                 Me.Hide()
             Else
                 MessageBox.Show("Please select a book to reserve from the list.", "Manage Books", MessageBoxButtons.OK, MessageBoxIcon.Error)
