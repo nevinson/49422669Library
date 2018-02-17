@@ -102,9 +102,9 @@ Partial Class frmManageBooks
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(633, 69)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(16, 17)
+        Me.Label2.Size = New System.Drawing.Size(102, 17)
         Me.Label2.TabIndex = 31
-        Me.Label2.Text = "+"
+        Me.Label2.Text = "Manage Books"
         '
         'Panel1
         '
@@ -213,13 +213,11 @@ Partial Class frmManageBooks
         '
         'book_quantity
         '
-        Me.book_quantity.DisplayIndex = 0
         Me.book_quantity.Text = "Book Quantity"
         Me.book_quantity.Width = 101
         '
         'category_name
         '
-        Me.category_name.DisplayIndex = 1
         Me.category_name.Text = "Category Name"
         Me.category_name.Width = 120
         '

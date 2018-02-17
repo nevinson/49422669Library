@@ -138,11 +138,10 @@ Public Class BookService
         dbCmd.CommandType = CommandType.StoredProcedure
 
         ''
-        dbCmd.Parameters.AddWithValue("@bookNumber", _book.BookNumber)
-        dbCmd.Parameters.AddWithValue("@bookname", _book.BookName)
+        dbCmd.Parameters.AddWithValue("@bookName", _book.BookName)
         dbCmd.Parameters.AddWithValue("@authorName", _book.AuthorName)
-        dbCmd.Parameters.AddWithValue("@bookCategoryId", _book.BookCategoryId)
         dbCmd.Parameters.AddWithValue("@bookQuantity", _book.BookQuantity)
+        dbCmd.Parameters.AddWithValue("@bookNumber", _book.BookNumber)
 
         If dbCmd.ExecuteNonQuery() = 1 Then
             blResult = True
