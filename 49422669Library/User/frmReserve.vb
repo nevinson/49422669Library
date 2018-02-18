@@ -4,7 +4,12 @@
 
     Private Sub frmReserve_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ''
-        txtMembershipNumber.Text = frmLogIn.MembershipNumber
+        If frmUserDashboard.SelectedBook.BookNumber = Nothing Or frmLogIn.MembershipNumber = Nothing Then
+            txtBookNumber.Text = Nothing
+        Else
+            txtBookNumber.Text = frmUserDashboard.SelectedBook.BookNumber
+            txtMembershipNumber.Text = frmLogIn.MembershipNumber
+        End If
     End Sub
 
     Private Sub btnReserve_Click(sender As Object, e As EventArgs) Handles btnReserve.Click

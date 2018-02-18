@@ -207,7 +207,7 @@ Public Class BorrowService
         Return blResult
     End Function
 
-    Public Function GetOverdue(ByVal _bookBorrow As BookBorrow)
+    Public Function GetOverdue()
         ''
         Dim dbCon As New OleDbConnection()
         Dim dbCmd As New OleDbCommand()
@@ -224,7 +224,7 @@ Public Class BorrowService
         dbCmd.CommandType = CommandType.StoredProcedure
 
         ''
-        dbCmd.Parameters.AddWithValue("@bookNumber", _bookBorrow.ReturnDate)
+        dbCmd.Parameters.AddWithValue("@returnDate", DateTime.Now.ToLongDateString())
 
         If dbCmd.ExecuteNonQuery() = 1 Then
             blResult = True
@@ -235,7 +235,7 @@ Public Class BorrowService
         Return blResult
     End Function
 
-    Public Function GetDueToday(ByVal dteReturnDate As DateTime)
+    Public Function GetDueToday()
         ''
         Dim dbCon As New OleDbConnection()
         Dim dbCmd As New OleDbCommand()
@@ -252,7 +252,7 @@ Public Class BorrowService
         dbCmd.CommandType = CommandType.StoredProcedure
 
         ''
-        dbCmd.Parameters.AddWithValue("@bookNumber", dteReturnDate)
+        dbCmd.Parameters.AddWithValue("@returnDate", DateTime.Now.ToLongDateString())
 
         If dbCmd.ExecuteNonQuery() = 1 Then
             blResult = True
