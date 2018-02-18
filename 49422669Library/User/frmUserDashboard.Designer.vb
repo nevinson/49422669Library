@@ -54,6 +54,7 @@ Partial Class frmUserDashboard
         Me.lblBooksReserved = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblBooksDue = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -265,6 +266,7 @@ Partial Class frmUserDashboard
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.lblBooksReserved)
         Me.Panel2.Controls.Add(Me.Label4)
@@ -318,12 +320,24 @@ Partial Class frmUserDashboard
         Me.lblBooksDue.TabIndex = 0
         Me.lblBooksDue.Text = "0"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(627, 62)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(112, 17)
+        Me.Label3.TabIndex = 28
+        Me.Label3.Text = "User Dashboard"
+        '
         'frmUserDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(751, 578)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -375,4 +389,5 @@ Partial Class frmUserDashboard
     Friend WithEvents lblBooksReserved As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents lblBooksDue As Label
+    Friend WithEvents Label3 As Label
 End Class

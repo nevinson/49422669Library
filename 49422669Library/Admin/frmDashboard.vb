@@ -1,8 +1,23 @@
 ﻿Public Class frmDashboard
+    ''
+    Dim objUserService As New UserService()
+    Dim objBookService As New BookService()
+    Dim objBorrowService As New BorrowService()
+    Dim objReserveService As New ReserveService()
+
     Private Sub frmDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label1.Text = frmLogIn.MembershipNumber
+        ''
+        lblUsers.Text = objUserService.GetAll().Rows.Count().ToString()
+        lblBooks.Text = objBookService.GetAll().Rows.Count().ToString()
+        lblBorrows.Text = objBorrowService.GetAll().Rows.Count().ToString()
+        lblReserves.Text = objReserveService.GetAll().Rows.Count().ToString()
     End Sub
 
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        ''
+        frmLogIn.Show()
+        Me.Hide()
+    End Sub
 
 #Region "MenuStrip"
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
