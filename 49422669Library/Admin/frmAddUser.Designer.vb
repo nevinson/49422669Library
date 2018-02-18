@@ -201,6 +201,7 @@ Partial Class frmAddUser
         Me.txtMembershipNumber.ForeColor = System.Drawing.Color.Teal
         Me.txtMembershipNumber.Location = New System.Drawing.Point(166, 9)
         Me.txtMembershipNumber.Name = "txtMembershipNumber"
+        Me.txtMembershipNumber.ReadOnly = True
         Me.txtMembershipNumber.Size = New System.Drawing.Size(249, 20)
         Me.txtMembershipNumber.TabIndex = 12
         '

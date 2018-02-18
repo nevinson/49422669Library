@@ -40,7 +40,7 @@
         newBook.BookCategoryId = intCategoryId
 
         ''
-        If objBookService.Update(newBook) = True Then
+        If objBookService.Create(newBook) = True Then
             MessageBox.Show("Book successfully created.", "Create Book", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
             MessageBox.Show("Book could not be created.", "Create Book", MessageBoxButtons.OK, MessageBoxIcon.Error)
