@@ -189,9 +189,9 @@ Partial Class frmEditBook
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(354, 64)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 17)
+        Me.Label2.Size = New System.Drawing.Size(68, 17)
         Me.Label2.TabIndex = 31
-        Me.Label2.Text = "Update Book"
+        Me.Label2.Text = "Edit Book"
         '
         'btnBack
         '

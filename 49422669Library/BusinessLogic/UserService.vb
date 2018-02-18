@@ -144,14 +144,8 @@ Public Class UserService
         dbCmd.CommandType = CommandType.StoredProcedure
 
         ''
-        dbCmd.Parameters.AddWithValue("@firstName", newUser.FirstName)
-        dbCmd.Parameters.AddWithValue("@lastName", newUser.LastName)
         dbCmd.Parameters.AddWithValue("@email", newUser.Email)
         dbCmd.Parameters.AddWithValue("@username", newUser.Username)
-        dbCmd.Parameters.AddWithValue("@password", HashPassword(newUser.Password))
-        dbCmd.Parameters.AddWithValue("@membershipType", newUser.MembershipType)
-        dbCmd.Parameters.AddWithValue("@status", newUser.Status)
-        dbCmd.Parameters.AddWithValue("@joinDate", newUser.JoinDate)
         dbCmd.Parameters.AddWithValue("@membershipNumber", newUser.MembershipNumber)
 
         If dbCmd.ExecuteNonQuery() = 1 Then

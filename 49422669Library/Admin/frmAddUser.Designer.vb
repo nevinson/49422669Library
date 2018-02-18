@@ -70,7 +70,7 @@ Partial Class frmAddUser
         'txtPassword
         '
         Me.txtPassword.ForeColor = System.Drawing.Color.Teal
-        Me.txtPassword.Location = New System.Drawing.Point(166, 169)
+        Me.txtPassword.Location = New System.Drawing.Point(166, 189)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(249, 20)
         Me.txtPassword.TabIndex = 17
@@ -112,7 +112,7 @@ Partial Class frmAddUser
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Teal
-        Me.Label9.Location = New System.Drawing.Point(70, 204)
+        Me.Label9.Location = New System.Drawing.Point(70, 228)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(78, 17)
         Me.Label9.TabIndex = 20
@@ -123,7 +123,7 @@ Partial Class frmAddUser
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Teal
-        Me.Label6.Location = New System.Drawing.Point(71, 140)
+        Me.Label6.Location = New System.Drawing.Point(71, 156)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(77, 17)
         Me.Label6.TabIndex = 10
@@ -159,7 +159,7 @@ Partial Class frmAddUser
         Me.cmbUserType.ForeColor = System.Drawing.Color.Teal
         Me.cmbUserType.FormattingEnabled = True
         Me.cmbUserType.Items.AddRange(New Object() {"Administrator", "Member"})
-        Me.cmbUserType.Location = New System.Drawing.Point(166, 200)
+        Me.cmbUserType.Location = New System.Drawing.Point(166, 224)
         Me.cmbUserType.Name = "cmbUserType"
         Me.cmbUserType.Size = New System.Drawing.Size(249, 21)
         Me.cmbUserType.TabIndex = 27
@@ -167,7 +167,7 @@ Partial Class frmAddUser
         'txtUsername
         '
         Me.txtUsername.ForeColor = System.Drawing.Color.Teal
-        Me.txtUsername.Location = New System.Drawing.Point(166, 137)
+        Me.txtUsername.Location = New System.Drawing.Point(166, 153)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(249, 20)
         Me.txtUsername.TabIndex = 16
@@ -175,7 +175,7 @@ Partial Class frmAddUser
         'txtEmailAddress
         '
         Me.txtEmailAddress.ForeColor = System.Drawing.Color.Teal
-        Me.txtEmailAddress.Location = New System.Drawing.Point(166, 105)
+        Me.txtEmailAddress.Location = New System.Drawing.Point(166, 117)
         Me.txtEmailAddress.Name = "txtEmailAddress"
         Me.txtEmailAddress.Size = New System.Drawing.Size(249, 20)
         Me.txtEmailAddress.TabIndex = 15
@@ -183,7 +183,7 @@ Partial Class frmAddUser
         'txtLastName
         '
         Me.txtLastName.ForeColor = System.Drawing.Color.Teal
-        Me.txtLastName.Location = New System.Drawing.Point(166, 73)
+        Me.txtLastName.Location = New System.Drawing.Point(166, 81)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(249, 20)
         Me.txtLastName.TabIndex = 14
@@ -191,7 +191,7 @@ Partial Class frmAddUser
         'txtFirstName
         '
         Me.txtFirstName.ForeColor = System.Drawing.Color.Teal
-        Me.txtFirstName.Location = New System.Drawing.Point(166, 41)
+        Me.txtFirstName.Location = New System.Drawing.Point(166, 45)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(249, 20)
         Me.txtFirstName.TabIndex = 13
@@ -220,7 +220,7 @@ Partial Class frmAddUser
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Teal
-        Me.Label4.Location = New System.Drawing.Point(46, 108)
+        Me.Label4.Location = New System.Drawing.Point(46, 120)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(102, 17)
         Me.Label4.TabIndex = 8
@@ -231,7 +231,7 @@ Partial Class frmAddUser
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Teal
-        Me.Label3.Location = New System.Drawing.Point(68, 76)
+        Me.Label3.Location = New System.Drawing.Point(68, 84)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(80, 17)
         Me.Label3.TabIndex = 7
@@ -242,7 +242,7 @@ Partial Class frmAddUser
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.ForeColor = System.Drawing.Color.Teal
-        Me.lblPassword.Location = New System.Drawing.Point(68, 44)
+        Me.lblPassword.Location = New System.Drawing.Point(68, 48)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(80, 17)
         Me.lblPassword.TabIndex = 5
@@ -253,7 +253,7 @@ Partial Class frmAddUser
         Me.lblUsername.AutoSize = True
         Me.lblUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername.ForeColor = System.Drawing.Color.Teal
-        Me.lblUsername.Location = New System.Drawing.Point(75, 172)
+        Me.lblUsername.Location = New System.Drawing.Point(75, 192)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(73, 17)
         Me.lblUsername.TabIndex = 4
@@ -264,7 +264,7 @@ Partial Class frmAddUser
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(356, 71)
+        Me.Label2.Location = New System.Drawing.Point(356, 76)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(88, 17)
         Me.Label2.TabIndex = 23
