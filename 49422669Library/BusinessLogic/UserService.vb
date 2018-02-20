@@ -31,6 +31,32 @@ Public Class UserService
         Return dbTable
     End Function
 
+    Friend Function GetByMembershipNumber(text As String) As DataTable
+        ''
+        Dim dbCon As New OleDbConnection()
+        Dim dbCmd As New OleDbCommand()
+        Dim dbTable As New DataTable()
+        sql = "GetUsersByMembershipNumber"
+
+        ''
+        dbCon.ConnectionString = objConstants.ConnectionString()
+        dbCon.Open()
+
+        ''
+        dbCmd.Connection = dbCon
+        dbCmd.CommandText = sql
+        dbCmd.CommandType = CommandType.StoredProcedure
+
+        ''
+        dbCmd.Parameters.AddWithValue("@membershipNumber", text)
+
+        ''
+        dbTable.Load(dbCmd.ExecuteReader())
+
+        ''
+        Return dbTable
+    End Function
+
     Public Function Search(ByVal strSearchString As String) As DataTable
         ''
         Dim dbCon As New OleDbConnection()

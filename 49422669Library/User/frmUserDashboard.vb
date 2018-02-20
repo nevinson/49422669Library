@@ -3,6 +3,7 @@
     Dim objBookService As New BookService()
     Dim objReservesService As New ReserveService()
     Dim objBorrowService As New BorrowService()
+    Dim objMessageService As New MessageService()
     Public Shared SelectedBook As New Book
 
     Private Sub frmUserDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -32,6 +33,7 @@
             ''
             lblBooksDue.Text = objBorrowService.GetByMembershipNumber(frmLogIn.MembershipNumber).Rows.Count.ToString()
             lblBooksReserved.Text = objReservesService.GetByMembershipNumber(frmLogIn.MembershipNumber).Rows.Count.ToString()
+            lblMessages.Text = objMessageService.GetUnreadByMembershipNumber(frmLogIn.MembershipNumber).Rows.Count.ToString()
         End If
     End Sub
 
@@ -137,6 +139,12 @@
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         ''
         MessageBox.Show("49422669 Library is a VB.Net project created for the UNISA Module ICT3714 Assessment Project.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub MessagesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MessagesToolStripMenuItem.Click
+        ''
+        frmManageMessage.Show()
+        Me.Hide()
     End Sub
 #End Region
 End Class

@@ -50,11 +50,14 @@ Partial Class frmUserDashboard
         Me.HowToUseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblMessages = New System.Windows.Forms.Label()
         Me.lblBooksReserved = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblBooksDue = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.MessagesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -214,7 +217,7 @@ Partial Class frmUserDashboard
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileToolStripMenuItem, Me.ReserveBookToolStripMenuItem, Me.BorrowBookToolStripMenuItem, Me.BackToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileToolStripMenuItem, Me.MessagesToolStripMenuItem, Me.ReserveBookToolStripMenuItem, Me.BorrowBookToolStripMenuItem, Me.BackToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "&View"
@@ -222,26 +225,26 @@ Partial Class frmUserDashboard
         'ProfileToolStripMenuItem
         '
         Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ProfileToolStripMenuItem.Text = "&Profile"
         '
         'ReserveBookToolStripMenuItem
         '
         Me.ReserveBookToolStripMenuItem.Name = "ReserveBookToolStripMenuItem"
-        Me.ReserveBookToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.ReserveBookToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ReserveBookToolStripMenuItem.Text = "&Reserve Book"
         '
         'BorrowBookToolStripMenuItem
         '
         Me.BorrowBookToolStripMenuItem.Name = "BorrowBookToolStripMenuItem"
-        Me.BorrowBookToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.BorrowBookToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BorrowBookToolStripMenuItem.Text = "&Borrow Book"
         '
         'BackToolStripMenuItem
         '
         Me.BackToolStripMenuItem.Enabled = False
         Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
-        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BackToolStripMenuItem.Text = "B&ack"
         '
         'HelpToolStripMenuItem
@@ -267,7 +270,9 @@ Partial Class frmUserDashboard
         '
         Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.lblMessages)
         Me.Panel2.Controls.Add(Me.lblBooksReserved)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.lblBooksDue)
@@ -276,23 +281,45 @@ Partial Class frmUserDashboard
         Me.Panel2.Size = New System.Drawing.Size(726, 98)
         Me.Panel2.TabIndex = 9
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Teal
+        Me.Label7.Location = New System.Drawing.Point(603, 65)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(72, 17)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "Messages"
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Teal
-        Me.Label6.Location = New System.Drawing.Point(578, 65)
+        Me.Label6.Location = New System.Drawing.Point(327, 65)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(112, 17)
         Me.Label6.TabIndex = 3
         Me.Label6.Text = "Books Reserved"
+        '
+        'lblMessages
+        '
+        Me.lblMessages.AutoSize = True
+        Me.lblMessages.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMessages.ForeColor = System.Drawing.Color.Teal
+        Me.lblMessages.Location = New System.Drawing.Point(617, 11)
+        Me.lblMessages.Name = "lblMessages"
+        Me.lblMessages.Size = New System.Drawing.Size(47, 51)
+        Me.lblMessages.TabIndex = 2
+        Me.lblMessages.Text = "0"
         '
         'lblBooksReserved
         '
         Me.lblBooksReserved.AutoSize = True
         Me.lblBooksReserved.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBooksReserved.ForeColor = System.Drawing.Color.Teal
-        Me.lblBooksReserved.Location = New System.Drawing.Point(612, 11)
+        Me.lblBooksReserved.Location = New System.Drawing.Point(361, 11)
         Me.lblBooksReserved.Name = "lblBooksReserved"
         Me.lblBooksReserved.Size = New System.Drawing.Size(47, 51)
         Me.lblBooksReserved.TabIndex = 2
@@ -330,6 +357,12 @@ Partial Class frmUserDashboard
         Me.Label3.Size = New System.Drawing.Size(112, 17)
         Me.Label3.TabIndex = 28
         Me.Label3.Text = "User Dashboard"
+        '
+        'MessagesToolStripMenuItem
+        '
+        Me.MessagesToolStripMenuItem.Name = "MessagesToolStripMenuItem"
+        Me.MessagesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MessagesToolStripMenuItem.Text = "&Messages"
         '
         'frmUserDashboard
         '
@@ -390,4 +423,7 @@ Partial Class frmUserDashboard
     Friend WithEvents Label4 As Label
     Friend WithEvents lblBooksDue As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents lblMessages As Label
+    Friend WithEvents MessagesToolStripMenuItem As ToolStripMenuItem
 End Class

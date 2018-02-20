@@ -78,6 +78,12 @@
     <Compile Include="Admin\frmAddBook.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\frmAddMessage.Designer.vb">
+      <DependentUpon>frmAddMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmAddMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\frmAddReserves.Designer.vb">
       <DependentUpon>frmAddReserves.vb</DependentUpon>
     </Compile>
@@ -120,6 +126,12 @@
     <Compile Include="Admin\frmManageBorrows.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\frmManageMessage.Designer.vb">
+      <DependentUpon>frmManageMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmManageMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\frmManageReserves.Designer.vb">
       <DependentUpon>frmManageReserves.vb</DependentUpon>
     </Compile>
@@ -132,15 +144,23 @@
     <Compile Include="Admin\frmManageUsers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\frmReplyMessage.Designer.vb">
+      <DependentUpon>frmReplyMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmReplyMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="BusinessLogic\BookService.vb" />
     <Compile Include="BusinessLogic\BorrowService.vb" />
+    <Compile Include="BusinessLogic\MessageService.vb" />
     <Compile Include="BusinessLogic\ReserveService.vb" />
     <Compile Include="BusinessLogic\UserService.vb" />
     <Compile Include="BusinessObjects\Book.vb" />
     <Compile Include="BusinessObjects\BookCategory.vb" />
     <Compile Include="BusinessObjects\BookBorrow.vb" />
     <Compile Include="BusinessObjects\BookReserve.vb" />
+    <Compile Include="BusinessObjects\Message.vb" />
     <Compile Include="BusinessObjects\User.vb" />
     <Compile Include="BusinessLogic\Constants.vb" />
     <Compile Include="frmHome.Designer.vb">
@@ -206,10 +226,19 @@
     <Compile Include="User\frmUserDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User\frmViewMessage.Designer.vb">
+      <DependentUpon>frmViewMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmViewMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Admin\frmAddBook.resx">
       <DependentUpon>frmAddBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmAddMessage.resx">
+      <DependentUpon>frmAddMessage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\frmAddReserves.resx">
       <DependentUpon>frmAddReserves.vb</DependentUpon>
@@ -232,11 +261,17 @@
     <EmbeddedResource Include="Admin\frmManageBorrows.resx">
       <DependentUpon>frmManageBorrows.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmManageMessage.resx">
+      <DependentUpon>frmManageMessage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\frmManageReserves.resx">
       <DependentUpon>frmManageReserves.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\frmManageUsers.resx">
       <DependentUpon>frmManageUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmReplyMessage.resx">
+      <DependentUpon>frmReplyMessage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoading.resx">
       <DependentUpon>frmLoading.vb</DependentUpon>
@@ -264,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User\frmUserDashboard.resx">
       <DependentUpon>frmUserDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmViewMessage.resx">
+      <DependentUpon>frmViewMessage.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

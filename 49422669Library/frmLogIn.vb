@@ -9,9 +9,15 @@
     Public Shared MembershipType As String
     Public Shared Status As String
 
+    Private Sub frmLogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ''
+        txtUsername.Clear()
+        txtPassword.Clear()
+    End Sub
+
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        '' terminate the application
-        Application.Exit()
+        '' 
+        Constants.ExitProgram(True)
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
