@@ -13,4 +13,9 @@
             Application.Exit()
         End If
     End Sub
+
+    Public Shared Function AdminId() As String
+        ''
+        Return "NM00123468"
+    End Function
 End Class

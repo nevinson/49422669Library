@@ -49,6 +49,7 @@ Partial Class frmDashboard
         Me.ManageBooks = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageBorrowedBooks = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageReservedBook = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageMessages = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddBook = New System.Windows.Forms.ToolStripMenuItem()
@@ -57,7 +58,6 @@ Partial Class frmDashboard
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HowToUse = New System.Windows.Forms.ToolStripMenuItem()
         Me.About = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageMessages = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -88,7 +88,6 @@ Partial Class frmDashboard
         Me.Label9.Size = New System.Drawing.Size(72, 17)
         Me.Label9.TabIndex = 1
         Me.Label9.Text = "Messages"
-        Me.Label9.Visible = False
         '
         'Label8
         '
@@ -122,7 +121,6 @@ Partial Class frmDashboard
         Me.lblMessages.Size = New System.Drawing.Size(47, 51)
         Me.lblMessages.TabIndex = 0
         Me.lblMessages.Text = "0"
-        Me.lblMessages.Visible = False
         '
         'lblBooks
         '
@@ -299,7 +297,7 @@ Partial Class frmDashboard
         '
         Me.ManageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageUsers, Me.ManageBooks, Me.ManageBorrowedBooks, Me.ManageReservedBook, Me.ManageMessages})
         Me.ManageToolStripMenuItem.Name = "ManageToolStripMenuItem"
-        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.ManageToolStripMenuItem.Text = "&Manage"
         '
         'ManageUsers
@@ -326,11 +324,17 @@ Partial Class frmDashboard
         Me.ManageReservedBook.Size = New System.Drawing.Size(160, 22)
         Me.ManageReservedBook.Text = "&Reserved Books"
         '
+        'ManageMessages
+        '
+        Me.ManageMessages.Name = "ManageMessages"
+        Me.ManageMessages.Size = New System.Drawing.Size(160, 22)
+        Me.ManageMessages.Text = "&Messages"
+        '
         'AddToolStripMenuItem
         '
         Me.AddToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddUser, Me.AddBook, Me.AddBorrowedBook, Me.AddReservedBook})
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.AddToolStripMenuItem.Text = "&Add"
         '
         'AddUser
@@ -375,12 +379,6 @@ Partial Class frmDashboard
         Me.About.Name = "About"
         Me.About.Size = New System.Drawing.Size(134, 22)
         Me.About.Text = "A&bout"
-        '
-        'ManageMessages
-        '
-        Me.ManageMessages.Name = "ManageMessages"
-        Me.ManageMessages.Size = New System.Drawing.Size(160, 22)
-        Me.ManageMessages.Text = "&Messages"
         '
         'frmDashboard
         '

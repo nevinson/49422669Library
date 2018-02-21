@@ -4,23 +4,22 @@
 
     Private Sub btnReply_Click(sender As Object, e As EventArgs) Handles btnReply.Click
         ''
-        Dim strSender As String = Nothing, strReceiver As String = Nothing
-
-        ''
-        If frmManageMessage.SelectedMessage.Sender = frmLogIn.MembershipNumber Then
-            strSender = frmLogIn.MembershipNumber
-            strReceiver = frmManageMessage.SelectedMessage.Reciever
-        ElseIf frmManageMessage.SelectedMessage.Reciever = frmLogIn.MembershipNumber Then
-            strSender = frmLogIn.MembershipNumber
-            strReceiver = frmManageMessage.SelectedMessage.Sender
-        End If
-
-        ''
         Dim newMessage As New Message
 
+        ''
+        If frmLogIn.MembershipType = "Admin" Then
+            newMessage.Sender = Constants.AdminId()
+            If frmLogIn.MembershipNumber.Equals(frmManageMessage.SelectedMessage.Sender) Then
+                newMessage.Reciever = frmManageMessage.SelectedMessage.Reciever
+            ElseIf frmLogIn.MembershipNumber.Equals(frmManageMessage.SelectedMessage.Reciever) Then
+                newMessage.Reciever = frmManageMessage.SelectedMessage.Sender
+            End If
+        ElseIf frmLogIn.MembershipType = "Member" Then
+            newMessage.Sender = frmLogIn.MembershipNumber
+            newMessage.Reciever = Constants.AdminId()
+        End If
+
         If txtMessage.Text.Length > 5 Then
-            newMessage.Sender = strSender
-            newMessage.Reciever = strReceiver
             newMessage.Content = txtMessage.Text
             newMessage.DateCreated = DateTime.Now.ToLongDateString
             newMessage.Status = "Unread"

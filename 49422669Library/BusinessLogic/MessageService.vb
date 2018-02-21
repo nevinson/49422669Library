@@ -65,7 +65,7 @@ Public Class MessageService
         ''
         Dim dbCon As New OleDbConnection()
         Dim dbCmd As New OleDbCommand()
-        sql = "UpdateMessageStatus"
+        sql = "AddMessage"
         blResult = False
 
         ''

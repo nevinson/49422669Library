@@ -6,7 +6,13 @@
     Private Sub frmAddMessage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ''
         Try
-            txtSender.Text = frmLogIn.MembershipNumber
+            If frmLogIn.MembershipType = "Admin" Then
+
+                txtSender.Text = frmLogIn.MembershipNumber
+            Else
+                txtSender.Text = frmLogIn.MembershipNumber
+                txtReceiver.Text = Constants.AdminId()
+            End If
         Catch ex As Exception
 
         End Try
