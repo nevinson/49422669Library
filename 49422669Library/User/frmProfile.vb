@@ -1,4 +1,22 @@
 ﻿Public Class frmProfile
+
+    Private Sub frmProfile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ''
+        If frmLogIn.MembershipNumber = Nothing Then
+            frmLogIn.Show()
+            Me.Hide()
+        Else
+            txtMembershipNumber.Text = frmLogIn.MembershipNumber
+            txtLastName.Text = frmLogIn.LastName
+            txtFirstName.Text = frmLogIn.FirstName
+            txtMemberType.Text = frmLogIn.MembershipType
+            txtStatus.Text = frmLogIn.Status
+            txtUsername.Text = frmLogIn.UserName
+
+            btnBack.Focus()
+        End If
+    End Sub
+
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         '' show the user dashboard form
         frmUserDashboard.Show()

@@ -22,28 +22,21 @@ Partial Class frmProfile
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtStatus = New System.Windows.Forms.TextBox()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.txtMembershipNumber = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
-        Me.lblUsername = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtMemberType = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -63,71 +56,68 @@ Partial Class frmProfile
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TextBox7
+        'txtStatus
         '
-        Me.TextBox7.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox7.Location = New System.Drawing.Point(166, 201)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox7.TabIndex = 18
+        Me.txtStatus.ForeColor = System.Drawing.Color.Teal
+        Me.txtStatus.Location = New System.Drawing.Point(169, 173)
+        Me.txtStatus.Name = "txtStatus"
+        Me.txtStatus.ReadOnly = True
+        Me.txtStatus.Size = New System.Drawing.Size(249, 20)
+        Me.txtStatus.TabIndex = 18
         '
-        'TextBox5
+        'txtLastName
         '
-        Me.TextBox5.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox5.Location = New System.Drawing.Point(166, 137)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox5.TabIndex = 16
+        Me.txtLastName.ForeColor = System.Drawing.Color.Teal
+        Me.txtLastName.Location = New System.Drawing.Point(169, 109)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.ReadOnly = True
+        Me.txtLastName.Size = New System.Drawing.Size(249, 20)
+        Me.txtLastName.TabIndex = 16
         '
-        'TextBox4
+        'txtFirstName
         '
-        Me.TextBox4.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox4.Location = New System.Drawing.Point(166, 105)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox4.TabIndex = 15
+        Me.txtFirstName.ForeColor = System.Drawing.Color.Teal
+        Me.txtFirstName.Location = New System.Drawing.Point(169, 77)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.ReadOnly = True
+        Me.txtFirstName.Size = New System.Drawing.Size(249, 20)
+        Me.txtFirstName.TabIndex = 15
         '
-        'TextBox3
+        'txtUsername
         '
-        Me.TextBox3.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox3.Location = New System.Drawing.Point(166, 73)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox3.TabIndex = 14
+        Me.txtUsername.ForeColor = System.Drawing.Color.Teal
+        Me.txtUsername.Location = New System.Drawing.Point(169, 45)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.ReadOnly = True
+        Me.txtUsername.Size = New System.Drawing.Size(249, 20)
+        Me.txtUsername.TabIndex = 14
         '
-        'TextBox2
+        'txtMembershipNumber
         '
-        Me.TextBox2.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox2.Location = New System.Drawing.Point(166, 41)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox2.TabIndex = 13
-        '
-        'TextBox1
-        '
-        Me.TextBox1.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox1.Location = New System.Drawing.Point(166, 9)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox1.TabIndex = 12
+        Me.txtMembershipNumber.ForeColor = System.Drawing.Color.Teal
+        Me.txtMembershipNumber.Location = New System.Drawing.Point(169, 13)
+        Me.txtMembershipNumber.Name = "txtMembershipNumber"
+        Me.txtMembershipNumber.ReadOnly = True
+        Me.txtMembershipNumber.Size = New System.Drawing.Size(249, 20)
+        Me.txtMembershipNumber.TabIndex = 13
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Teal
-        Me.Label7.Location = New System.Drawing.Point(74, 204)
+        Me.Label7.Location = New System.Drawing.Point(97, 176)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(72, 17)
+        Me.Label7.Size = New System.Drawing.Size(52, 17)
         Me.Label7.TabIndex = 11
-        Me.Label7.Text = "Join Date:"
+        Me.Label7.Text = "Status:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Teal
-        Me.Label5.Location = New System.Drawing.Point(3, 44)
+        Me.Label5.Location = New System.Drawing.Point(6, 16)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(143, 17)
         Me.Label5.TabIndex = 9
@@ -138,18 +128,18 @@ Partial Class frmProfile
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Teal
-        Me.Label4.Location = New System.Drawing.Point(32, 172)
+        Me.Label4.Location = New System.Drawing.Point(24, 144)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(114, 17)
+        Me.Label4.Size = New System.Drawing.Size(125, 17)
         Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Contact Number:"
+        Me.Label4.Text = "Membership Type:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Teal
-        Me.Label3.Location = New System.Drawing.Point(66, 140)
+        Me.Label3.Location = New System.Drawing.Point(69, 112)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(80, 17)
         Me.Label3.TabIndex = 7
@@ -160,22 +150,11 @@ Partial Class frmProfile
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.ForeColor = System.Drawing.Color.Teal
-        Me.lblPassword.Location = New System.Drawing.Point(66, 108)
+        Me.lblPassword.Location = New System.Drawing.Point(69, 80)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(80, 17)
         Me.lblPassword.TabIndex = 5
         Me.lblPassword.Text = "First Name:"
-        '
-        'lblUsername
-        '
-        Me.lblUsername.AutoSize = True
-        Me.lblUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsername.ForeColor = System.Drawing.Color.Teal
-        Me.lblUsername.Location = New System.Drawing.Point(121, 12)
-        Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(25, 17)
-        Me.lblUsername.TabIndex = 4
-        Me.lblUsername.Text = "ID:"
         '
         'Label2
         '
@@ -205,102 +184,48 @@ Partial Class frmProfile
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnBack)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.TextBox10)
-        Me.Panel1.Controls.Add(Me.TextBox9)
-        Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Controls.Add(Me.TextBox7)
-        Me.Panel1.Controls.Add(Me.TextBox6)
-        Me.Panel1.Controls.Add(Me.TextBox5)
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.txtStatus)
+        Me.Panel1.Controls.Add(Me.txtMemberType)
+        Me.Panel1.Controls.Add(Me.txtLastName)
+        Me.Panel1.Controls.Add(Me.txtFirstName)
+        Me.Panel1.Controls.Add(Me.txtUsername)
+        Me.Panel1.Controls.Add(Me.txtMembershipNumber)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.lblPassword)
-        Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Location = New System.Drawing.Point(13, 104)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(431, 391)
+        Me.Panel1.Size = New System.Drawing.Size(431, 252)
         Me.Panel1.TabIndex = 17
         '
         'btnBack
         '
         Me.btnBack.ForeColor = System.Drawing.Color.Teal
-        Me.btnBack.Location = New System.Drawing.Point(321, 346)
+        Me.btnBack.Location = New System.Drawing.Point(324, 210)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(94, 32)
         Me.btnBack.TabIndex = 26
         Me.btnBack.Text = "B&ack"
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'Button1
+        'txtMemberType
         '
-        Me.Button1.ForeColor = System.Drawing.Color.Teal
-        Me.Button1.Location = New System.Drawing.Point(16, 346)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 32)
-        Me.Button1.TabIndex = 25
-        Me.Button1.Text = "&Update Profile"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox10
-        '
-        Me.TextBox10.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox10.Location = New System.Drawing.Point(166, 297)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox10.TabIndex = 24
-        '
-        'TextBox9
-        '
-        Me.TextBox9.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox9.Location = New System.Drawing.Point(166, 265)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox9.TabIndex = 23
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Teal
-        Me.Label10.Location = New System.Drawing.Point(42, 300)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(104, 17)
-        Me.Label10.TabIndex = 21
-        Me.Label10.Text = "New Password:"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Teal
-        Me.Label9.Location = New System.Drawing.Point(47, 268)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(99, 17)
-        Me.Label9.TabIndex = 20
-        Me.Label9.Text = "Old Password:"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.ForeColor = System.Drawing.Color.Teal
-        Me.TextBox6.Location = New System.Drawing.Point(166, 169)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(249, 20)
-        Me.TextBox6.TabIndex = 17
+        Me.txtMemberType.ForeColor = System.Drawing.Color.Teal
+        Me.txtMemberType.Location = New System.Drawing.Point(169, 141)
+        Me.txtMemberType.Name = "txtMemberType"
+        Me.txtMemberType.ReadOnly = True
+        Me.txtMemberType.Size = New System.Drawing.Size(249, 20)
+        Me.txtMemberType.TabIndex = 17
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Teal
-        Me.Label6.Location = New System.Drawing.Point(69, 76)
+        Me.Label6.Location = New System.Drawing.Point(72, 48)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(77, 17)
         Me.Label6.TabIndex = 10
@@ -402,7 +327,7 @@ Partial Class frmProfile
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(456, 516)
+        Me.ClientSize = New System.Drawing.Size(456, 367)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -419,28 +344,21 @@ Partial Class frmProfile
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtStatus As TextBox
+    Friend WithEvents txtLastName As TextBox
+    Friend WithEvents txtFirstName As TextBox
+    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents txtMembershipNumber As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblPassword As Label
-    Friend WithEvents lblUsername As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnBack As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtMemberType As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
