@@ -41,23 +41,18 @@ Partial Class frmDashboard
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Logout = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResfreshPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NavigateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageUsers = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageBooks = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageBorrowedBooks = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageReservedBook = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageMessages = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddUser = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddBook = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddBorrowedBook = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddReservedBook = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageMessagesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageBooksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageBorrowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageReservesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HowToUse = New System.Windows.Forms.ToolStripMenuItem()
-        Me.About = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HowTouseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -230,11 +225,11 @@ Partial Class frmDashboard
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(421, 73)
+        Me.Label12.Location = New System.Drawing.Point(409, 73)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(112, 17)
+        Me.Label12.Size = New System.Drawing.Size(121, 17)
         Me.Label12.TabIndex = 34
-        Me.Label12.Text = "User Dashboard"
+        Me.Label12.Text = "Admin Dashboard"
         '
         'Label13
         '
@@ -264,121 +259,89 @@ Partial Class frmDashboard
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(542, 24)
-        Me.MenuStrip1.TabIndex = 38
+        Me.MenuStrip1.TabIndex = 36
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Logout, Me.ExitMenu})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogoutToolStripMenuItem, Me.ResfreshPageToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
         '
-        'Logout
+        'LogoutToolStripMenuItem
         '
-        Me.Logout.Name = "Logout"
-        Me.Logout.Size = New System.Drawing.Size(112, 22)
-        Me.Logout.Text = "&Logout"
+        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LogoutToolStripMenuItem.Text = "&Logout"
         '
-        'ExitMenu
+        'ResfreshPageToolStripMenuItem
         '
-        Me.ExitMenu.Name = "ExitMenu"
-        Me.ExitMenu.Size = New System.Drawing.Size(112, 22)
-        Me.ExitMenu.Text = "&Exit"
+        Me.ResfreshPageToolStripMenuItem.Name = "ResfreshPageToolStripMenuItem"
+        Me.ResfreshPageToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ResfreshPageToolStripMenuItem.Text = "&Refresh Page"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'NavigateToolStripMenuItem
         '
-        Me.NavigateToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageToolStripMenuItem, Me.AddToolStripMenuItem})
+        Me.NavigateToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageUsersToolStripMenuItem, Me.ManageMessagesToolStripMenuItem, Me.ManageBooksToolStripMenuItem, Me.ManageBorrowsToolStripMenuItem, Me.ManageReservesToolStripMenuItem})
         Me.NavigateToolStripMenuItem.Name = "NavigateToolStripMenuItem"
         Me.NavigateToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.NavigateToolStripMenuItem.Text = "&Navigate"
         '
-        'ManageToolStripMenuItem
+        'ManageUsersToolStripMenuItem
         '
-        Me.ManageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageUsers, Me.ManageBooks, Me.ManageBorrowedBooks, Me.ManageReservedBook, Me.ManageMessages})
-        Me.ManageToolStripMenuItem.Name = "ManageToolStripMenuItem"
-        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.ManageToolStripMenuItem.Text = "&Manage"
+        Me.ManageUsersToolStripMenuItem.Name = "ManageUsersToolStripMenuItem"
+        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ManageUsersToolStripMenuItem.Text = "Manage &Users"
         '
-        'ManageUsers
+        'ManageMessagesToolStripMenuItem
         '
-        Me.ManageUsers.Name = "ManageUsers"
-        Me.ManageUsers.Size = New System.Drawing.Size(160, 22)
-        Me.ManageUsers.Text = "&Users"
+        Me.ManageMessagesToolStripMenuItem.Name = "ManageMessagesToolStripMenuItem"
+        Me.ManageMessagesToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ManageMessagesToolStripMenuItem.Text = "Manage &Messages"
         '
-        'ManageBooks
+        'ManageBooksToolStripMenuItem
         '
-        Me.ManageBooks.Name = "ManageBooks"
-        Me.ManageBooks.Size = New System.Drawing.Size(160, 22)
-        Me.ManageBooks.Text = "&Books"
+        Me.ManageBooksToolStripMenuItem.Name = "ManageBooksToolStripMenuItem"
+        Me.ManageBooksToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ManageBooksToolStripMenuItem.Text = "Manage &Books"
         '
-        'ManageBorrowedBooks
+        'ManageBorrowsToolStripMenuItem
         '
-        Me.ManageBorrowedBooks.Name = "ManageBorrowedBooks"
-        Me.ManageBorrowedBooks.Size = New System.Drawing.Size(160, 22)
-        Me.ManageBorrowedBooks.Text = "Borro&wed Books"
+        Me.ManageBorrowsToolStripMenuItem.Name = "ManageBorrowsToolStripMenuItem"
+        Me.ManageBorrowsToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ManageBorrowsToolStripMenuItem.Text = "Manage Borro&ws"
         '
-        'ManageReservedBook
+        'ManageReservesToolStripMenuItem
         '
-        Me.ManageReservedBook.Name = "ManageReservedBook"
-        Me.ManageReservedBook.Size = New System.Drawing.Size(160, 22)
-        Me.ManageReservedBook.Text = "&Reserved Books"
-        '
-        'ManageMessages
-        '
-        Me.ManageMessages.Name = "ManageMessages"
-        Me.ManageMessages.Size = New System.Drawing.Size(160, 22)
-        Me.ManageMessages.Text = "&Messages"
-        '
-        'AddToolStripMenuItem
-        '
-        Me.AddToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddUser, Me.AddBook, Me.AddBorrowedBook, Me.AddReservedBook})
-        Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.AddToolStripMenuItem.Text = "&Add"
-        '
-        'AddUser
-        '
-        Me.AddUser.Name = "AddUser"
-        Me.AddUser.Size = New System.Drawing.Size(155, 22)
-        Me.AddUser.Text = "&User"
-        '
-        'AddBook
-        '
-        Me.AddBook.Name = "AddBook"
-        Me.AddBook.Size = New System.Drawing.Size(155, 22)
-        Me.AddBook.Text = "&Book"
-        '
-        'AddBorrowedBook
-        '
-        Me.AddBorrowedBook.Name = "AddBorrowedBook"
-        Me.AddBorrowedBook.Size = New System.Drawing.Size(155, 22)
-        Me.AddBorrowedBook.Text = "Borro&wed Book"
-        '
-        'AddReservedBook
-        '
-        Me.AddReservedBook.Name = "AddReservedBook"
-        Me.AddReservedBook.Size = New System.Drawing.Size(155, 22)
-        Me.AddReservedBook.Text = "&Reserved Book"
+        Me.ManageReservesToolStripMenuItem.Name = "ManageReservesToolStripMenuItem"
+        Me.ManageReservesToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ManageReservesToolStripMenuItem.Text = "Manage &Reserves"
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HowToUse, Me.About})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HowTouseToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "&Help"
         '
-        'HowToUse
+        'HowTouseToolStripMenuItem
         '
-        Me.HowToUse.Name = "HowToUse"
-        Me.HowToUse.Size = New System.Drawing.Size(134, 22)
-        Me.HowToUse.Text = "How to &use"
+        Me.HowTouseToolStripMenuItem.Name = "HowTouseToolStripMenuItem"
+        Me.HowTouseToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.HowTouseToolStripMenuItem.Text = "How to &use"
         '
-        'About
+        'AboutToolStripMenuItem
         '
-        Me.About.Name = "About"
-        Me.About.Size = New System.Drawing.Size(134, 22)
-        Me.About.Text = "A&bout"
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.AboutToolStripMenuItem.Text = "A&bout"
         '
         'frmDashboard
         '
@@ -386,13 +349,14 @@ Partial Class frmDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(542, 431)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmDashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmDashboard"
@@ -425,21 +389,16 @@ Partial Class frmDashboard
     Friend WithEvents btnLogout As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Logout As ToolStripMenuItem
-    Friend WithEvents ExitMenu As ToolStripMenuItem
+    Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResfreshPageToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NavigateToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ManageToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ManageUsers As ToolStripMenuItem
-    Friend WithEvents ManageBooks As ToolStripMenuItem
-    Friend WithEvents ManageBorrowedBooks As ToolStripMenuItem
-    Friend WithEvents ManageReservedBook As ToolStripMenuItem
-    Friend WithEvents AddToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AddUser As ToolStripMenuItem
-    Friend WithEvents AddBook As ToolStripMenuItem
-    Friend WithEvents AddBorrowedBook As ToolStripMenuItem
-    Friend WithEvents AddReservedBook As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HowToUse As ToolStripMenuItem
-    Friend WithEvents About As ToolStripMenuItem
-    Friend WithEvents ManageMessages As ToolStripMenuItem
+    Friend WithEvents HowTouseToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManageUsersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManageMessagesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManageBooksToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManageBorrowsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManageReservesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
 End Class

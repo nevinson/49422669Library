@@ -35,20 +35,6 @@ Partial Class frmUserDashboard
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RefreshPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReserveBookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BorrowBookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BackToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HowToUseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -57,10 +43,21 @@ Partial Class frmUserDashboard
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblBooksDue = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.MessagesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserLogout = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserRefreshPage = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NavigateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserHowToUse = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserAbout = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserProfile = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserMessages = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserReserves = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -175,97 +172,6 @@ Partial Class frmUserDashboard
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "List of Books"
         '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.HelpToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(751, 24)
-        Me.MenuStrip1.TabIndex = 8
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogoutToolStripMenuItem, Me.RefreshPageToolStripMenuItem, Me.ExitToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "&File"
-        '
-        'LogoutToolStripMenuItem
-        '
-        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.LogoutToolStripMenuItem.Text = "&Logout"
-        '
-        'RefreshPageToolStripMenuItem
-        '
-        Me.RefreshPageToolStripMenuItem.Name = "RefreshPageToolStripMenuItem"
-        Me.RefreshPageToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.RefreshPageToolStripMenuItem.Text = "Refresh Page"
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.ExitToolStripMenuItem.Text = "E&xit"
-        '
-        'EditToolStripMenuItem
-        '
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
-        Me.EditToolStripMenuItem.Text = "&Edit"
-        '
-        'ViewToolStripMenuItem
-        '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileToolStripMenuItem, Me.MessagesToolStripMenuItem, Me.ReserveBookToolStripMenuItem, Me.BorrowBookToolStripMenuItem, Me.BackToolStripMenuItem})
-        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.ViewToolStripMenuItem.Text = "&View"
-        '
-        'ProfileToolStripMenuItem
-        '
-        Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ProfileToolStripMenuItem.Text = "&Profile"
-        '
-        'ReserveBookToolStripMenuItem
-        '
-        Me.ReserveBookToolStripMenuItem.Name = "ReserveBookToolStripMenuItem"
-        Me.ReserveBookToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ReserveBookToolStripMenuItem.Text = "&Reserve Book"
-        '
-        'BorrowBookToolStripMenuItem
-        '
-        Me.BorrowBookToolStripMenuItem.Name = "BorrowBookToolStripMenuItem"
-        Me.BorrowBookToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.BorrowBookToolStripMenuItem.Text = "&Borrow Book"
-        '
-        'BackToolStripMenuItem
-        '
-        Me.BackToolStripMenuItem.Enabled = False
-        Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
-        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.BackToolStripMenuItem.Text = "B&ack"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HowToUseToolStripMenuItem, Me.AboutToolStripMenuItem})
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.HelpToolStripMenuItem.Text = "&Help"
-        '
-        'HowToUseToolStripMenuItem
-        '
-        Me.HowToUseToolStripMenuItem.Name = "HowToUseToolStripMenuItem"
-        Me.HowToUseToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
-        Me.HowToUseToolStripMenuItem.Text = "How To &Use"
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
-        Me.AboutToolStripMenuItem.Text = "&About"
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
@@ -358,11 +264,83 @@ Partial Class frmUserDashboard
         Me.Label3.TabIndex = 28
         Me.Label3.Text = "User Dashboard"
         '
-        'MessagesToolStripMenuItem
+        'MenuStrip1
         '
-        Me.MessagesToolStripMenuItem.Name = "MessagesToolStripMenuItem"
-        Me.MessagesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.MessagesToolStripMenuItem.Text = "&Messages"
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.NavigateToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(751, 24)
+        Me.MenuStrip1.TabIndex = 29
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserLogout, Me.UserRefreshPage, Me.UserExit})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "&File"
+        '
+        'UserLogout
+        '
+        Me.UserLogout.Name = "UserLogout"
+        Me.UserLogout.Size = New System.Drawing.Size(152, 22)
+        Me.UserLogout.Text = "&Logout"
+        '
+        'UserRefreshPage
+        '
+        Me.UserRefreshPage.Name = "UserRefreshPage"
+        Me.UserRefreshPage.Size = New System.Drawing.Size(152, 22)
+        Me.UserRefreshPage.Text = "Refresh &Page"
+        '
+        'UserExit
+        '
+        Me.UserExit.Name = "UserExit"
+        Me.UserExit.Size = New System.Drawing.Size(152, 22)
+        Me.UserExit.Text = "&Exit"
+        '
+        'NavigateToolStripMenuItem
+        '
+        Me.NavigateToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserProfile, Me.UserMessages, Me.UserReserves})
+        Me.NavigateToolStripMenuItem.Name = "NavigateToolStripMenuItem"
+        Me.NavigateToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.NavigateToolStripMenuItem.Text = "&Navigate"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserHowToUse, Me.UserAbout})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "&Help"
+        '
+        'UserHowToUse
+        '
+        Me.UserHowToUse.Name = "UserHowToUse"
+        Me.UserHowToUse.Size = New System.Drawing.Size(152, 22)
+        Me.UserHowToUse.Text = "How &to use"
+        '
+        'UserAbout
+        '
+        Me.UserAbout.Name = "UserAbout"
+        Me.UserAbout.Size = New System.Drawing.Size(152, 22)
+        Me.UserAbout.Text = "&About"
+        '
+        'UserProfile
+        '
+        Me.UserProfile.Name = "UserProfile"
+        Me.UserProfile.Size = New System.Drawing.Size(152, 22)
+        Me.UserProfile.Text = "&Profile"
+        '
+        'UserMessages
+        '
+        Me.UserMessages.Name = "UserMessages"
+        Me.UserMessages.Size = New System.Drawing.Size(152, 22)
+        Me.UserMessages.Text = "&Messages"
+        '
+        'UserReserves
+        '
+        Me.UserReserves.Name = "UserReserves"
+        Me.UserReserves.Size = New System.Drawing.Size(152, 22)
+        Me.UserReserves.Text = "&Reserve Book"
         '
         'frmUserDashboard
         '
@@ -377,15 +355,16 @@ Partial Class frmUserDashboard
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmUserDashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmUserDashboard"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -397,20 +376,6 @@ Partial Class frmUserDashboard
     Friend WithEvents btnLogout As Button
     Friend WithEvents btnReserve As Button
     Friend WithEvents btnSearch As Button
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RefreshPageToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProfileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReserveBookToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BorrowBookToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BackToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HowToUseToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lstBooks As ListView
     Friend WithEvents book_no As ColumnHeader
     Friend WithEvents book_name As ColumnHeader
@@ -425,5 +390,16 @@ Partial Class frmUserDashboard
     Friend WithEvents Label3 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents lblMessages As Label
-    Friend WithEvents MessagesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UserLogout As ToolStripMenuItem
+    Friend WithEvents UserRefreshPage As ToolStripMenuItem
+    Friend WithEvents UserExit As ToolStripMenuItem
+    Friend WithEvents NavigateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UserHowToUse As ToolStripMenuItem
+    Friend WithEvents UserAbout As ToolStripMenuItem
+    Friend WithEvents UserProfile As ToolStripMenuItem
+    Friend WithEvents UserMessages As ToolStripMenuItem
+    Friend WithEvents UserReserves As ToolStripMenuItem
 End Class
