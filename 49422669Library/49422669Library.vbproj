@@ -164,12 +164,6 @@
     <Compile Include="BusinessObjects\Message.vb" />
     <Compile Include="BusinessObjects\User.vb" />
     <Compile Include="BusinessLogic\Constants.vb" />
-    <Compile Include="frmHome.Designer.vb">
-      <DependentUpon>frmHome.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmHome.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmLoading.Designer.vb">
       <DependentUpon>frmLoading.vb</DependentUpon>
     </Compile>

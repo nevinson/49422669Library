@@ -162,5 +162,11 @@
         ''
         MessageBox.Show("49422669 Library is a VB.Net project created for the UNISA Module ICT3714 Assessment Project.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
+
+    Private Sub btnSubmitQuery_Click(sender As Object, e As EventArgs) Handles btnSubmitQuery.Click
+        ''
+        frmAddMessage.Show()
+        Me.Hide()
+    End Sub
 #End Region
 End Class

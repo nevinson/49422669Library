@@ -49,12 +49,13 @@ Partial Class frmUserDashboard
         Me.UserRefreshPage = New System.Windows.Forms.ToolStripMenuItem()
         Me.UserExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.NavigateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UserHowToUse = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UserAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.UserProfile = New System.Windows.Forms.ToolStripMenuItem()
         Me.UserMessages = New System.Windows.Forms.ToolStripMenuItem()
         Me.UserReserves = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserHowToUse = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserAbout = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnSubmitQuery = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -64,6 +65,7 @@ Partial Class frmUserDashboard
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.btnSubmitQuery)
         Me.Panel1.Controls.Add(Me.lstBooks)
         Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.btnReserve)
@@ -283,19 +285,19 @@ Partial Class frmUserDashboard
         'UserLogout
         '
         Me.UserLogout.Name = "UserLogout"
-        Me.UserLogout.Size = New System.Drawing.Size(152, 22)
+        Me.UserLogout.Size = New System.Drawing.Size(142, 22)
         Me.UserLogout.Text = "&Logout"
         '
         'UserRefreshPage
         '
         Me.UserRefreshPage.Name = "UserRefreshPage"
-        Me.UserRefreshPage.Size = New System.Drawing.Size(152, 22)
+        Me.UserRefreshPage.Size = New System.Drawing.Size(142, 22)
         Me.UserRefreshPage.Text = "Refresh &Page"
         '
         'UserExit
         '
         Me.UserExit.Name = "UserExit"
-        Me.UserExit.Size = New System.Drawing.Size(152, 22)
+        Me.UserExit.Size = New System.Drawing.Size(142, 22)
         Me.UserExit.Text = "&Exit"
         '
         'NavigateToolStripMenuItem
@@ -304,6 +306,24 @@ Partial Class frmUserDashboard
         Me.NavigateToolStripMenuItem.Name = "NavigateToolStripMenuItem"
         Me.NavigateToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.NavigateToolStripMenuItem.Text = "&Navigate"
+        '
+        'UserProfile
+        '
+        Me.UserProfile.Name = "UserProfile"
+        Me.UserProfile.Size = New System.Drawing.Size(144, 22)
+        Me.UserProfile.Text = "&Profile"
+        '
+        'UserMessages
+        '
+        Me.UserMessages.Name = "UserMessages"
+        Me.UserMessages.Size = New System.Drawing.Size(144, 22)
+        Me.UserMessages.Text = "&Messages"
+        '
+        'UserReserves
+        '
+        Me.UserReserves.Name = "UserReserves"
+        Me.UserReserves.Size = New System.Drawing.Size(144, 22)
+        Me.UserReserves.Text = "&Reserve Book"
         '
         'HelpToolStripMenuItem
         '
@@ -315,32 +335,24 @@ Partial Class frmUserDashboard
         'UserHowToUse
         '
         Me.UserHowToUse.Name = "UserHowToUse"
-        Me.UserHowToUse.Size = New System.Drawing.Size(152, 22)
+        Me.UserHowToUse.Size = New System.Drawing.Size(134, 22)
         Me.UserHowToUse.Text = "How &to use"
         '
         'UserAbout
         '
         Me.UserAbout.Name = "UserAbout"
-        Me.UserAbout.Size = New System.Drawing.Size(152, 22)
+        Me.UserAbout.Size = New System.Drawing.Size(134, 22)
         Me.UserAbout.Text = "&About"
         '
-        'UserProfile
+        'btnSubmitQuery
         '
-        Me.UserProfile.Name = "UserProfile"
-        Me.UserProfile.Size = New System.Drawing.Size(152, 22)
-        Me.UserProfile.Text = "&Profile"
-        '
-        'UserMessages
-        '
-        Me.UserMessages.Name = "UserMessages"
-        Me.UserMessages.Size = New System.Drawing.Size(152, 22)
-        Me.UserMessages.Text = "&Messages"
-        '
-        'UserReserves
-        '
-        Me.UserReserves.Name = "UserReserves"
-        Me.UserReserves.Size = New System.Drawing.Size(152, 22)
-        Me.UserReserves.Text = "&Reserve Book"
+        Me.btnSubmitQuery.ForeColor = System.Drawing.Color.Teal
+        Me.btnSubmitQuery.Location = New System.Drawing.Point(590, 163)
+        Me.btnSubmitQuery.Name = "btnSubmitQuery"
+        Me.btnSubmitQuery.Size = New System.Drawing.Size(108, 36)
+        Me.btnSubmitQuery.TabIndex = 35
+        Me.btnSubmitQuery.Text = "&Submit Query"
+        Me.btnSubmitQuery.UseVisualStyleBackColor = True
         '
         'frmUserDashboard
         '
@@ -402,4 +414,5 @@ Partial Class frmUserDashboard
     Friend WithEvents UserProfile As ToolStripMenuItem
     Friend WithEvents UserMessages As ToolStripMenuItem
     Friend WithEvents UserReserves As ToolStripMenuItem
+    Friend WithEvents btnSubmitQuery As Button
 End Class

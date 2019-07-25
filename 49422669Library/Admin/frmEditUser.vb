@@ -29,7 +29,7 @@
             updateUser.Email = txtEmailAddress.Text
             updateUser.Username = txtUsername.Text
 
-            If objuserservice.Update(updateUser) = True Then
+            If objUserService.Update(updateUser) = True Then
                 MessageBox.Show("User successfully updated.", "Edit User", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
                 MessageBox.Show("Could not successfully update User.", "Edit User", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -40,7 +40,7 @@
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         ''
-        frmDashboard.Show()
+        frmManageUsers.Show()
         Me.Hide()
     End Sub
 
